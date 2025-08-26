@@ -357,3 +357,109 @@ function lx_blogheader(com, _)
     ---
     """
 end
+
+
+# Services
+# hero section
+function hfun_hero(params)
+    hero_img, hero_title, hero_subtitle = params
+    return """
+    <section class="px-2 pb-8 bg-white md:px-0">
+        <div class="relative text-center">
+            <img
+                class="rounded-md sm:rounded-xl object-cover max-h-96 w-full"
+                src="$hero_img"
+            />
+            <div class="absolute inset-0 bg-black/40 rounded-md sm:rounded-xl"></div>
+            <div class="container w-full absolute top-0 left-10 mt-10">
+                <h1
+                    class="text-4xl font-extrabold tracking-tight text-left text-white [text-shadow:_2px_2px_0_black] sm:text-5xl md:text-6xl my-0"
+                >
+                    <span class="block">$hero_title</span>
+                </h1>
+                <h2
+                    class="text-white text-left text-base sm:text-2xl md:text-3xl mt-1 leading-snug break-words"
+                >
+                    $hero_subtitle
+                </h2>
+            </div>
+        </div>
+    </section>
+    """
+end
+
+# Single expert
+function hfun_expert(name, role, former_positions::Vector{String}, img_path)
+    former_html = join(["<div class=\"text-gray-500 dark:text-gray-300 text-lg ml-2.5\">$pos</div>" for pos in former_positions], "\n")
+    return """
+    <div class="flex items-center space-x-4">
+        <img src="$img_path" class="w-28 h-28 mb-6 rounded-full" />
+        <div>
+            <p class="font-bold text-xl">$name</p>
+            <div class="text-[#00416b] dark:text-gray-300 text-lg ml-2.5">$role</div>
+            $former_html
+        </div>
+    </div>
+    """
+end
+
+# All experts
+function hfun_experts(expert_params::Vector{String})
+    return join([hfun_expert_from_string(e) for e in expert_params], "\n")
+end
+
+function hfun_expert_from_string(s::String)
+    parts = split(s, "|")
+    name, role, img = String.(parts[1:3])   # force to plain Strings
+    former = length(parts) > 3 ? String.(split(parts[4], ";")) : String[]
+    return hfun_expert(name, role, former, img)
+end
+
+
+
+# Our Work section
+function hfun_work(work_text, experts_html="")
+    return """
+    <div class="grid grid-cols-1 md:grid-cols-10 gap-4 px-4 md:px-0">
+        <div class="md:col-span-6">
+            <h2 class="text-4xl font-bold tracking-tight text-left dark:text-gray-200 py-8 ml-8">Our Work</h2>
+            <p class="text-xl text-gray-500">$work_text</p>
+        </div>
+
+        <div class="md:col-span-4">
+            <h3 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8 ml-8">
+                Our Industry Experts
+            </h3>
+            $experts_html
+            <a href="/pages/team/" class="mx-auto inline-block px-6 py-3 mt-4 mb-3 text-lg text-white bg-[#00416b] rounded-full hover:bg-[#00638a]" data-primary="#00416b" data-rounded="rounded-full">
+                Learn More About Our Team
+            </a>
+        </div>
+    </div>
+    """
+end
+
+
+
+
+"""
+Service page skeleton.
+"""
+function hfun_service(params)
+    # params[1] = hero_img
+    # params[2] = hero_title
+    # params[3] = hero_subtitle
+    # params[4] = work_text
+    # params[5:end] = expert strings (optional)
+
+    hero_html = hfun_hero(params[1:3])
+    experts_html = ""
+    if length(params) > 4
+        experts_html = hfun_experts(params[5:end])
+    end
+
+    work_html = hfun_work(params[4], experts_html)
+
+    return hero_html * work_html
+end
+
