@@ -373,7 +373,7 @@ function hfun_hero(params)
             <div class="absolute inset-0 bg-black/40 rounded-md sm:rounded-xl"></div>
             <div class="container w-full absolute top-0 left-10 mt-10">
                 <h1
-                    class="text-4xl font-extrabold tracking-tight text-left text-white [text-shadow:_2px_2px_0_black] sm:text-5xl md:text-6xl my-0"
+                    class="text-4xl font-extrabold tracking-tight text-left text-white sm:text-5xl md:text-6xl my-0"
                 >
                     <span class="block">$hero_title</span>
                 </h1>
@@ -395,7 +395,7 @@ function hfun_expert(name, role, former_positions::Vector{String}, img_path)
     <div class="flex items-center space-x-4">
         <img src="$img_path" class="w-28 h-28 mb-6 rounded-full" />
         <div>
-            <p class="font-bold text-xl">$name</p>
+            <p class="font-bold text-xl lg:whitespace-nowrap">$name</p>
             <div class="text-[#00416b] dark:text-gray-300 text-lg ml-2.5">$role</div>
             $former_html
         </div>
@@ -505,10 +505,10 @@ end
 # Single project card.
 function hfun_project(title, description, tag, author, date, minutes, link, img, tag_color="bg-gray-500")
     return """
-    <div class="w-full sm:w-1/2 xl:w-1/3 max-w-md">
+    <div class="w-full sm:w-1/2 xl:w-1/3">
         <a href="$link" class="block">
             <img
-                class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56"
+                class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 max-w-6xl"
                 src="$img"
                 alt="$title"
             />
@@ -571,6 +571,7 @@ end
 function hfun_call_to_action()
     return """
     <section class="px-2 py-25 bg-white md:px-0">
+        <div class="hidden lg:relative lg:flex h-1 mt-10 my-10 -mx-1 bg-[#00415b]"></div>
         <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
             <div class="flex flex-wrap items-center sm:-mx-3">
                 <div class="w-full md:w-1/2 md:px-3">
@@ -578,7 +579,7 @@ function hfun_call_to_action()
                         class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0"
                     >
                         <h1
-                            class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
+                            class="mb-0 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
                         >
                             <span class="block xl:inline">Reach out to experience</span>
                             <span
@@ -588,7 +589,7 @@ function hfun_call_to_action()
                             >
                         </h1>
                         <p
-                            class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl"
+                            class="mx-auto mt-0 text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl"
                         >
                             Help us understand your needs and goals, and we'll
                             work with you to create a custom solution that meets
@@ -630,7 +631,7 @@ function hfun_call_to_action()
                         data-rounded="rounded-xl"
                         data-rounded-max="rounded-full"
                     >
-                        <img src="/assets/images/citation.jpg" />
+                        <img src="/assets/presage_logo_full.jpg" />
                     </div>
                 </div>
             </div>
@@ -654,7 +655,6 @@ function hfun_service(params)
         idx_area = findfirst(==("--areas--"), params)
         idx_proj = findfirst(==("--projects--"), params)
 
-        # Experts are before areas/projects
         cutoff = minimum(filter(!isnothing, [idx_area, idx_proj]))
         if cutoff > 5
             experts_html = hfun_experts(params[5:cutoff-1])
