@@ -631,7 +631,7 @@ function hfun_call_to_action()
                         data-rounded="rounded-xl"
                         data-rounded-max="rounded-full"
                     >
-                        <img src="/assets/presage_logo_full.jpg" />
+                        <img src="/assets/images/citation.jpg" />
                     </div>
                 </div>
             </div>
