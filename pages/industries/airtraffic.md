@@ -12,7 +12,7 @@ layout = "base_service"
 
 "Capt. Piyush Gandhi, MBA|VP Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
 "Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Boeing 787 Check Airman;Former Flight Ops Manager (Various)"
-"Umair Durrani, PhD|Data Scientist|/assets/umair-headshot.jpg|Former Postdoctoral Researcher;"
+"Umair Durrani, PhD|Data Scientist|/assets/umair-headshot.jpg|Former Postdoctoral Researcher in <br> Civil Engineering;"
 
 "--areas--"
 "Culture|Understand the culture of your team and how it affects your work."
