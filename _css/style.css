@@ -276,6 +276,14 @@ h5 a:visited {
     color: #1c1c1c !important;
 }
 
+.franklin-content p {
+    margin: 0 auto 1.25rem auto;
+    padding: 0;
+    line-height: 1.6;
+    max-width: 70ch;
+    text-align: justify;
+}
+
 /* ==================================================================
     TEXT GEOMETRY
 ================================================================== */
