@@ -284,6 +284,21 @@ h5 a:visited {
     text-align: justify;
 }
 
+.franklin-content table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.franklin-content th,
+td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.franklin-content th {
+    border-bottom: 2px solid #333;
+}
+
 /* ==================================================================
     TEXT GEOMETRY
 ================================================================== */
