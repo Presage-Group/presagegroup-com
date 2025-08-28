@@ -15,8 +15,16 @@
             user-select: none;
         }
     </style>
-    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+        defer
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        document.addEventListener("alpine:init", () => {
+            Alpine.store("contactModal", { open: false });
+        });
+    </script>
 </head>
 <header class="sticky top-0 left-0 w-full z-50">
     {{ insert slidenav.html }} {{ insert nav.html }}
