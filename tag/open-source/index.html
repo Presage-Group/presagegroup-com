@@ -123,40 +123,35 @@
             <div
                 class="flex flex-col items-center justify-end w-full h-auto md:w-full md:flex-row"
             >
-                <!-- opens a modal with a contact form. -->
-                <div
-                    x-data="{ modalOpen: false }"
-                    @keydown.escape.window="modalOpen = false"
-                    class="relative z-50 w-auto h-auto"
+                <button
+                    @click="Alpine.store('contactModal').open = true"
+                    class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl text-gray-100 bg-[#e76254] font-medium transition-colors rounded-xl hover:text-neutral-100 focus:outline-none focus:text-neutral-100 disabled:opacity-50 hover:bg-[#f5a455] focus:bg-[#f5a455] disabled:pointer-events-none group w-max"
                 >
-                    <button
-                        @click="modalOpen=true"
-                        class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl text-gray-100 bg-[#e76254] font-medium transition-colors rounded-xl hover:text-neutral-100 focus:outline-none focus:text-neutral-100 disabled:opacity-50 hover:bg-[#f5a455] focus:bg-[#f5a455] disabled:pointer-events-none group w-max"
-                    >
-                        WORK WITH US
-                    </button>
-                    <!-- Contains the rest of the logic for the modal -->
-                    
-    <template x-teleport="body">
+                    WORK WITH US
+                </button>
+                <template x-teleport="body">
         <div
-            x-show="modalOpen"
+            x-show="Alpine.store('contactModal')?.open"
+            x-transition.opacity
+            @keydown.escape.window="Alpine.store('contactModal').open = false"
             class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen"
             x-cloak
         >
+            <!-- Background overlay -->
             <div
-                x-show="modalOpen"
+                @click="Alpine.store('contactModal').open = false"
                 x-transition:enter="ease-out duration-300"
                 x-transition:enter-start="opacity-0"
                 x-transition:enter-end="opacity-100"
                 x-transition:leave="ease-in duration-300"
                 x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0"
-                @click="modalOpen=false"
                 class="absolute inset-0 w-full h-full bg-black bg-opacity-40"
             ></div>
+
+            <!-- Modal content -->
             <div
-                x-show="modalOpen"
-                x-trap.inert.noscroll="modalOpen"
+                @click.away="Alpine.store('contactModal').open = false"
                 x-transition:enter="ease-out duration-300"
                 x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
@@ -168,7 +163,7 @@
                 <div class="flex items-center justify-between pb-2">
                     <h3 class="text-lg font-semibold">Contact Presage:</h3>
                     <button
-                        @click="modalOpen=false"
+                        @click="Alpine.store('contactModal').open = false"
                         class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 mt-1 mr-1 text-gray-600 hover:text-gray-800 hover:bg-gray-50"
                     >
                         <svg
@@ -187,13 +182,15 @@
                         </svg>
                     </button>
                 </div>
+
+                <!-- Form fields -->
                 <div class="relative w-auto">
                     <div class="w-full max-w-xs mx-auto py-1">
                         <input
                             type="text"
                             placeholder="Name"
                             id="contactName"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
                         />
                     </div>
                     <div class="w-full max-w-xs mx-auto py-1">
@@ -201,7 +198,7 @@
                             type="text"
                             placeholder="Company"
                             id="contactCompany"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
                         />
                     </div>
                     <div class="w-full max-w-xs mx-auto py-1">
@@ -209,7 +206,7 @@
                             type="text"
                             placeholder="Phone Number"
                             id="contactPhone"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
                         />
                     </div>
                     <div class="w-full max-w-xs mx-auto py-1">
@@ -217,17 +214,16 @@
                             type="text"
                             placeholder="Email Address"
                             id="contactEmail"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
                         />
                     </div>
                     <div class="w-full max-w-xs mx-auto py-1">
                         <input
                             type="text"
                             placeholder="Location"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
                         />
                     </div>
-
                     <!-- select dropdown -->
 
                     <div
@@ -460,8 +456,8 @@
                 <div class="flex w-full items-center justify-center pt-2">
                     <button
                         id="createIssueBtn"
-                        @click="modalOpen=false"
-                        class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl text-gray-100 bg-[#00416b] font-medium transition-colors rounded-xl hover:text-neutral-100 focus:outline-none focus:text-neutral-100 disabled:opacity-50 hover:bg-[#00638a] focus:bg-[#00638a] disabled:pointer-events-none group w-max"
+                        @click="Alpine.store('contactModal').open = false"
+                        class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl text-gray-100 bg-[#00416b] font-medium transition-colors rounded-xl hover:text-neutral-100 focus:outline-none hover:bg-[#00638a] focus:bg-[#00638a] group w-max"
                     >
                         SUBMIT
                     </button>
