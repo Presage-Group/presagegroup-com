@@ -4,15 +4,15 @@ layout = "base_service"
 +++
 
 {{service 
-"/assets/images/atc_page.jpeg"
+"/assets/images/utilities_page.jpg"
 "Utilities" 
 "Leaders in lorem ipsum, lorem ipsum <br> lorem, and lorem ipsum"
 
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-"Michelle Morrissey|SME, Utilities|/assets/Michelle-Morrissey-Headshot.jpg|Former Role 1;Former Role 2"
-"Leonard McMillian|SME, Utilities|/assets/Len-Headshot.jpg|Former Role 1;Former Role 2"
-"Randy Boyes, PhD|Director, Analytics|/assets/randy-headshot-1.jpg|Former Role 1;Former Role 2"
+"Michelle Morrissey|SME, Utilities|/assets/Michelle-Morrissey-Headshot.jpg|Former VP Health Safety Environment;Former VP Construction Services"
+"Leonard McMillian|SME, Utilities|/assets/Len-Headshot.jpg|Chief Operating Officer;"
+"Randy Boyes, PhD|Director, Analytics|/assets/randy-headshot-1.jpg|Former Epidemiologist;"
 
 "--areas--"
 "Culture|Understand the culture of your team and how it affects your work."
