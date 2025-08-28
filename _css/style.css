@@ -276,6 +276,29 @@ h5 a:visited {
     color: #1c1c1c !important;
 }
 
+.franklin-content p {
+    margin: 0 auto 1.25rem auto;
+    padding: 0;
+    line-height: 1.6;
+    max-width: 70ch;
+    text-align: justify;
+}
+
+.franklin-content table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.franklin-content th,
+td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.franklin-content th {
+    border-bottom: 2px solid #333;
+}
+
 /* ==================================================================
     TEXT GEOMETRY
 ================================================================== */
@@ -313,7 +336,14 @@ h5 a:visited {
 }
 
 .franklin-content a {
+    color: #00415b;
     text-decoration: none;
+}
+
+.franklin-content a:hover,
+.franklin-content a:focus {
+    color: #00638a;
+    text-decoration: underline;
 }
 
 /* ==================================================================
