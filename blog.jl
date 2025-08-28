@@ -326,22 +326,18 @@ const icons = Dict{String,String}(
 
 function lx_blogheader(com, _)
     return """
-    ~~~
-    <div class="flex grid grid-cols-12 sm:px-5 gap-x-8">
-    <div class="flex flex-col items-start col-span-12 sm:col-span-6">
-    <img class = "px-6 align-left h-72 object-cover" src="$(locvar("img"))">
-    </div>
-    <div class="flex flex-col items-start col-span-12 sm:col-span-6">
-    <p class = "text-3xl">$(locvar("title"))</p>
-    </div>
-    </div>
-    ~~~
+        ~~~
+        <div class="flex flex-col items-center text-center sm:px-5 gap-y-4">
+            <img
+                class="h-48 w-96 object-contain rounded-md mt-6"
+                src="$(locvar("img"))"
+                alt="Blog header image"
+            >
+            <p class="text-3xl font-semibold max-w-2xl">
+                $(locvar("title"))
+            </p>
+        </div>
+        ~~~
 
-    ---
-    """
+        """
 end
-
-
-
-
-
