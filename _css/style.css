@@ -169,34 +169,92 @@ body {
 /* ==================================================================
     CODE & HIGHLIGHT.JS
 ================================================================== */
-
-code {
-    background-color: var(--block-background);
-    padding: 0.1em 0.2em;
-    border-radius: 2px;
-    font-size: 14px;
+/* Inline code inside paragraphs */
+.franklin-content p code {
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    background: var(--block-background, #f6f8fa);
+    padding: 0.1em 0.25em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    display: inline;
+    color: inherit;
 }
 
+/* Block code (highlight.js) */
+.franklin-content pre code.hljs {
+    display: block;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    background: var(--block-background, #f6f8fa);
+    padding: 1em;
+    border-radius: 8px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+/* Pre elements containing code blocks */
+.franklin-content pre {
+    max-width: 70ch;
+    margin: 0 auto 1.25rem auto;
+    text-align: left;
+    display: block;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Highlight.js base styles */
 .hljs {
     font-size: 14px;
     line-height: 1.35em;
     border-radius: 10px;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+.language-julia hljs {
+    font-size: 14px;
+    line-height: 1.35em;
+    border-radius: 10px;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hljs-number {
+    color: blue;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.hljs-comment {
+    color: gray;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Highlight.js meta styling */
 .hljs-meta {
     font-weight: bold;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
-
 .hljs-meta.shell_ {
     color: crimson;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 .hljs-meta.prompt_ {
     color: rgb(25, 179, 51);
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+/* Code output boxes */
 .code-output {
     background: var(--output-background);
     border: 1px dashed #dbdbdb;
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .fndef-content {
@@ -284,6 +342,18 @@ h5 a:visited {
     text-align: justify;
 }
 
+.franklin-content h1,
+.franklin-content h2,
+.franklin-content h3,
+.franklin-content h4,
+.franklin-content h5,
+.franklin-content h6 {
+    margin: 0 auto 1.5rem auto;
+    max-width: 70ch;
+    padding: 0;
+    font-weight: 800;
+}
+
 .franklin-content table {
     margin: 20px auto;
     border-collapse: collapse;
@@ -330,6 +400,12 @@ td {
 ================================================================== */
 
 .franklin-content h1 {
+    padding-bottom: 0.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.franklin-content h2 {
     padding-bottom: 0.5em;
     margin-top: 1.5em;
     margin-bottom: 1em;
