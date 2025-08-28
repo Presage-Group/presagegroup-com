@@ -371,7 +371,7 @@ function hfun_hero(params)
                 src="$hero_img"
             />
             <div class="absolute inset-0 bg-black/40 rounded-md sm:rounded-xl"></div>
-            <div class="container w-full absolute top-0 left-10 mt-10">
+            <div class="container w-full absolute top-0 left-10 mt-10 border-l-4 border-white pl-4">
                 <h1
                     class="text-4xl font-extrabold tracking-tight text-left text-white sm:text-5xl md:text-6xl my-0"
                 >
@@ -568,10 +568,66 @@ function hfun_project_from_string(s::String)
 end
 
 
+function hfun_marquee()
+    return raw"""
+<div
+    x-data
+    x-init="
+            $nextTick(() => {
+                const content = $refs.content;
+                const item = $refs.item;
+                const clone = item.cloneNode(true);
+                content.appendChild(clone);
+            });
+    "
+    class="relative w-full bg-gray-900 container-block mt-10"
+>
+    <div
+        class="relative w-full py-3 mx-auto overflow-hidden text-lg italic tracking-wide text-white uppercase bg-gray-900 max-w-7xl sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl"
+    >
+        <div
+            class="absolute left-0 z-20 w-40 h-full bg-gradient-to-r from-gray-900 to-transparent"
+        ></div>
+        <div
+            class="absolute right-0 z-20 w-40 h-full bg-gradient-to-l from-gray-900 to-transparent"
+        ></div>
+        <div x-ref="content" class="flex animate-marquee">
+            <div
+                x-ref="item"
+                class="flex items-center justify-around flex-shrink-0 w-full py-2 space-x-2 text-white"
+            >
+                <img src="/assets/Delta_logo.svg" width="100" />
+                <img src="/assets/luft.svg" width="100" />
+                <img src="/assets/airways.png" width="100" />
+                <img src="/assets/air-canada.svg" width="100" />
+                <img src="/assets/FlightSafety-Logo-Color.svg" width="100" />
+                <img src="/assets/Virgin_Australia_Logo_2022.svg" width="100" />
+                <img src="/assets/Porter_Airlines_Logo.svg" width="100" />
+                <img
+                    src="/assets/bas-logo-inverse-transparent.svg"
+                    width="200"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+        animation: marquee 20s linear infinite;
+    }
+</style>
+"""
+end
+
+
+
 function hfun_call_to_action()
     return """
     <section class="px-2 py-25 bg-white md:px-0">
-        <div class="hidden lg:relative lg:flex h-1 mt-10 my-10 -mx-1 bg-[#00415b]"></div>
         <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
             <div class="flex flex-wrap items-center sm:-mx-3">
                 <div class="w-full md:w-1/2 md:px-3">
@@ -650,6 +706,7 @@ function hfun_service(params)
     areas_html = ""
     projects_html = ""
     call_to_action_html = hfun_call_to_action()
+    marquee_html = hfun_marquee()
 
     if "--areas--" in params || "--projects--" in params
         idx_area = findfirst(==("--areas--"), params)
@@ -677,7 +734,7 @@ function hfun_service(params)
         work_html = hfun_work(params[4], experts_html)
     end
 
-    return hero_html * work_html * areas_html * projects_html * call_to_action_html
+    return hero_html * work_html * areas_html * projects_html * marquee_html * call_to_action_html
 end
 
 
