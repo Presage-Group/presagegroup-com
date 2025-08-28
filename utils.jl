@@ -38,37 +38,36 @@ end
 
     eles = sort(posts, by=x -> x.date, rev=true)
     html = ""
-    for e in eles[1:3]
+    for e in eles[1:2]
         html *= """\n
-        <a href="$(e.link)"
-        class = "block">
-        <blockquote
-            class="flex items-center justify-between w-full col-span-1 p-6 bg-white rounded-lg shadow my-2"
+        <a href="$(e.link)" class="block">
+          <blockquote
+            class="flex w-full col-span-1 bg-white rounded-lg shadow overflow-hidden my-2 h-24 sm:h-32 lg:h-40 mx-6 lg:mx-0"
             data-rounded="rounded-lg"
             data-rounded-max="rounded-full"
+          >
+            <!-- Image column with gradient fade -->
+            <div class="relative h-full w-32 sm:w-40 lg:w-48">
+              <img
+                class="object-cover h-full w-full"
+                src="$(e.img)"
+                alt="$(e.title)"
+              />
+              <!-- Gradient overlay -->
+              <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-white"></div>
+            </div>
 
-        >
-            <div class="flex flex-col pr-8">
-                <div class="relative pl-2">
-                    <p
-                        class="mt-2 text-sm text-gray-600 sm:text-base lg:text-sm xl:text-base"
-                    >
-                        $(e.title)
-                    </p>
-                </div>
-
-            <h3
-                class="pl-12 mt-3 text-sm font-medium text-gray-800 truncate sm:text-base lg:text-sm lg:text-base"
-            >
-                Date • $(e.date)
-            </h3>
-             </div>
-            <img
-                class="object-cover w-24 h-24 bg-gray-300 rounded-md border"
-                src=$(e.img)
-            />
-        </blockquote>
-        </a>\n
+            <!-- Text column -->
+            <div class="flex flex-col justify-center p-6 flex-1">
+              <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                $(e.title)
+              </h3>
+              <p class="mt-2 text-sm text-gray-500">
+                $(e.date)
+              </p>
+            </div>
+          </blockquote>
+        </a>
         """
     end
     return html
@@ -739,5 +738,3 @@ function hfun_service(params)
 
     return hero_html * work_html * areas_html * projects_html * call_to_action_html
 end
-
-
