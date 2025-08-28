@@ -183,17 +183,17 @@ function hfun_small_card(args)
 
     link_html = """
     <div class="col-12 col-md-6 col-lg-4">
-    <div class="card border-0 shadow-lg pt-5 my-5 position-relative">
+    <div class="card border-0 shadow-lg pt-5 my-5 position-relative dark:bg-[#1f2937]">
       <div class="card-body p-4">
         <div class="member-profile position-absolute w-100 text-center">
           <img
-            class="rounded-circle mx-auto d-inline-block shadow-sm"
+            class="rounded-circle mx-auto d-inline-block shadow-sm object-cover"
             src=$photo
             alt=""
           />
         </div>
         <div class="card-text pt-1">
-          <h5 class="member-name mb-0 text-center text-primary font-weight-bold">
+          <h5 class="member-name mb-0 text-center text-[#0D6EFD] dark:text-blue-300 font-weight-bold">
             $name
           </h5>
           <div class="mb-3 text-center">
@@ -234,7 +234,7 @@ end
 
 const icons = Dict{String,String}(
     "linkedin" => """
-    <svg class="svg-inline--fa fa-linkedin-in fa-w-14 fa-fw"
+    <svg class="svg-inline--fa fa-linkedin-in fa-w-14 fa-fw dark:text-white"
               aria-hidden="true"
               focusable="false"
               data-prefix="fab"
@@ -258,7 +258,7 @@ const icons = Dict{String,String}(
         width="16"
         height="16"
         fill="currentColor"
-        class="bi bi-mortarboard-fill"
+        class="bi bi-mortarboard-fill dark:text-white"
         viewBox="0 0 16 16"
     >
         <path
@@ -272,7 +272,7 @@ const icons = Dict{String,String}(
     """,
     "x" => """
     <svg
-        class="svg-inline--fa fa-twitter fa-w-16 fa-fw"
+        class="svg-inline--fa fa-twitter fa-w-16 fa-fw dark:text-white"
         aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -291,7 +291,7 @@ const icons = Dict{String,String}(
     """,
     "github" => """
     <svg
-        class="svg-inline--fa fa-github fa-w-16 fa-fw"
+        class="svg-inline--fa fa-github fa-w-16 fa-fw dark:text-white"
         aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -314,7 +314,7 @@ const icons = Dict{String,String}(
         width="18"
         height="18"
         fill="currentColor"
-        class="bi bi-envelope"
+        class="bi bi-envelope dark:text-white"
         viewBox="0 0 16 16"
     >
         <path

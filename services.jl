@@ -103,7 +103,7 @@ function hfun_area(title::String, desc::String)
     """
     return """
     <div
-        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
+        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl"
         data-rounded="rounded-xl"
         data-rounded-max="rounded-full"
     >
@@ -136,7 +136,7 @@ function hfun_areas(area_params::Vector{String})
     return """
     <section class="pt-32 bg-white">
         <div class="container max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold tracking-tight text-center">
+            <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
                 Our Areas of Expertise
             </h2>
             <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
@@ -165,7 +165,7 @@ function hfun_project(title, description, tag, author, date, minutes, link, img,
             <span>$tag</span>
         </div>
 
-        <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+        <h2 class="text-lg text-black dark:text-white font-bold sm:text-xl md:text-2xl">
             <a href="$link">$title</a>
         </h2>
 
@@ -286,7 +286,7 @@ function hfun_call_to_action()
                         >
                             <span class="block xl:inline">Reach out to experience</span>
                             <span
-                                class="block text-[#00416b] xl:inline"
+                                class="block text-[#00416b] dark:text-[#e76254] xl:inline"
                                 data-primary="indigo-600"
                                 >the Presage Effect!</span
                             >
