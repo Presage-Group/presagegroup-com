@@ -405,7 +405,7 @@ function lx_blogheader(com, _)
     ~~~
     <div class="flex flex-col items-center text-center sm:px-5 gap-y-4">
         <img
-            class="h-48 w-48 object-cover rounded-md mt-6"
+            class="h-48 w-96 object-contain rounded-md mt-6"
             src="$(locvar("img"))"
             alt="Blog header image"
         >

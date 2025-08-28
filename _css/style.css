@@ -336,7 +336,14 @@ td {
 }
 
 .franklin-content a {
+    color: #00415b;
     text-decoration: none;
+}
+
+.franklin-content a:hover,
+.franklin-content a:focus {
+    color: #00638a;
+    text-decoration: underline;
 }
 
 /* ==================================================================
