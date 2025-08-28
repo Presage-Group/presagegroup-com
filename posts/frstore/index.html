@@ -1198,17 +1198,16 @@
 
 </header>
 <div class="franklin-content">
-<div class="flex flex-col items-center text-center sm:px-5 gap-y-4">
-    <img
-        class="h-48 w-96 object-contain rounded-md mt-6"
-        src="/assets/images/frstore.png"
-        alt="Blog header image"
-    >
-    <p class="text-3xl font-semibold max-w-2xl">
-        frstore: R interface to Google Firestore Database
-    </p>
+<div class="flex grid grid-cols-12 sm:px-5 gap-x-8">
+<div class="flex flex-col items-start col-span-12 sm:col-span-6">
+<img class = "px-6 align-left h-72 object-cover" src="/assets/images/frstore.png">
 </div>
-
+<div class="flex flex-col items-start col-span-12 sm:col-span-6">
+<p class = "text-3xl">frstore: R interface to Google Firestore Database</p>
+</div>
+</div>
+</p>
+<p><hr />
 <p>Firestore is a Google Cloud NoSQL database that is used to power internal tooling and applications at Presage. Since there is no official support for interacting with Firestore in the R programming language, we developed the <a href="https://github.com/Presage-Group/frstore"><code>frstore</code></a> package that enables the Create, Read, Update, and Delete &#40;CRUD&#41; database operations on Firestore databases using R. This open-source package is available on GitHub.</p>
 <p><a href="https://github.com/Presage-Group/frstore"><code>frstore</code></a> provides these functions for the CRUD operations:</p>
 <table><tr><th align="right">Operation</th><th align="right">Functions</th></tr><tr><td align="right">Create</td><td align="right"><code>frstore_create_document</code></td></tr><tr><td align="right">Read</td><td align="right"><code>frstore_get</code>; <code>frstore_run_query</code></td></tr><tr><td align="right">Update</td><td align="right"><code>frstore_patch</code></td></tr><tr><td align="right">Delete</td><td align="right"><code>frstore_delete</code></td></tr></table>
