@@ -19,7 +19,7 @@ Our work in ATC is driven by experienced industry professionals and supported by
 <br>
 Whether we’re conducting culture diagnostics, evaluating real-time decision processes, or designing proactive wellbeing initiatives, our approach is collaborative, data-informed, and grounded in the unique operational demands of Air Traffic Control."
 
-"Capt. Piyush Gandhi, MBA|VP Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
+"Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
 "Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Boeing 787 Check Airman;Former Flight Ops Manager (Various)"
 "Umair Durrani, PhD|Data Scientist|/assets/umair-headshot.jpg|Former Postdoctoral Researcher in <br> Civil Engineering;"
 
