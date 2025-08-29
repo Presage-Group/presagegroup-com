@@ -42,7 +42,7 @@ We're also at the forefront of innovation in aviation mental
 health. We are currently working on a digital application to
 support pilot wellbeing that will contribute to a healthier,
 more sustainable approach to mental health in the industry."
-"Capt. Piyush Gandhi, MBA|VP Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
+"Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
 "Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Boeing 787 Check Airman;Former Flight Ops Manager (Various)"
 "Capt. Mark Stow|SME, Aviation|/assets/M.Stow-headshot.jpg|Former Chief Pilot, B787;Former Director, Flight Ops (Air Canada)"
 "Capt. Jacques Mignault|SME, Aviation|/assets/jacques.jpg|Former Instructor, Check Pilot (Air Transat);Former Sr Director Safety, Quality and Security"
