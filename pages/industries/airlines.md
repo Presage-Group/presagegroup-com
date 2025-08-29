@@ -44,7 +44,7 @@ that will contribute to a healthier, more sustainable approach to
 mental health in the industry, is well underway."
 
 "Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
-"Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Boeing 787 Check Airman;Former Flight Ops Manager (Various)"
+"Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Director of Flight Safety;Chair of FSF International Advisory Committee"
 "Capt. Mark Stow|SME, Aviation|/assets/M.Stow-headshot.jpg|Former Chief Pilot, B787;Former Director, Flight Ops (Air Canada)"
 "Capt. Jacques Mignault|SME, Aviation|/assets/jacques.jpg|Former Instructor, Check Pilot (Air Transat);Former Sr Director Safety, Quality and Security"
 
