@@ -21,14 +21,14 @@ Whether we’re conducting culture diagnostics, evaluating real-time decision pr
 
 "Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
 "Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Boeing 787 Check Airman;Former Flight Ops Manager (Various)"
-"Umair Durrani, PhD|Data Scientist|/assets/umair-headshot.jpg|Former Postdoctoral Researcher in <br> Civil Engineering;"
+"Kathleen Fox|SME, ATC|/assets/kathyfox.jpg|Former VP Operations, Nav Canada; Former Chair, Transportation Safety Board"
 
 "--areas--"
-"Pilot Decision Making|Go-around decision making and execution, flight path management."
-"Safety Culture|Organizational safety culture, flight deck person, policies and procedures."
-"Pilot Wellbeing|Safeguarding and supporting pilots’ mental health and wellbeing."
+"Controller Decision Making|Operational compliance, best practices, and safety first."
+"Safety Culture|Organizational safety culture, policies and procedures."
+"Air Traffic Controller Well Being|Safeguarding and supporting controllers' mental health and wellbeing."
 
 --projects--
-"Air Traffic Control"
 "Airways New Zealand|A review of safety culture|Scientific Aviation|Brooke Linden|2023|8 min. read|/assets/cases/Airways.pdf|/assets/images/DVOR with aircraft 2.jpeg|bg-orange-500"
+"/assets/images/tower.jpg"
 }}
