@@ -1,4 +1,4 @@
-@def title = "Presage Group featured in Air International"
+@def title = "Presage Group featured in AIR International"
 @def author = "Piyush Gandhi"
 @def date = "2022-08-18"
 @def tags = ["projects", "GADME"]
