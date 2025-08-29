@@ -32,7 +32,7 @@ function hfun_expert(name, role, former_positions::Vector{String}, img_path)
     former_html = join(["<div class=\"text-gray-500 dark:text-gray-300 text-lg ml-2.5\">$pos</div>" for pos in former_positions], "\n")
     return """
     <div class="flex items-center space-x-4">
-        <img src="$img_path" class="w-28 h-28 mb-6 rounded-full" />
+        <img src="$img_path" class="w-28 h-28 mb-6 rounded-full object-cover" />
         <div>
             <div class="font-bold text-xl lg:whitespace-nowrap mb-0.5 ml-2.5">$name</div>
             <div class="text-[#00416b] dark:text-gray-300 text-lg ml-2.5">$role</div>
@@ -153,7 +153,7 @@ end
 function hfun_project(title, description, tag, author, date, minutes, link, img, tag_color="bg-gray-500")
     return """
     <div class="w-full sm:w-1/2 xl:w-1/3">
-        <a href="$link" class="block">
+        <a href="$link" target="_blank" class="block">
             <img
                 class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 max-w-6xl"
                 src="$img"
@@ -166,7 +166,7 @@ function hfun_project(title, description, tag, author, date, minutes, link, img,
         </div>
 
         <h2 class="text-lg text-black dark:text-white font-bold sm:text-xl md:text-2xl">
-            <a href="$link">$title</a>
+            <a href="$link" target="_blank">$title</a>
         </h2>
 
         <p class="text-sm text-gray-500">
@@ -185,12 +185,21 @@ end
 
 
 # Multiple projects
-function hfun_projects(service_name::String, project_params::Vector{String})
-    projects_html = join([hfun_project_from_string(p) for p in project_params], "\n")
+function hfun_projects(project_params::Vector{String})
+    # drop the CTA image if it’s the last entry
+    clean_params = filter(p -> endswith(p, ".jpg") == false &&
+                           endswith(p, ".jpeg") == false &&
+                           endswith(p, ".png") == false, project_params)
+
+    if isempty(clean_params)
+        return ""  # no projects → return nothing
+    end
+
+    projects_html = join([hfun_project_from_string(p) for p in clean_params], "\n")
     return """
     <section class="pt-32 bg-white">
         <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
-            Featured Projects in $service_name
+            Presage Case Studies and Client Testimonials
         </h2>
 
         <div class="flex flex-wrap justify-center gap-8 pb-10 sm:px-5 m-10">
@@ -199,6 +208,8 @@ function hfun_projects(service_name::String, project_params::Vector{String})
     </section>
     """
 end
+
+
 
 # Function for processing the input string for projects
 function hfun_project_from_string(s::String)
@@ -272,7 +283,7 @@ end
 
 
 
-function hfun_call_to_action()
+function hfun_call_to_action(img::String="/assets/images/citation.jpg")
     return """
     <section class="px-2 py-25 bg-white md:px-0">
         <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
@@ -288,8 +299,7 @@ function hfun_call_to_action()
                             <span
                                 class="block text-[#00416b] dark:text-[#e76254] xl:inline"
                                 data-primary="indigo-600"
-                                >the Presage Effect!</span
-                            >
+                                >the Presage Effect!</span>
                         </h1>
                         <p
                             class="mx-auto mt-0 text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl"
@@ -298,31 +308,24 @@ function hfun_call_to_action()
                             work with you to create a custom solution that meets
                             your unique requirements.
                         </p>
-                        <div
-                            class="relative flex flex-col sm:flex-row sm:space-x-4"
-                        >
+                        <div class="relative flex flex-col sm:flex-row sm:space-x-4">
                             <a
-                                href="mailto:sales@presagegroup.com?subject=RFP%20Aviation?body=Describe%20your%20question"
+                                href="mailto:info@presagegroup.com?subject=RFP%20Aviation?body=Describe%20your%20question"
                                 class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-[#00416b] rounded-md sm:mb-0 hover:bg-[#00638a] sm:w-auto"
                                 data-primary="#00416b"
                                 data-rounded="rounded-md"
                             >
                                 Start the Conversation
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
+                                <svg xmlns="http://www.w3.org/2000/svg"
                                     class="w-5 h-5 ml-1"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
                                     stroke-width="2"
                                     stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-arrow-right"
-                                >
+                                    stroke-linejoin="round">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline
-                                        points="12 5 19 12 12 19"
-                                    ></polyline>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
                             </a>
                         </div>
@@ -334,7 +337,7 @@ function hfun_call_to_action()
                         data-rounded="rounded-xl"
                         data-rounded-max="rounded-full"
                     >
-                        <img src="/assets/images/citation.jpg" />
+                        <img src="$img" />
                     </div>
                 </div>
             </div>
@@ -342,6 +345,7 @@ function hfun_call_to_action()
     </section>
     """
 end
+
 
 
 """
@@ -352,8 +356,11 @@ function hfun_service(params)
     work_html = ""
     areas_html = ""
     projects_html = ""
-    call_to_action_html = hfun_call_to_action()
     marquee_html = hfun_marquee()
+
+    # last param = image for call_to_action
+    img = last(params)
+    call_to_action_html = hfun_call_to_action(img)
 
     if "--areas--" in params || "--projects--" in params
         idx_area = findfirst(==("--areas--"), params)
@@ -373,11 +380,10 @@ function hfun_service(params)
         end
 
         if idx_proj !== nothing
-            service_name = params[idx_proj+1]
-            projects_html = hfun_projects(service_name, params[idx_proj+2:end])
+            projects_html = hfun_projects(params[idx_proj+1:end-1])  # all project strings
         end
     else
-        experts_html = length(params) > 4 ? hfun_experts(params[5:end]) : ""
+        experts_html = length(params) > 4 ? hfun_experts(params[5:end-1]) : ""
         work_html = hfun_work(params[4], experts_html)
     end
 

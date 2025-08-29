@@ -14,8 +14,8 @@ difference between routine and risk.
 <br />
 <br />
 At Presage, we specialize in uncovering the human,
-organizational, and cultural factors behind this high stakes
-decision-making. Our proprietary methodology blends
+organizational, and cultural factors behind critical decision-making. 
+Our proprietary methodology blends
 psychological insights, decades of operational expertise, and
 data-driven analyses to reveal the unique factors influencing
 pilots' behaviour in the moment. We look at everything from
@@ -39,9 +39,10 @@ of our clients.
 <br />
 <br />
 We're also at the forefront of innovation in aviation mental
-health. We are currently working on a digital application to
-support pilot wellbeing that will contribute to a healthier,
-more sustainable approach to mental health in the industry."
+health. Development of a digital application to support pilot wellbeing 
+that will contribute to a healthier, more sustainable approach to 
+mental health in the industry, is well underway."
+
 "Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
 "Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Boeing 787 Check Airman;Former Flight Ops Manager (Various)"
 "Capt. Mark Stow|SME, Aviation|/assets/M.Stow-headshot.jpg|Former Chief Pilot, B787;Former Director, Flight Ops (Air Canada)"
@@ -53,7 +54,7 @@ more sustainable approach to mental health in the industry."
 "Pilot Wellbeing|Safeguarding and supporting pilots’ mental health and wellbeing."
 
 --projects--
-"Aviation"
 "British Antarctic Survey|A review of takeoff and landing procedures prior to the introduction of a new aircraft type|Scientific Aviation|Brooke Linden|June 3rd, 2025|8 min. read|/assets/cases/BAS.pdf|/assets/images/antarctica.jpg|bg-orange-500"
-"Virgin Australia|Aligning policies and pilot mental models by understanding decision-making in the moment|Commercial Aviation|Martin Smith|April 6, 2021|10 min. read|#_|/assets/images/virgin.jpg|bg-red-500"
+"Virgin Australia|Aligning policies and pilot mental models by understanding decision-making in the moment|Commercial Aviation|Brooke Linden|April 6, 2021|10 min. read|/assets/cases/virgin.pdf|/assets/images/virgin.jpg|bg-red-500"
+"/assets/images/citation.jpg"
 }}
