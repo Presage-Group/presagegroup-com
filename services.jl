@@ -34,7 +34,7 @@ function hfun_expert(name, role, former_positions::Vector{String}, img_path)
     <div class="flex items-center space-x-4">
         <img src="$img_path" class="w-28 h-28 mb-6 rounded-full" />
         <div>
-            <p class="font-bold text-xl lg:whitespace-nowrap">$name</p>
+            <div class="font-bold text-xl lg:whitespace-nowrap mb-0.5 ml-2.5">$name</div>
             <div class="text-[#00416b] dark:text-gray-300 text-lg ml-2.5">$role</div>
             $former_html
         </div>
@@ -61,14 +61,22 @@ function hfun_work(work_text, experts_html="")
     return """
     <div class="grid grid-cols-1 md:grid-cols-10 gap-4 px-4 md:px-0">
         <div class="md:col-span-6">
-            <h2 class="text-4xl font-bold tracking-tight text-left dark:text-gray-200 py-8 ml-8">Our Work</h2>
-            <p class="text-xl text-gray-500">$work_text</p>
+            <div class="max-w-[85ch] mx-auto">
+                <h2 
+                    class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-left">
+                    Our Work
+                </h2>
+                <p 
+                    class="text-xl text-gray-500 text-left">
+                    $work_text
+                </p>
+            </div>          
         </div>
 
         <div class="md:col-span-4">
-            <h3 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8 ml-8">
+            <h2 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8 ml-8">
                 Our Industry Experts
-            </h3>
+            </h2>
             $experts_html
             <div class="text-center">
                 <a href="/pages/team/" class="mx-auto inline-block px-6 py-3 mt-4 mb-3 text-lg text-white bg-[#00416b] rounded-full hover:bg-[#00638a]" data-primary="#00416b" data-rounded="rounded-full">
@@ -95,7 +103,7 @@ function hfun_area(title::String, desc::String)
     """
     return """
     <div
-        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
+        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl"
         data-rounded="rounded-xl"
         data-rounded-max="rounded-full"
     >
@@ -128,7 +136,7 @@ function hfun_areas(area_params::Vector{String})
     return """
     <section class="pt-32 bg-white">
         <div class="container max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold tracking-tight text-center">
+            <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
                 Our Areas of Expertise
             </h2>
             <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
@@ -157,7 +165,7 @@ function hfun_project(title, description, tag, author, date, minutes, link, img,
             <span>$tag</span>
         </div>
 
-        <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+        <h2 class="text-lg text-black dark:text-white font-bold sm:text-xl md:text-2xl">
             <a href="$link">$title</a>
         </h2>
 
@@ -278,7 +286,7 @@ function hfun_call_to_action()
                         >
                             <span class="block xl:inline">Reach out to experience</span>
                             <span
-                                class="block text-[#00416b] xl:inline"
+                                class="block text-[#00416b] dark:text-[#e76254] xl:inline"
                                 data-primary="indigo-600"
                                 >the Presage Effect!</span
                             >

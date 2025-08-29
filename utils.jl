@@ -57,11 +57,11 @@ end
                 alt="$(e.title)"
               />
               <!-- Gradient overlay -->
-              <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-white"></div>
+              <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-white dark:to-[#1f2937]"></div>
             </div>
 
             <!-- Text column -->
-            <div class="flex flex-col justify-center p-6 flex-1">
+            <div class="flex flex-col justify-center p-6 flex-1 dark:bg-[#1f2937]">
               <h3 class="text-lg font-bold text-gray-900 leading-tight">
                 $(e.title)
               </h3>
@@ -75,4 +75,3 @@ end
     end
     return html
 end
-
