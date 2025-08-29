@@ -1,4 +1,4 @@
-@def title = "Announcement - Kathy Fox"
+@def title = "Welcoming Kathy to the Presage team!"
 @def author = "Brooke Linden"
 @def date = "2025-08-22"
 @def tags = ["team", "announcement"]
