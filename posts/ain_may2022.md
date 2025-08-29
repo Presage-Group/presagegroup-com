@@ -5,7 +5,7 @@ tags = ["news", "gadme"]
 title = "FlightSafety, Presage Team On Gulfstream Go-around Study"
 short_text = "FlightSafety International and Presage Group partner on groundbreaking psychological study of go-around decision making for Gulfstream operators."
 rss_pubdate = Date(2022, 05, 11)
-img = "/assets/FlightSafety-Logo-Color.svg"
+img = "/assets/FlightSafety-Logo-blue.svg"
 +++
 
 \blogheader{}
