@@ -1,8 +1,8 @@
 @def title = "lineaR: R interface to linear.app"
 @def author = "Umair Durrani"
 @def date = "2025-08-21"
-@def tags = ["Analytics", "linear"]
-@def short_text = ""
+@def tags = ["analytics", "linear"]
+@def short_text = "Read data from and write data to linear.app using the GraphQL API in R."
 
 @def rss_pubdate = Date(2025, 08, 21)
 
@@ -13,5 +13,3 @@
 We developed [`lineaR`](https://github.com/Presage-Group/lineaR), a package in R language, for programmatically tracking and reporting our progress in projects and issues. It is particularly useful for creating regular reports of project progress and team productivity. We open sourced `lineaR` for the benefit of the wider R community.
 
 Check out the [`lineaR` package on GitHub](https://github.com/Presage-Group/lineaR).
-
-

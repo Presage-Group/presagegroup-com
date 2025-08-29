@@ -1,9 +1,9 @@
 +++
 title = "Presage Group presentation at JuliaCon 2025"
 author = "Randy Boyes"
-date = "2021-07-24"
+date = "2025-07-24"
 tags = ["conferences", "open-source"]
-short_text = ""
+short_text = "Data visualization software TidierPlots.jl presented at the global conference for the julia programming language."
 rss_pubdate = Date(2021, 07, 24)
 img = "/assets/juliacon.svg"
 +++
