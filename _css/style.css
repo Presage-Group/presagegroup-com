@@ -1,3 +1,13 @@
+@import "tailwindcss";
+@tailwind utilities
+
+@theme {
+    --color-presage-light-blue: oklch(0.4711 0.099 234.31);
+    --color-presage-dark-blue: oklch(0.3531 0.072973 233.0388);
+    --color-presage-dark-orange: oklch(0.6606 0.1682 28.48);
+    --color-presage-light-orange: oklch(0.7838 0.1347 62.84);
+}
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
