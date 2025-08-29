@@ -57,7 +57,7 @@ end
                 alt="$(e.title)"
               />
               <!-- Gradient overlay -->
-              <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-white"></div>
+              <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-white dark:to-[#1f2937]"></div>
             </div>
 
             <!-- Text column -->
@@ -75,4 +75,3 @@ end
     end
     return html
 end
-
