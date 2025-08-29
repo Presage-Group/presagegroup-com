@@ -291,7 +291,7 @@
                 class="relative w-full py-6 bg-white px-7 sm:max-w-lg sm:rounded-lg"
             >
                 <div class="flex items-center justify-between pb-2">
-                    <h3 class="text-lg font-semibold">Contact Presage:</h3>
+                    <h3 class="text-lg font-semibold dark:text-gray-100">Contact Presage:</h3>
                     <button
                         @click="Alpine.store('contactModal').open = false"
                         class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 mt-1 mr-1 text-gray-600 hover:text-gray-800 hover:bg-gray-50"
@@ -536,7 +536,7 @@
                                     @click="selectedItem=item; selectOpen=false; $refs.selectButton.focus();"
                                     :id="item.value + '-' + selectId"
                                     :data-disabled="item.disabled"
-                                    :class="{ 'bg-neutral-100 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
+                                    :class="{ 'bg-neutral-300 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
                                     @mousemove="selectableItemActive=item"
                                     class="relative flex items-center h-full py-2 pl-8 text-gray-700 cursor-default select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
                                 >
@@ -690,7 +690,7 @@
                     <a
                         href="/pages/story/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Our Story</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -700,7 +700,7 @@
                     <a
                         href="/pages/how/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">How it Works</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -710,7 +710,7 @@
                     <a
                         href="/pages/team"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium"
                             >Meet the Team</span
@@ -722,7 +722,7 @@
                     <a
                         href="https://www.linkedin.com/company/presage-group-inc-/jobs/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Careers</span>
                         <span class="block leading-5 opacity-50"
@@ -732,7 +732,7 @@
                     <a
                         href="/blog/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Blog</span>
                         <span class="block leading-5 opacity-50"
@@ -762,7 +762,7 @@
                 <a
                     href="/pages/industries/airlines/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Airlines and Aerospace</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -772,7 +772,7 @@
                 <a
                     href="/pages/industries/airtraffic/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Air Traffic Control</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -782,7 +782,7 @@
                 <a
                     href="/pages/industries/utilities/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium"
                         >Utilities</span
@@ -794,7 +794,7 @@
                 <a
                     href="/pages/industries/health/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Health and Medicine</span>
                     <span class="block leading-5 opacity-50"
@@ -824,7 +824,7 @@
 <p><a href="https://github.com/Presage-Group/frstore"><code>frstore</code></a> provides these functions for the CRUD operations:</p>
 <table><tr><th align="right">Operation</th><th align="right">Functions</th></tr><tr><td align="right">Create</td><td align="right"><code>frstore_create_document</code></td></tr><tr><td align="right">Read</td><td align="right"><code>frstore_get</code>; <code>frstore_run_query</code></td></tr><tr><td align="right">Update</td><td align="right"><code>frstore_patch</code></td></tr><tr><td align="right">Delete</td><td align="right"><code>frstore_delete</code></td></tr></table>
 <div class="page-foot">
-    Last modified: August 28, 2025
+    Last modified: August 29, 2025
 </div>
 </div>
 </div> <!-- end of class container -->

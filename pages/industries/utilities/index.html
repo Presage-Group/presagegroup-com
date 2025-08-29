@@ -291,7 +291,7 @@
                 class="relative w-full py-6 bg-white px-7 sm:max-w-lg sm:rounded-lg"
             >
                 <div class="flex items-center justify-between pb-2">
-                    <h3 class="text-lg font-semibold">Contact Presage:</h3>
+                    <h3 class="text-lg font-semibold dark:text-gray-100">Contact Presage:</h3>
                     <button
                         @click="Alpine.store('contactModal').open = false"
                         class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 mt-1 mr-1 text-gray-600 hover:text-gray-800 hover:bg-gray-50"
@@ -536,7 +536,7 @@
                                     @click="selectedItem=item; selectOpen=false; $refs.selectButton.focus();"
                                     :id="item.value + '-' + selectId"
                                     :data-disabled="item.disabled"
-                                    :class="{ 'bg-neutral-100 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
+                                    :class="{ 'bg-neutral-300 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
                                     @mousemove="selectableItemActive=item"
                                     class="relative flex items-center h-full py-2 pl-8 text-gray-700 cursor-default select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
                                 >
@@ -690,7 +690,7 @@
                     <a
                         href="/pages/story/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Our Story</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -700,7 +700,7 @@
                     <a
                         href="/pages/how/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">How it Works</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -710,7 +710,7 @@
                     <a
                         href="/pages/team"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium"
                             >Meet the Team</span
@@ -722,7 +722,7 @@
                     <a
                         href="https://www.linkedin.com/company/presage-group-inc-/jobs/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Careers</span>
                         <span class="block leading-5 opacity-50"
@@ -732,7 +732,7 @@
                     <a
                         href="/blog/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Blog</span>
                         <span class="block leading-5 opacity-50"
@@ -762,7 +762,7 @@
                 <a
                     href="/pages/industries/airlines/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Airlines and Aerospace</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -772,7 +772,7 @@
                 <a
                     href="/pages/industries/airtraffic/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Air Traffic Control</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -782,7 +782,7 @@
                 <a
                     href="/pages/industries/utilities/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium"
                         >Utilities</span
@@ -794,7 +794,7 @@
                 <a
                     href="/pages/industries/health/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Health and Medicine</span>
                     <span class="block leading-5 opacity-50"
@@ -832,8 +832,14 @@
 </section>
 <div class="grid grid-cols-1 md:grid-cols-10 gap-4 px-4 md:px-0">
     <div class="md:col-span-6">
-        <h2 class="text-4xl font-bold tracking-tight text-left dark:text-gray-200 py-8 ml-8">Our Work</h2>
-        <p class="text-xl text-gray-500">Keeping systems moving and communities connected depends on more than just infrastructure - it depends on people. 
+        <div class="max-w-[85ch] mx-auto">
+            <h2 
+                class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-left">
+                Our Work
+            </h2>
+            <p 
+                class="text-xl text-gray-500 text-left">
+                Keeping systems moving and communities connected depends on more than just infrastructure - it depends on people. 
 <br>
 <br>
 In the utilities and transportation sectors, human decision-making, organizational safety culture, and leadership capability are as critical as technical systems. When something goes wrong, it’s often a reflection of how decisions were made, how risks were managed, and how leadership shaped both response and accountability.
@@ -842,17 +848,19 @@ In the utilities and transportation sectors, human decision-making, organization
 At Presage, we specialize in uncovering the human, organizational, and cultural factors that shape how these decisions are made in real-time. Our proprietary methodology blends psychological insights, operational understanding, and data-driven analyses to reveal the unique factors influencing how frontline decisions are shaped and how organizations can better support the people making them.
 <br>
 <br>
-Whether it’s a control room operator managing grid fluctuations or a transportation supervisor making split-second judgments during service disruptions, we help organizations uncover what’s truly affecting decision-making under pressure. With the Presage effect at play, your people don’t just adapt to complexity - they’re equipped to thrive and lead through it.</p>
+Whether it’s a control room operator managing grid fluctuations or a transportation supervisor making split-second judgments during service disruptions, we help organizations uncover what’s truly affecting decision-making under pressure. With the Presage effect at play, your people don’t just adapt to complexity - they’re equipped to thrive and lead through it.
+            </p>
+        </div>          
     </div>
 
     <div class="md:col-span-4">
-        <h3 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8 ml-8">
+        <h2 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8 ml-8">
             Our Industry Experts
-        </h3>
+        </h2>
         <div class="flex items-center space-x-4">
     <img src="/assets/Michelle-Morrissey-Headshot.jpg" class="w-28 h-28 mb-6 rounded-full" />
     <div>
-        <p class="font-bold text-xl lg:whitespace-nowrap">Michelle Morrissey</p>
+        <div class="font-bold text-xl lg:whitespace-nowrap mb-0.5 ml-2.5">Michelle Morrissey</div>
         <div class="text-[#00416b] dark:text-gray-300 text-lg ml-2.5">SME, Utilities</div>
         <div class="text-gray-500 dark:text-gray-300 text-lg ml-2.5">Former VP Health Safety Environment</div>
 <div class="text-gray-500 dark:text-gray-300 text-lg ml-2.5">Former VP Construction Services</div>
@@ -862,7 +870,7 @@ Whether it’s a control room operator managing grid fluctuations or a transport
 <div class="flex items-center space-x-4">
     <img src="/assets/Len-Headshot.jpg" class="w-28 h-28 mb-6 rounded-full" />
     <div>
-        <p class="font-bold text-xl lg:whitespace-nowrap">Leonard McMillian</p>
+        <div class="font-bold text-xl lg:whitespace-nowrap mb-0.5 ml-2.5">Leonard McMillian</div>
         <div class="text-[#00416b] dark:text-gray-300 text-lg ml-2.5">SME, Utilities</div>
         <div class="text-gray-500 dark:text-gray-300 text-lg ml-2.5">Chief Operating Officer</div>
 <div class="text-gray-500 dark:text-gray-300 text-lg ml-2.5"></div>
@@ -872,7 +880,7 @@ Whether it’s a control room operator managing grid fluctuations or a transport
 <div class="flex items-center space-x-4">
     <img src="/assets/randy-headshot-1.jpg" class="w-28 h-28 mb-6 rounded-full" />
     <div>
-        <p class="font-bold text-xl lg:whitespace-nowrap">Randy Boyes, PhD</p>
+        <div class="font-bold text-xl lg:whitespace-nowrap mb-0.5 ml-2.5">Randy Boyes, PhD</div>
         <div class="text-[#00416b] dark:text-gray-300 text-lg ml-2.5">Director, Analytics</div>
         <div class="text-gray-500 dark:text-gray-300 text-lg ml-2.5">Former Epidemiologist</div>
 <div class="text-gray-500 dark:text-gray-300 text-lg ml-2.5"></div>
@@ -888,12 +896,12 @@ Whether it’s a control room operator managing grid fluctuations or a transport
 </div>
 <section class="pt-32 bg-white">
     <div class="container max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold tracking-tight text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
             Our Areas of Expertise
         </h2>
         <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
             <div
-    class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
+    class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl"
     data-rounded="rounded-xl"
     data-rounded-max="rounded-full"
 >
@@ -918,7 +926,7 @@ Whether it’s a control room operator managing grid fluctuations or a transport
 </div>
 
 <div
-    class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
+    class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl"
     data-rounded="rounded-xl"
     data-rounded-max="rounded-full"
 >
@@ -943,7 +951,7 @@ Whether it’s a control room operator managing grid fluctuations or a transport
 </div>
 
 <div
-    class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
+    class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl"
     data-rounded="rounded-xl"
     data-rounded-max="rounded-full"
 >
@@ -1032,7 +1040,7 @@ Whether it’s a control room operator managing grid fluctuations or a transport
                     >
                         <span class="block xl:inline">Reach out to experience</span>
                         <span
-                            class="block text-[#00416b] xl:inline"
+                            class="block text-[#00416b] dark:text-[#e76254] xl:inline"
                             data-primary="indigo-600"
                             >the Presage Effect!</span
                         >
@@ -1088,7 +1096,7 @@ Whether it’s a control room operator managing grid fluctuations or a transport
 </section>
 
 <div class="page-foot">
-    Last modified: August 28, 2025
+    Last modified: August 29, 2025
 </div>
 </div>
 </div> <!-- end of class container -->

@@ -293,7 +293,7 @@
                 class="relative w-full py-6 bg-white px-7 sm:max-w-lg sm:rounded-lg"
             >
                 <div class="flex items-center justify-between pb-2">
-                    <h3 class="text-lg font-semibold">Contact Presage:</h3>
+                    <h3 class="text-lg font-semibold dark:text-gray-100">Contact Presage:</h3>
                     <button
                         @click="Alpine.store('contactModal').open = false"
                         class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 mt-1 mr-1 text-gray-600 hover:text-gray-800 hover:bg-gray-50"
@@ -538,7 +538,7 @@
                                     @click="selectedItem=item; selectOpen=false; $refs.selectButton.focus();"
                                     :id="item.value + '-' + selectId"
                                     :data-disabled="item.disabled"
-                                    :class="{ 'bg-neutral-100 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
+                                    :class="{ 'bg-neutral-300 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
                                     @mousemove="selectableItemActive=item"
                                     class="relative flex items-center h-full py-2 pl-8 text-gray-700 cursor-default select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
                                 >
@@ -692,7 +692,7 @@
                     <a
                         href="/pages/story/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Our Story</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -702,7 +702,7 @@
                     <a
                         href="/pages/how/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">How it Works</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -712,7 +712,7 @@
                     <a
                         href="/pages/team"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium"
                             >Meet the Team</span
@@ -724,7 +724,7 @@
                     <a
                         href="https://www.linkedin.com/company/presage-group-inc-/jobs/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Careers</span>
                         <span class="block leading-5 opacity-50"
@@ -734,7 +734,7 @@
                     <a
                         href="/blog/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                     >
                         <span class="block mb-1 font-medium">Blog</span>
                         <span class="block leading-5 opacity-50"
@@ -764,7 +764,7 @@
                 <a
                     href="/pages/industries/airlines/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Airlines and Aerospace</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -774,7 +774,7 @@
                 <a
                     href="/pages/industries/airtraffic/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Air Traffic Control</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -784,7 +784,7 @@
                 <a
                     href="/pages/industries/utilities/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium"
                         >Utilities</span
@@ -796,7 +796,7 @@
                 <a
                     href="/pages/industries/health/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-100"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
                 >
                     <span class="block mb-1 font-medium">Health and Medicine</span>
                     <span class="block leading-5 opacity-50"
@@ -814,13 +814,13 @@
 
   <body>
     <div class="mx-auto mt-10 max-w-6xl px-4">
-      <h3 class="text-2xl font-bold text-gray-800 sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-center md:text-left">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-white sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-center md:text-left">
         OUR STORY
       </h3>
 
       <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
         <div class="md:col-span-3">
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 dark:text-white leading-relaxed">
             It was through his earliest career choice that Presage founder, Martin Smith Ph.D. (“Marty”), first came into to contact with the kind of issues – essentially, those of being ‘only human’ – that he would later be so dedicated to resolving. Aviation was his passion, and as a teenager he worked in ground handling, then flight dispatch, and finally flight operations.
             <br><br>
             Although he loved flying, he was left frustrated and concerned by the frequency of errors and the number of near misses that would have to be averted. Marty’s frustration turned into curiosity when he studied situational awareness in commercial pilots for his doctoral thesis, whose research went on to help form what is now the backbone of Presage.
