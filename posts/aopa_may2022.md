@@ -5,7 +5,7 @@ tags = ["news", "gadme"]
 title = "Owning the Go-Around Button"
 short_text = "Presage and CJP project on go-around decision-making featured in AOPA news"
 rss_pubdate = Date(2022, 05, 11)
-img = "/assets/FlightSafety-Logo-Color.svg"
+img = "/assets/cjp.svg"
 +++
 
 \blogheader{}
