@@ -30,7 +30,7 @@
                 class="relative w-full py-6 bg-white px-7 sm:max-w-lg sm:rounded-lg"
             >
                 <div class="flex items-center justify-between pb-2">
-                    <h3 class="text-lg font-semibold">Contact Presage:</h3>
+                    <h3 class="text-lg font-semibold dark:text-gray-100">Contact Presage:</h3>
                     <button
                         @click="Alpine.store('contactModal').open = false"
                         class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 mt-1 mr-1 text-gray-600 hover:text-gray-800 hover:bg-gray-50"
@@ -275,7 +275,7 @@
                                     @click="selectedItem=item; selectOpen=false; $refs.selectButton.focus();"
                                     :id="item.value + '-' + selectId"
                                     :data-disabled="item.disabled"
-                                    :class="{ 'bg-neutral-100 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
+                                    :class="{ 'bg-neutral-300 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
                                     @mousemove="selectableItemActive=item"
                                     class="relative flex items-center h-full py-2 pl-8 text-gray-700 cursor-default select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
                                 >
