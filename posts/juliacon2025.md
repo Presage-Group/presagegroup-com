@@ -1,12 +1,14 @@
 +++
 title = "Presage Group presentation at JuliaCon 2025"
 author = "Randy Boyes"
-date = "2021-07-24"
+date = "2025-07-24"
 tags = ["conferences", "open-source"]
-short_text = ""
+short_text = "Data visualization software TidierPlots.jl presented at the global conference for the julia programming language."
 rss_pubdate = Date(2021, 07, 24)
 img = "/assets/juliacon.svg"
 +++
+
+\blogheader{}
 
 Presage was represented by Randy Boyes at Juliacon in Pittsburg for the second year as part of our continuing support for open source data analysis. Randy presented the recent developments in TidierPlots.jl, a `ggplot`-inspired package for data visualization in Julia.
 
@@ -31,4 +33,4 @@ Your browser appears to not support revealjs.
 
 ## Video Recording
 
-Randy's talk can be viewed [here](https://www.youtube.com/live/HMdBi9Lrbes?si=dhWGED2UUt2N6AmY&t=411)
+Randy's talk can be viewed [here.](https://www.youtube.com/live/HMdBi9Lrbes?si=dhWGED2UUt2N6AmY&t=411)
