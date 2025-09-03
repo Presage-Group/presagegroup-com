@@ -252,392 +252,234 @@
                     WORK WITH US
                 </button>
                 <template x-teleport="body">
-        <div
-            x-show="Alpine.store('contactModal')?.open"
-            x-transition.opacity
-            @keydown.escape.window="Alpine.store('contactModal').open = false"
-            class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen"
-            x-cloak
+  <div
+    x-show="Alpine.store('contactModal')?.open"
+    x-transition.opacity
+    @keydown.escape.window="Alpine.store('contactModal').open = false"
+    class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen"
+    x-cloak
+  >
+    <!-- Background overlay -->
+    <div
+      @click="Alpine.store('contactModal').open = false"
+      x-transition:enter="ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="ease-in duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="absolute inset-0 w-full h-full bg-black bg-opacity-40"
+    ></div>
+
+    <!-- Modal content -->
+    <div
+      @click.away="Alpine.store('contactModal').open = false"
+      x-transition:enter="ease-out duration-300"
+      x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave="ease-in duration-200"
+      x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      class="relative w-full py-6 bg-white px-7 sm:max-w-lg sm:rounded-lg"
+    >
+      <div class="flex items-center justify-between pb-2">
+        <h3 class="text-lg font-semibold dark:text-gray-100">
+          Contact Presage:
+        </h3>
+        <button
+          @click="Alpine.store('contactModal').open = false"
+          class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 mt-1 mr-1 text-gray-600 hover:text-gray-800 hover:bg-gray-50"
         >
-            <!-- Background overlay -->
-            <div
-                @click="Alpine.store('contactModal').open = false"
-                x-transition:enter="ease-out duration-300"
-                x-transition:enter-start="opacity-0"
-                x-transition:enter-end="opacity-100"
-                x-transition:leave="ease-in duration-300"
-                x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0"
-                class="absolute inset-0 w-full h-full bg-black bg-opacity-40"
-            ></div>
+          <svg
+            class="w-8 h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
 
-            <!-- Modal content -->
-            <div
-                @click.away="Alpine.store('contactModal').open = false"
-                x-transition:enter="ease-out duration-300"
-                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                x-transition:leave="ease-in duration-200"
-                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                class="relative w-full py-6 bg-white px-7 sm:max-w-lg sm:rounded-lg"
-            >
-                <div class="flex items-center justify-between pb-2">
-                    <h3 class="text-lg font-semibold dark:text-gray-100">Contact Presage:</h3>
-                    <button
-                        @click="Alpine.store('contactModal').open = false"
-                        class="absolute top-0 right-0 flex items-center justify-center w-12 h-12 mt-1 mr-1 text-gray-600 hover:text-gray-800 hover:bg-gray-50"
-                    >
-                        <svg
-                            class="w-8 h-8"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6 18L18 6M6 6l12 12"
-                            />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Form fields -->
-                <div class="relative w-auto">
-                    <div class="w-full max-w-xs mx-auto py-1">
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            id="contactName"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
-                        />
-                    </div>
-                    <div class="w-full max-w-xs mx-auto py-1">
-                        <input
-                            type="text"
-                            placeholder="Company"
-                            id="contactCompany"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
-                        />
-                    </div>
-                    <div class="w-full max-w-xs mx-auto py-1">
-                        <input
-                            type="text"
-                            placeholder="Phone Number"
-                            id="contactPhone"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
-                        />
-                    </div>
-                    <div class="w-full max-w-xs mx-auto py-1">
-                        <input
-                            type="text"
-                            placeholder="Email Address"
-                            id="contactEmail"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
-                        />
-                    </div>
-                    <div class="w-full max-w-xs mx-auto py-1">
-                        <input
-                            type="text"
-                            placeholder="Location"
-                            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
-                        />
-                    </div>
-                    <!-- select dropdown -->
-
-                    <div
-                        x-data="{
-                            selectOpen: false,
-                            selectedItem: '',
-                            selectableItems: [
-                                {
-                                    title: 'Airlines and Aerospace',
-                                    value: 'airline',
-                                    disabled: false
-                                },
-                                {
-                                    title: 'Air Traffic Control',
-                                    value: 'ats',
-                                    disabled: false
-                                },
-                                {
-                                    title: 'Utilities',
-                                    value: 'utility',
-                                    disabled: false
-                                },
-                                {
-                                    title: 'Health and Medicine',
-                                    value: 'health',
-                                    disabled: false
-                                },
-                                {
-                                    title: 'Other',
-                                    value: 'other',
-                                    disabled: false
-                                }
-                            ],
-                            selectableItemActive: null,
-                            selectId: $id('select'),
-                            selectKeydownValue: '',
-                            selectKeydownTimeout: 1000,
-                            selectKeydownClearTimeout: null,
-                            selectDropdownPosition: 'bottom',
-                            selectableItemIsActive(item) {
-                                return this.selectableItemActive && this.selectableItemActive.value==item.value;
-                            },
-                            selectableItemActiveNext(){
-                                let index = this.selectableItems.indexOf(this.selectableItemActive);
-                                if(index < this.selectableItems.length-1){
-                                    this.selectableItemActive = this.selectableItems[index+1];
-                                    this.selectScrollToActiveItem();
-                                }
-                            },
-                            selectableItemActivePrevious(){
-                                let index = this.selectableItems.indexOf(this.selectableItemActive);
-                                if(index > 0){
-                                    this.selectableItemActive = this.selectableItems[index-1];
-                                    this.selectScrollToActiveItem();
-                                }
-                            },
-                            selectScrollToActiveItem(){
-                                if(this.selectableItemActive){
-                                    activeElement = document.getElementById(this.selectableItemActive.value + '-' + this.selectId)
-                                    newScrollPos = (activeElement.offsetTop + activeElement.offsetHeight) - this.$refs.selectableItemsList.offsetHeight;
-                                    if(newScrollPos > 0){
-                                        this.$refs.selectableItemsList.scrollTop=newScrollPos;
-                                    } else {
-                                        this.$refs.selectableItemsList.scrollTop=0;
-                                    }
-                                }
-                            },
-                            selectKeydown(event){
-                                if (event.keyCode >= 65 && event.keyCode <= 90) {
-
-                                    this.selectKeydownValue += event.key;
-                                    selectedItemBestMatch = this.selectItemsFindBestMatch();
-                                    if(selectedItemBestMatch){
-                                        if(this.selectOpen){
-                                            this.selectableItemActive = selectedItemBestMatch;
-                                            this.selectScrollToActiveItem();
-                                        } else {
-                                            this.selectedItem = this.selectableItemActive = selectedItemBestMatch;
-                                        }
-                                    }
-
-                                    if(this.selectKeydownValue != ''){
-                                        clearTimeout(this.selectKeydownClearTimeout);
-                                        this.selectKeydownClearTimeout = setTimeout(() => {
-                                            this.selectKeydownValue = '';
-                                        }, this.selectKeydownTimeout);
-                                    }
-                                }
-                            },
-                            selectItemsFindBestMatch(){
-                                typedValue = this.selectKeydownValue.toLowerCase();
-                                var bestMatch = null;
-                                var bestMatchIndex = -1;
-                                for (var i = 0; i < this.selectableItems.length; i++) {
-                                    var title = this.selectableItems[i].title.toLowerCase();
-                                    var index = title.indexOf(typedValue);
-                                    if (index > -1 && (bestMatchIndex == -1 || index < bestMatchIndex) && !this.selectableItems[i].disabled) {
-                                        bestMatch = this.selectableItems[i];
-                                        bestMatchIndex = index;
-                                    }
-                                }
-                                return bestMatch;
-                            },
-                            selectPositionUpdate(){
-                                selectDropdownBottomPos = this.$refs.selectButton.getBoundingClientRect().top + this.$refs.selectButton.offsetHeight + parseInt(window.getComputedStyle(this.$refs.selectableItemsList).maxHeight);
-                                if(window.innerHeight < selectDropdownBottomPos){
-                                    this.selectDropdownPosition = 'top';
-                                } else {
-                                    this.selectDropdownPosition = 'bottom';
-                                }
-                            }
-                        }"
-                        x-init="
-                            $watch('selectOpen', function(){
-                                if(!selectedItem){
-                                    selectableItemActive=selectableItems[0];
-                                } else {
-                                    selectableItemActive=selectedItem;
-                                }
-                                setTimeout(function(){
-                                    selectScrollToActiveItem();
-                                }, 10);
-                                selectPositionUpdate();
-                                window.addEventListener('resize', (event) => { selectPositionUpdate(); });
-                            });
-                        "
-                        @keydown.escape="if(selectOpen){ selectOpen=false; }"
-                        @keydown.down="if(selectOpen){ selectableItemActiveNext(); } else { selectOpen=true; } event.preventDefault();"
-                        @keydown.up="if(selectOpen){ selectableItemActivePrevious(); } else { selectOpen=true; } event.preventDefault();"
-                        @keydown.enter="selectedItem=selectableItemActive; selectOpen=false;"
-                        @keydown="selectKeydown($event);"
-                        class="w-full max-w-xs mx-auto py-1"
-                    >
-                        <button
-                            x-ref="selectButton"
-                            @click="selectOpen=!selectOpen"
-                            :class="{ 'focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400' : !selectOpen }"
-                            class="relative min-h-[38px] flex items-center justify-between w-full py-2 pl-3 pr-10 text-left bg-white border rounded-md shadow-sm cursor-default border-neutral-200/70 focus:outline-none text-sm"
-                        >
-                            <span
-                                x-text="selectedItem ? selectedItem.title : 'Industry'"
-                                class="truncate"
-                                >Industry</span
-                            >
-                            <span
-                                class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                    class="w-5 h-5 text-gray-400"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
-                                        clip-rule="evenodd"
-                                    ></path>
-                                </svg>
-                            </span>
-                        </button>
-
-                        <ul
-                            x-show="selectOpen"
-                            x-ref="selectableItemsList"
-                            @click.away="selectOpen = false"
-                            x-transition:enter="transition ease-out duration-50"
-                            x-transition:enter-start="opacity-0 -translate-y-1"
-                            x-transition:enter-end="opacity-100"
-                            :class="{ 'bottom-0 mb-10' : selectDropdownPosition == 'top', 'top-0 mt-10' : selectDropdownPosition == 'bottom' }"
-                            class="absolute w-full py-1 mt-1 overflow-auto text-sm bg-white rounded-md shadow-md max-h-56 ring-1 ring-black ring-opacity-5 focus:outline-none"
-                            x-cloak
-                        >
-                            <template
-                                x-for="item in selectableItems"
-                                :key="item.value"
-                            >
-                                <li
-                                    @click="selectedItem=item; selectOpen=false; $refs.selectButton.focus();"
-                                    :id="item.value + '-' + selectId"
-                                    :data-disabled="item.disabled"
-                                    :class="{ 'bg-neutral-300 text-gray-900' : selectableItemIsActive(item), '' : !selectableItemIsActive(item) }"
-                                    @mousemove="selectableItemActive=item"
-                                    class="relative flex items-center h-full py-2 pl-8 text-gray-700 cursor-default select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
-                                >
-                                    <svg
-                                        x-show="selectedItem.value==item.value"
-                                        class="absolute left-0 w-4 h-4 ml-2 stroke-current text-neutral-400"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline
-                                            points="20 6 9 17 4 12"
-                                        ></polyline>
-                                    </svg>
-                                    <span
-                                        class="block font-medium truncate"
-                                        x-text="item.title"
-                                    ></span>
-                                </li>
-                            </template>
-                        </ul>
-                    </div>
-
-                    <!-- message -->
-
-                    <div class="w-full max-w-xs mx-auto py-1">
-                        <textarea
-                            x-data="{
-                                    resize () {
-                                        $el.style.height = '0px';
-                                        $el.style.height = $el.scrollHeight + 'px'
-                                    }
-                                }"
-                            x-init="resize()"
-                            @input="resize()"
-                            type="text"
-                            id="contactMessage"
-                            placeholder="Type your message here."
-                            class="flex w-full h-auto min-h-[80px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
-                        ></textarea>
-                    </div>
-                </div>
-                <div class="flex w-full items-center justify-center pt-2">
-                    <button
-                        id="createIssueBtn"
-                        @click="Alpine.store('contactModal').open = false"
-                        class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl text-gray-100 bg-[#00416b] font-medium transition-colors rounded-xl hover:text-neutral-100 focus:outline-none hover:bg-[#00638a] focus:bg-[#00638a] group w-max"
-                    >
-                        SUBMIT
-                    </button>
-
-                    <script>
-                        const functionUrl =
-                            "https://contact-form-linear-254410625793.us-east1.run.app";
-
-                        document
-                            .getElementById("createIssueBtn")
-                            .addEventListener("click", async () => {
-                                // Get values from form fields
-                                const title =
-                                    document.getElementById("contactName")
-                                        .value +
-                                    " - " +
-                                    document.getElementById("contactCompany")
-                                        .value;
-                                const description =
-                                    "Phone: " +
-                                    document.getElementById("contactPhone")
-                                        .value +
-                                    "Email: " +
-                                    document.getElementById("contactEmail")
-                                        .value +
-                                    document.getElementById("contactMessage")
-                                        .value;
-
-                                try {
-                                    const response = await fetch(functionUrl, {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json",
-                                        },
-                                        body: JSON.stringify({
-                                            title: title,
-                                            description: description,
-                                            teamKey: "WLD",
-                                        }),
-                                    });
-
-                                    const result = await response.json();
-                                    console.log("Function response:", result);
-                                } catch (err) {
-                                    console.error(
-                                        "Error calling Cloud Function:",
-                                        err,
-                                    );
-                                    alert(
-                                        "Failed to submit your contact information. Please reach out to hello@presagegroup.com.",
-                                    );
-                                }
-                            });
-                    </script>
-                </div>
-            </div>
+      <!-- Div that tells that form was submitted successfully -->
+      <div class="relative w-auto">
+        <div x-show="Alpine.store('contactModal').formSuccess"
+            class="mb-4 p-3 text-green-800 bg-green-100 rounded" x-cloak>
+            Your message has been submitted successfully!
+            <button @click="Alpine.store('contactModal').formSuccess=false; Alpine.store('contactModal').open=false"
+                    class="ml-2 px-2 py-1 text-sm text-white bg-green-600 rounded">
+                Close
+            </button>
         </div>
-    </template>
+        <!-- Form fields -->
+        <!-- Wrap inputs in a <form> so browser validation runs -->
+        <form id="contactForm">
+          <div class="w-full max-w-xs mx-auto py-1">
+            <input
+              type="text"
+              placeholder="Name"
+              id="contactName"
+              name="name"
+              required
+              class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
+            />
+          </div>
+          <div class="w-full max-w-xs mx-auto py-1">
+            <input
+              type="text"
+              placeholder="Company"
+              id="contactCompany"
+              name="company"
+              class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
+            />
+          </div>
+          <div class="w-full max-w-xs mx-auto py-1">
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              id="contactPhone"
+              name="phone"
+              class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
+            />
+          </div>
+          <div class="w-full max-w-xs mx-auto py-1">
+            <input
+              type="email"
+              placeholder="Email Address"
+              id="contactEmail"
+              name="email"
+              required
+              class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
+            />
+          </div>
+          <div class="w-full max-w-xs mx-auto py-1">
+            <input
+              type="text"
+              placeholder="Location"
+              id="contactLocation"
+              name="location"
+              class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
+            />
+          </div>
+
+          <!-- Industry field -->
+          <!-- Replaced industry dropdown with <select> so that HTML5 validation works -->
+          <div class="w-full max-w-xs mx-auto py-1">
+            <label for="industry" class="sr-only">Industry</label>
+            <select
+              id="industry"
+              name="industry"
+              required
+              class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400"
+            >
+              <option value="">Select an industry</option>
+              <option value="airline">Airlines and Aerospace</option>
+              <option value="ats">Air Traffic Control</option>
+              <option value="utility">Utilities</option>
+              <option value="health">Health and Medicine</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- message -->
+          <div class="w-full max-w-xs mx-auto py-1">
+            <textarea
+              x-data="{
+                resize () {
+                  $el.style.height = '0px';
+                  $el.style.height = $el.scrollHeight + 'px'
+                }
+              }"
+              x-init="resize()"
+              @input="resize()"
+              id="contactMessage"
+              name="message"
+              placeholder="Type your message here."
+              class="flex w-full h-auto min-h-[80px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+            ></textarea>
+          </div>
+
+          <div class="flex w-full items-center justify-center pt-2">
+            <button
+              type="submit"
+              id="createIssueBtn"
+              class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl text-gray-100 bg-[#00416b] font-medium transition-colors rounded-xl hover:text-neutral-100 focus:outline-none hover:bg-[#00638a] focus:bg-[#00638a] group w-max"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <script>
+        Alpine.store('contactModal').formSuccess = false;
+        const functionUrl =
+          "https://contact-form-linear-254410625793.us-east1.run.app";
+
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+
+            // Let browser show native validation messages
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              return;
+            }
+
+            // Collect values
+            const title = form.name.value + " - " + form.company.value;
+            const description =
+              "Phone: " +
+              form.phone.value +
+              " Email: " +
+              form.email.value +
+              " Location: " +
+              form.location.value +
+              " Industry: " +
+              form.industry.value +
+              " Message: " +
+              form.message.value;
+
+            try {
+              const response = await fetch(functionUrl, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  title: title,
+                  description: description,
+                  teamKey: "WLD",
+                }),
+              });
+
+              const result = await response.json();
+              console.log("Function response:", result);
+
+              // Close form & reset form
+              // Alpine.store("contactModal").open = false;
+              form.reset();
+              Alpine.store("contactModal").formSuccess = true; // show success message
+            } catch (err) {
+              console.error("Error calling Cloud Function:", err);
+              alert(
+                "Failed to submit your contact information. Please reach out to hello@presagegroup.com."
+              );
+            }
+          });
+      </script>
+    </div>
+  </div>
+</template>
 </div>
 
             </div>
