@@ -3,7 +3,7 @@
 @def date = "2022-08-18"
 @def tags = ["projects", "GADME"]
 @def short_text = "AIR International's August 2022 edition discusses the Go-Around Decision-Making & Execution (GADM&E) study for the Gulfstream G500, G600, & G650"
-@def img = "/assets/gulfstream.jpg"
+@def img = "/assets/images/pexels-saturnus99-19766183.jpg"
 
 @def rss_pubdate = Date(2022, 08, 18)
 
