@@ -7,11 +7,11 @@ function hfun_small_card(args)
 
     card = """
     <div class="flex flex-col items-center justify-between p-6">
-        <img class="mx-auto mb-1 w-36 h-36 rounded-full object-cover" src="$photo" alt="$name">
+        <a href=$page><img class="mx-auto mb-1 w-36 h-36 rounded-full object-cover" src="$photo" alt="$name"></a>
         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <a href=$page>$name</a>
         </h3>
-        <p class="mb-1 text-gray-500 dark:text-gray-400">$title</p>
+        <p class="mb-1 text-gray-500 dark:text-gray-400"><a href=$page>$title</a></p>
         <ul class="flex justify-center space-x-4">
     """
 
@@ -146,7 +146,7 @@ function hfun_member(args)
           <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-2">$name</h1>
           <h2 class="text-lg font-medium text-gray-500 dark:text-gray-400 mb-6">$title</h2>
           <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-8">$bio</p>
-          <ul class="flex justify-center space-x-6">
+          <ul class="flex justify-center space-x-6 mb-8">
     """
 
     for link in 1:2:length(links)
@@ -155,9 +155,13 @@ function hfun_member(args)
 
     html *= """
           </ul>
+          <a href="/pages/team/" class="inline-block px-6 py-3 rounded-lg bg-[#00638a] text-white font-medium shadow hover:bg-[#00638a] transition">
+            ← Back to Team
+          </a>
         </div>
       </div>
     </section>
     """
     return html
 end
+
