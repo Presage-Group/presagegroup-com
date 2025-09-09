@@ -4,7 +4,7 @@ layout = "base_service"
 +++
 
 {{service 
-"/assets/images/airlines_page.jpg"
+"/assets/images/airlines_page.webp"
 "Airlines and Aerospace" 
 "Leaders in pilot decision-making, organizational <br> culture, and flight path management"
 
@@ -43,10 +43,10 @@ health. Development of a digital application to support pilot wellbeing
 that will contribute to a healthier, more sustainable approach to 
 mental health in the industry, is well underway."
 
-"Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
-"Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Director of Flight Safety;Chair of FSF International Advisory Committee"
-"Capt. Mark Stow|SME, Aviation|/assets/M.Stow-headshot.jpg|Former Chief Pilot, B787;Former Director, Flight Ops (Air Canada)"
-"Capt. Jacques Mignault|SME, Aviation|/assets/jacques.jpg|Former Instructor, Check Pilot (Air Transat);Former Sr Director Safety, Quality and Security"
+"Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.webp|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
+"Capt. Bill Curtis|Head of Aviation|/assets/will.webp|Former Director of Flight Safety;Chair of FSF International Advisory Committee"
+"Capt. Mark Stow|SME, Aviation|/assets/M.Stow-headshot.webp|Former Chief Pilot, B787;Former Director, Flight Ops (Air Canada)"
+"Capt. Jacques Mignault|SME, Aviation|/assets/jacques.webp|Former Instructor, Check Pilot (Air Transat);Former Sr Director Safety, Quality and Security"
 
 "--areas--"
 "Pilot Decision Making|Go-around decision making and execution, flight path management."
@@ -54,7 +54,7 @@ mental health in the industry, is well underway."
 "Pilot Wellbeing|Safeguarding and supporting pilots’ mental health and wellbeing."
 
 --projects--
-"British Antarctic Survey|A review of takeoff and landing procedures prior to the introduction of a new aircraft type|Scientific Aviation|Brooke Linden|June 3rd, 2025|8 min. read|/assets/cases/BAS.pdf|/assets/images/antarctica.jpg|bg-orange-500"
-"Virgin Australia|Aligning policies and pilot mental models by understanding decision-making in the moment|Commercial Aviation|Brooke Linden|April 6, 2021|10 min. read|/assets/cases/virgin.pdf|/assets/images/virgin.jpg|bg-red-500"
-"/assets/images/citation.jpg"
+"British Antarctic Survey|A review of takeoff and landing procedures prior to the introduction of a new aircraft type|Scientific Aviation|Brooke Linden|June 3rd, 2025|8 min. read|/assets/cases/BAS.pdf|/assets/images/antarctica.webp|bg-orange-500"
+"Virgin Australia|Aligning policies and pilot mental models by understanding decision-making in the moment|Commercial Aviation|Brooke Linden|April 6, 2021|10 min. read|/assets/cases/virgin.pdf|/assets/images/virgin.webp|bg-red-500"
+"/assets/citation.webp"
 }}

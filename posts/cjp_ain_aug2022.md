@@ -5,7 +5,7 @@ tags = ["news", "gadme"]
 title = "Pilot Association Aims To Curb Runway Excursion Accidents"
 short_text = "Presage Group's work with the Citation Jet Pilots Owner's Association (CJP) was featured in an article in AIN."
 rss_pubdate = Date(2021, 07, 24)
-img = "/assets/martin-smith-dsc02119.jpg"
+img = "/assets/martin-smith-dsc02119.webp"
 +++
 
 \blogheader{}
