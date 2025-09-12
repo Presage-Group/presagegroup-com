@@ -4,7 +4,7 @@ layout = "base_service"
 +++
 
 {{service 
-"/assets/images/atc_page.jpg"
+"/assets/images/atc_page.webp"
 "Air Traffic Control" 
 "Leaders in ATC decision-making and <br> organizational safety culture"
 
@@ -19,9 +19,9 @@ Our work in ATC is driven by experienced industry professionals and supported by
 <br>
 Whether we’re conducting culture diagnostics, evaluating real-time decision processes, or designing proactive wellbeing initiatives, our approach is collaborative, data-informed, and grounded in the unique operational demands of Air Traffic Control."
 
-"Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.jpg|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
-"Capt. Bill Curtis|Head of Aviation|/assets/will.jpg|Former Director of Flight Safety;Chair of FSF International Advisory Committee"
-"Kathleen Fox|SME, ATC|/assets/kathyfox.jpg|Former VP Operations, Nav Canada; Former Chair, Transportation Safety Board"
+"Capt. Piyush Gandhi, MBA|VP Operations and Business Development|/assets/Piyush.webp|Former VP, Flight Ops (Sunwing and Porter);Former B737 Captain"
+"Capt. Bill Curtis|Head of Aviation|/assets/will.webp|Former Director of Flight Safety;Chair of FSF International Advisory Committee"
+"Kathleen Fox|SME, ATC|/assets/kathyfox.webp|Former VP Operations, Nav Canada; Former Chair, Transportation Safety Board"
 
 "--areas--"
 "Controller Decision Making|Operational compliance, best practices, and safety first."
@@ -29,6 +29,6 @@ Whether we’re conducting culture diagnostics, evaluating real-time decision pr
 "Air Traffic Controller Well Being|Safeguarding and supporting controllers' mental health and wellbeing."
 
 --projects--
-"Airways New Zealand|A review of safety culture|Scientific Aviation|Brooke Linden|2023|8 min. read|/assets/cases/Airways.pdf|/assets/images/DVOR with aircraft 2.jpeg|bg-orange-500"
-"/assets/images/tower.jpg"
+"Airways New Zealand|A review of safety culture|Scientific Aviation|Brooke Linden|2023|8 min. read|/assets/cases/Airways.pdf|/assets/images/DVOR with aircraft 2.webp|bg-orange-500"
+"/assets/images/tower.webp"
 }}

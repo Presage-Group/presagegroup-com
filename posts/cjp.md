@@ -3,7 +3,7 @@
 @def date = "2021-05-18"
 @def tags = ["projects", "gadme"]
 @def short_text = "We are pleased to announce that Citation Jet Pilots Owner Pilot Association (CJP) has signed a SaaS agreement with Presage Group Inc. to partner in a scientific study"
-@def img = "/assets/citation.jpg"
+@def img = "/assets/citation.webp"
 @def rss_pubdate = Date(2021, 05, 18)
 
 \blogheader{}

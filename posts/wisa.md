@@ -3,7 +3,7 @@
 @def date = "2025-08-22"
 @def tags = ["analytics", "wisa"]
 @def short_text = "Aerospace Sustainability and its Intersection with Mental Health and Wellbeing"
-@def img = "/assets/images/wisa_logo.jpg"
+@def img = "/assets/images/wisa_logo.webp"
 @def rss_pubdate = Date(2025, 08, 22)
 
 \blogheader{}

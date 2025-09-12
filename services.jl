@@ -189,6 +189,7 @@ function hfun_projects(project_params::Vector{String})
     # drop the CTA image if it’s the last entry
     clean_params = filter(p -> endswith(p, ".jpg") == false &&
                            endswith(p, ".jpeg") == false &&
+                           endswith(p, ".webp") == false &&
                            endswith(p, ".png") == false, project_params)
 
     if isempty(clean_params)
@@ -256,7 +257,7 @@ function hfun_marquee()
             >
                 <img src="/assets/Delta_logo.svg" width="100" />
                 <img src="/assets/luft.svg" width="100" />
-                <img src="/assets/airways.png" width="100" />
+                <img src="/assets/airways.webp" width="100" />
                 <img src="/assets/air-canada.svg" width="100" />
                 <img src="/assets/FlightSafety-Logo-Color.svg" width="100" />
                 <img src="/assets/Virgin_Australia_Logo_2022.svg" width="100" />
@@ -283,7 +284,7 @@ end
 
 
 
-function hfun_call_to_action(img::String="/assets/images/citation.jpg")
+function hfun_call_to_action(img::String="/assets/images/citation.webp")
     return """
     <section class="px-2 py-25 bg-white md:px-0">
         <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">

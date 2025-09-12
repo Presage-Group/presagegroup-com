@@ -3,7 +3,7 @@
 @def date = "2025-08-21"
 @def tags = ["analytics", "google"]
 @def short_text = "Easy API access to Firestore in R"
-@def img = "/assets/images/frstore.png"
+@def img = "/assets/images/frstore.webp"
 
 @def rss_pubdate = Date(2025, 08, 21)
 

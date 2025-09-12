@@ -4,7 +4,7 @@ layout = "base_service"
 +++
 
 {{service 
-"/assets/images/health_page.jpg"
+"/assets/images/health_page.webp"
 "Health and Wellbeing" 
 "Emerging leaders in organizational culture <br> related to mental health and wellbeing"
 
@@ -16,10 +16,10 @@ Our team includes subject matter experts in medicine, epidemiology, health scien
 <br>
 As we extend our work into healthcare and related domains, our approach remains rooted in one core belief: that human sustainability (the mental, emotional, and organizational conditions that enable people to perform their best) is not a nice-to-have. It's essential."
 
-"Martin Smith, PhD|Co-founder / CEO|/assets/martin.jpg|Former Pilot and Flight Dispatcher;"
-"Brooke Linden, PhD|Director, Research|/assets/brooke-headshot.jpg|Research Scientist, Health Services and <br> Policy Research Institute;"
-"Richard Karl, PhD|SME, Medicine & Surgery|/assets/Dick-Karl-3.jpg|Chairman Emeritus of the Surgery Department <br> at the University of South Florida <br> Morsani College of Medicine;"
-"Randy Boyes, PhD|Director, Analytics|/assets/randy-headshot-1.jpg|Former Epidemiologist;"
+"Martin Smith, PhD|Co-founder / CEO|/assets/martin.webp|Former Pilot and Flight Dispatcher;"
+"Brooke Linden, PhD|Director, Research|/assets/brooke-headshot.webp|Research Scientist, Health Services and <br> Policy Research Institute;"
+"Richard Karl, PhD|SME, Medicine & Surgery|/assets/Dick-Karl-3.webp|Chairman Emeritus of the Surgery Department <br> at the University of South Florida <br> Morsani College of Medicine;"
+"Randy Boyes, PhD|Director, Analytics|/assets/randy-headshot-1.webp|Former Epidemiologist;"
 
 "--areas--"
 "Decision Making|How are your people making decisions under pressure?"
@@ -28,5 +28,5 @@ As we extend our work into healthcare and related domains, our approach remains 
 
 
 "--projects--"
-"/assets/images/health.jpg"
+"/assets/images/health.webp"
 }}

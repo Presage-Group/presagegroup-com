@@ -3,7 +3,7 @@
 @def date = "2025-08-22"
 @def tags = ["team", "announcement"]
 @def short_text = "Welcoming Kathy Fox to Team"
-@def img = "/assets/kathyfox.jpg"
+@def img = "/assets/kathyfox.webp"
 @def rss_pubdate = Date(2025, 08, 22)
 
 \blogheader{}
