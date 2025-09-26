@@ -244,15 +244,15 @@ function hfun_marquee()
         class="relative w-full py-3 mx-auto overflow-hidden text-lg italic tracking-wide text-white uppercase bg-gray-900 max-w-7xl sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl"
     >
         <div
-            class="absolute left-0 z-20 w-40 h-full bg-gradient-to-r from-gray-900 to-transparent"
+            class="absolute left-0 z-20 w-40 h-full bg-linear-to-r from-gray-900 to-transparent"
         ></div>
         <div
-            class="absolute right-0 z-20 w-40 h-full bg-gradient-to-l from-gray-900 to-transparent"
+            class="absolute right-0 z-20 w-40 h-full bg-linear-to-l from-gray-900 to-transparent"
         ></div>
         <div x-ref="content" class="flex animate-marquee">
             <div
                 x-ref="item"
-                class="flex items-center justify-around flex-shrink-0 w-full py-2 space-x-2 text-white"
+                class="flex items-center justify-around shrink-0 w-full py-2 space-x-2 text-white"
             >
                 <img src="/assets/Delta_logo.svg" width="100" />
                 <img src="/assets/luft.svg" width="100" />

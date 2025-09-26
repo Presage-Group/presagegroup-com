@@ -131,7 +131,7 @@ function grid_post(title, link, date, short_text="test", author="Presage Group";
     html = """
     <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
         <a href="/$link/" class="block">
-            <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="$img_src">
+            <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="$img_src">
         </a>
         <div class="flex flex-col w-full md:flex-row">
           $tag_html

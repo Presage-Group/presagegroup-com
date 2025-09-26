@@ -3,7 +3,7 @@
     x-show="Alpine.store('contactModal')?.open"
     x-transition.opacity
     @keydown.escape.window="Alpine.store('contactModal').open = false"
-    class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen"
+    class="fixed top-0 left-0 z-99 flex items-center justify-center w-screen h-screen"
     x-cloak
   >
     <!-- Background overlay -->
