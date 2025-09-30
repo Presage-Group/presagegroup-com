@@ -350,7 +350,7 @@ h5 a:visited {
 }
 
 .franklin-content p {
-    margin: 0 auto 1.25rem auto;
+    margin: 1rem auto 1.25rem auto;
     padding: 0;
     line-height: 1.6;
     max-width: 70ch;
@@ -363,7 +363,7 @@ h5 a:visited {
 .franklin-content h4,
 .franklin-content h5,
 .franklin-content h6 {
-    margin: 0 auto 1.5rem auto;
+    /* margin: 0 auto 1.5rem auto; */
     max-width: 70ch;
     padding: 0;
     font-weight: 800;
@@ -414,11 +414,11 @@ td {
     LINKS
 ================================================================== */
 
-.franklin-content h1 {
+/* .franklin-content h1 {
     padding-bottom: 0.5em;
     margin-top: 1.5em;
     margin-bottom: 1em;
-}
+} */
 
 .franklin-content h2 {
     padding-bottom: 0.5em;
@@ -428,6 +428,11 @@ td {
 
 .franklin-content a {
     color: #00415b;
+    text-decoration: none;
+}
+
+.blue-btn {
+    color: white !important;
     text-decoration: none;
 }
 

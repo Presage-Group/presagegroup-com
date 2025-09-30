@@ -100,7 +100,7 @@ function featured_post(title, link, date, short_text="test", author="Presage Gro
                   $tag_html
                 </div>
 
-                <p class="pt-2 text-sm font-medium">by <a href="/pages/team.html" class="mr-1 underline">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600">$length_html</span></p>
+                <p class="pt-2 text-sm font-medium">by <a href="/pages/team" class="mr-1 underline">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600">$length_html</span></p>
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@ function grid_post(title, link, date, short_text="test", author="Presage Group";
         </div>
         <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/$link/">$title</a></h2>
         <p class="text-sm text-gray-500">$short_text</p>
-        <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600">$length_html</span></p>
+        <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600">$length_html</span></p>
     </div>
     """
     return html
