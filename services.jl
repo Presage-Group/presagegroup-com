@@ -17,7 +17,7 @@ function hfun_hero(params)
                     <span class="block">$hero_title</span>
                 </h1>
                 <h2
-                    class="text-white text-left text-base sm:text-2xl md:text-3xl mt-1 leading-snug break-words"
+                    class="text-white text-left text-base sm:text-2xl md:text-3xl mt-4 leading-snug break-words"
                 >
                     $hero_subtitle
                 </h2>
@@ -79,7 +79,7 @@ function hfun_work(work_text, experts_html="")
             </h2>
             $experts_html
             <div class="text-center">
-                <a href="/pages/team/" class="mx-auto inline-block px-6 py-3 mt-4 mb-3 text-lg text-white bg-[#00416b] rounded-full hover:bg-[#00638a]" data-primary="#00416b" data-rounded="rounded-full">
+                <a href="/pages/team/" class="blue-btn mx-auto inline-block px-6 py-3 mt-4 mb-3 text-lg text-white bg-[#00416b] rounded-full hover:bg-[#00638a]" data-primary="#00416b" data-rounded="rounded-full">
                     Learn More About Our Team
                 </a>
             </div>
@@ -245,15 +245,15 @@ function hfun_marquee()
         class="relative w-full py-3 mx-auto overflow-hidden text-lg italic tracking-wide text-white uppercase bg-gray-900 max-w-7xl sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl"
     >
         <div
-            class="absolute left-0 z-20 w-40 h-full bg-gradient-to-r from-gray-900 to-transparent"
+            class="absolute left-0 z-20 w-40 h-full bg-linear-to-r from-gray-900 to-transparent"
         ></div>
         <div
-            class="absolute right-0 z-20 w-40 h-full bg-gradient-to-l from-gray-900 to-transparent"
+            class="absolute right-0 z-20 w-40 h-full bg-linear-to-l from-gray-900 to-transparent"
         ></div>
         <div x-ref="content" class="flex animate-marquee">
             <div
                 x-ref="item"
-                class="flex items-center justify-around flex-shrink-0 w-full py-2 space-x-2 text-white"
+                class="flex items-center justify-around shrink-0 w-full py-2 space-x-2 text-white"
             >
                 <img src="/assets/Delta_logo.svg" width="100" />
                 <img src="/assets/luft.svg" width="100" />
@@ -312,7 +312,7 @@ function hfun_call_to_action(img::String="/assets/images/citation.webp")
                         <div class="relative flex flex-col sm:flex-row sm:space-x-4">
                             <a
                                 href="mailto:info@presagegroup.com?subject=RFP%20Aviation?body=Describe%20your%20question"
-                                class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-[#00416b] rounded-md sm:mb-0 hover:bg-[#00638a] sm:w-auto"
+                                class="blue-btn flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-[#00416b] rounded-md sm:mb-0 hover:bg-[#00638a] sm:w-auto"
                                 data-primary="#00416b"
                                 data-rounded="rounded-md"
                             >
