@@ -5,14 +5,18 @@
     <meta name="description" content="" />
     <title>Presage Group</title>
     <!-- bootstrap@5.3.1 and bootstrap icon@1.10-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link rel="stylesheet" href="/css/output.css">
+<!-- <link rel="stylesheet" href="/css/franklin.css"> -->
+<!-- <link rel="stylesheet" href="/css/logos.css"> -->
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"> -->
 <!-- fonts -->
-<link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons">
+<!-- <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 <!-- favicon generated through https://realfavicongenerator.net/-->
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
@@ -35,7 +39,7 @@
         src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
         defer
     ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script defer>
         document.addEventListener("alpine:init", () => {
             Alpine.store("contactModal", { open: false });
@@ -74,7 +78,7 @@
             <a
                 href="/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Home</span>
             </a>
@@ -82,28 +86,28 @@
             <a
                 href="/pages/story/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Our Story</span>
             </a>
             <a
                 href="/pages/how/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>How it Works</span>
             </a>
             <a
                 href="/pages/team/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Meet the Team</span>
             </a>
             <a
                 href="/blog/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Blog</span>
             </a>
@@ -111,28 +115,28 @@
             <a
                 href="/pages/industries/airlines/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Airlines and Aerospace</span>
             </a>
             <a
                 href="/pages/industries/airtraffic/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Air Traffic Control</span>
             </a>
             <a
                 href="/pages/industries/utilities/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Utilities</span>
             </a>
             <a
                 href="/pages/industries/health/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Health and Wellbeing</span>
             </a>
@@ -202,7 +206,7 @@
                 <span>ABOUT US</span>
                 <svg
                     :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == 'about-us' }"
-                    class="relative top-[1px] ml-1 h-3 w-3 ease-out duration-300"
+                    class="relative top-px ml-1 h-3 w-3 ease-out duration-300"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -224,7 +228,7 @@
                 <span>SERVICES</span>
                 <svg
                     :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == 'learn-more' }"
-                    class="relative top-[1px] ml-1 h-3 w-3 ease-out duration-300"
+                    class="relative top-px ml-1 h-3 w-3 ease-out duration-300"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -256,7 +260,7 @@
     x-show="Alpine.store('contactModal')?.open"
     x-transition.opacity
     @keydown.escape.window="Alpine.store('contactModal').open = false"
-    class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen"
+    class="fixed top-0 left-0 z-99 flex items-center justify-center w-screen h-screen"
     x-cloak
   >
     <!-- Background overlay -->
@@ -507,7 +511,7 @@
                 class="flex items-stretch justify-center w-full max-w-2xl p-6 gap-x-3"
             >
                 <div
-                    class="flex-shrink-0 w-48 rounded pt-28 pb-7 bg-gradient-to-br from-neutral-800 to-[#00415b]"
+                    class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
                 >
                     <img
                         src="/assets/Presage_Logo_TXTwhite.svg"
@@ -570,7 +574,7 @@
             class="flex items-stretch justify-center w-full max-w-2xl p-6 gap-x-3"
         >
             <div
-                class="flex-shrink-0 w-48 rounded pt-28 pb-7 bg-gradient-to-br from-neutral-800 to-[#00415b]"
+                class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
             >
                 <img
                     src="/assets/Presage_Logo_TXTwhite.svg"
@@ -666,7 +670,7 @@
 
             </div>
 
-            <p class="pt-2 text-sm font-medium">by <a href="/pages/team.html" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">2025-08-24</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+            <p class="pt-2 text-sm font-medium">by <a href="/pages/team" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">2025-08-24</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
         </div>
     </div>
 </div>
@@ -675,7 +679,7 @@
   <div class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/welcome_kathy/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/kathyfox.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/kathyfox.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -694,11 +698,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/welcome_kathy/">Welcoming Kathy to the Presage team!</a></h2>
     <p class="text-sm text-gray-500">Welcoming Kathy Fox to Team</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">2025-08-22</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">2025-08-22</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/wisa/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/wisa_logo.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/wisa_logo.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -717,11 +721,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/wisa/">Presage Awarded WISA Grant to Conduct Research</a></h2>
     <p class="text-sm text-gray-500">Aerospace Sustainability and its Intersection with Mental Health and Wellbeing</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">2025-08-22</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">2025-08-22</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/frstore/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/frstore.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/frstore.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -740,11 +744,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/frstore/">frstore: R interface to Google Firestore Database</a></h2>
     <p class="text-sm text-gray-500">Easy API access to Firestore in R</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Umair Durrani</a> · <span class="mx-1">2025-08-21</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Umair Durrani</a> · <span class="mx-1">2025-08-21</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/linear/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/Presage_Logo_noTXT.svg">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/330px-R_logo.svg.png">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -763,11 +767,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/linear/">lineaR: R interface to linear.app</a></h2>
     <p class="text-sm text-gray-500">Read data from and write data to linear.app using the GraphQL API in R.</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Umair Durrani</a> · <span class="mx-1">2025-08-21</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Umair Durrani</a> · <span class="mx-1">2025-08-21</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/useR2025/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/user2025_logo.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/user2025_logo.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -792,11 +796,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/useR2025/">useR! 2025 Talk about Web APIs</a></h2>
     <p class="text-sm text-gray-500">Interacting with the firestore web API in R using our open source package</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Umair Durrani</a> · <span class="mx-1">2025-08-19</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Umair Durrani</a> · <span class="mx-1">2025-08-19</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/juliacon2025/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/juliacon.svg">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/juliacon.svg">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -815,11 +819,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/juliacon2025/">Presage Group presentation at JuliaCon 2025</a></h2>
     <p class="text-sm text-gray-500">Data visualization software TidierPlots.jl presented at the global conference for the julia programming language.</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2025-07-24</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2025-07-24</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/twin_and_turbine2024/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/TTlogo.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/TTlogo.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -838,11 +842,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/twin_and_turbine2024/">Navigating the Skies with Confidence: CJP’s Commitment to Safety</a></h2>
     <p class="text-sm text-gray-500">Presage Group's work with the Citation Jet Pilots Owner's Association (CJP) was featured in an article in Twin & Turbine.</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2024-01-01</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2024-01-01</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/airinternational/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/pexels-saturnus99-19766183.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/images/pexels-saturnus99-19766183.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -861,11 +865,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/airinternational/">Presage Group featured in AIR International</a></h2>
     <p class="text-sm text-gray-500">AIR International's August 2022 edition discusses the Go-Around Decision-Making & Execution (GADM&E) study for the Gulfstream G500, G600, & G650</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Piyush Gandhi</a> · <span class="mx-1">2022-08-18</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Piyush Gandhi</a> · <span class="mx-1">2022-08-18</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/ain_may2022/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/FlightSafety-Logo-blue.svg">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/FlightSafety-Logo-blue.svg">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -884,11 +888,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/ain_may2022/">FlightSafety, Presage Team On Gulfstream Go-around Study</a></h2>
     <p class="text-sm text-gray-500">FlightSafety International and Presage Group partner on groundbreaking psychological study of go-around decision making for Gulfstream operators.</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2022-05-11</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2022-05-11</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/aopa_may2022/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/cjp.svg">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/cjp.svg">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -907,11 +911,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/aopa_may2022/">Owning the Go-Around Button</a></h2>
     <p class="text-sm text-gray-500">Presage and CJP project on go-around decision-making featured in AOPA news</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2022-05-11</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2022-05-11</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/cjp_ain_aug2022/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/martin-smith-dsc02119.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/martin-smith-dsc02119.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -930,11 +934,11 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/cjp_ain_aug2022/">Pilot Association Aims To Curb Runway Excursion Accidents</a></h2>
     <p class="text-sm text-gray-500">Presage Group's work with the Citation Jet Pilots Owner's Association (CJP) was featured in an article in AIN.</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2022-02-01</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Randy Boyes</a> · <span class="mx-1">2022-02-01</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
 <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
     <a href="/posts/cjp/" class="block">
-        <img class="object-contain w-full aspect-[16/9] mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/citation.webp">
+        <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="/assets/citation.webp">
     </a>
     <div class="flex flex-col w-full md:flex-row">
       
@@ -953,21 +957,21 @@
     </div>
     <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/posts/cjp/">Presage Group partners with Citation Jet Pilots</a></h2>
     <p class="text-sm text-gray-500">We are pleased to announce that Citation Jet Pilots Owner Pilot Association (CJP) has signed a SaaS agreement with Presage Group Inc. to partner in a scientific study</p>
-    <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Piyush Gandhi</a> · <span class="mx-1">2021-05-18</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+    <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Piyush Gandhi</a> · <span class="mx-1">2021-05-18</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
 </div>
     </div>
   </div>
 </section>
 
 <div class="page-foot">
-    Last modified: September 12, 2025
+    Last modified: October 02, 2025
 </div>
 </div>
 </div> <!-- end of class container -->
 
 <footer class="container">
     <section class="bg-white">
-        <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <div class="max-w-(--breakpoint-xl) px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
             <div class="flex justify-center mt-8 space-x-6">
                 <a href="https://x.com/PresageGroup" class="text-gray-400 hover:text-gray-500">
                     <span class="sr-only">X</span>

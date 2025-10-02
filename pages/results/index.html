@@ -7,14 +7,18 @@
     <meta name="description" content="" />
     <title>Presage Group</title>
     <!-- bootstrap@5.3.1 and bootstrap icon@1.10-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link rel="stylesheet" href="/css/output.css">
+<!-- <link rel="stylesheet" href="/css/franklin.css"> -->
+<!-- <link rel="stylesheet" href="/css/logos.css"> -->
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"> -->
 <!-- fonts -->
-<link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons">
+<!-- <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 <!-- favicon generated through https://realfavicongenerator.net/-->
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
@@ -37,7 +41,7 @@
         src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
         defer
     ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script defer>
         document.addEventListener("alpine:init", () => {
             Alpine.store("contactModal", { open: false });
@@ -76,7 +80,7 @@
             <a
                 href="/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Home</span>
             </a>
@@ -84,28 +88,28 @@
             <a
                 href="/pages/story/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Our Story</span>
             </a>
             <a
                 href="/pages/how/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>How it Works</span>
             </a>
             <a
                 href="/pages/team/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Meet the Team</span>
             </a>
             <a
                 href="/blog/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Blog</span>
             </a>
@@ -113,28 +117,28 @@
             <a
                 href="/pages/industries/airlines/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Airlines and Aerospace</span>
             </a>
             <a
                 href="/pages/industries/airtraffic/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Air Traffic Control</span>
             </a>
             <a
                 href="/pages/industries/utilities/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Utilities</span>
             </a>
             <a
                 href="/pages/industries/health/"
                 @click="menuBarOpen=false"
-                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
             >
                 <span>Health and Wellbeing</span>
             </a>
@@ -204,7 +208,7 @@
                 <span>ABOUT US</span>
                 <svg
                     :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == 'about-us' }"
-                    class="relative top-[1px] ml-1 h-3 w-3 ease-out duration-300"
+                    class="relative top-px ml-1 h-3 w-3 ease-out duration-300"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -226,7 +230,7 @@
                 <span>SERVICES</span>
                 <svg
                     :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == 'learn-more' }"
-                    class="relative top-[1px] ml-1 h-3 w-3 ease-out duration-300"
+                    class="relative top-px ml-1 h-3 w-3 ease-out duration-300"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -258,7 +262,7 @@
     x-show="Alpine.store('contactModal')?.open"
     x-transition.opacity
     @keydown.escape.window="Alpine.store('contactModal').open = false"
-    class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen"
+    class="fixed top-0 left-0 z-99 flex items-center justify-center w-screen h-screen"
     x-cloak
   >
     <!-- Background overlay -->
@@ -509,7 +513,7 @@
                 class="flex items-stretch justify-center w-full max-w-2xl p-6 gap-x-3"
             >
                 <div
-                    class="flex-shrink-0 w-48 rounded pt-28 pb-7 bg-gradient-to-br from-neutral-800 to-[#00415b]"
+                    class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
                 >
                     <img
                         src="/assets/Presage_Logo_TXTwhite.svg"
@@ -572,7 +576,7 @@
             class="flex items-stretch justify-center w-full max-w-2xl p-6 gap-x-3"
         >
             <div
-                class="flex-shrink-0 w-48 rounded pt-28 pb-7 bg-gradient-to-br from-neutral-800 to-[#00415b]"
+                class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
             >
                 <img
                     src="/assets/Presage_Logo_TXTwhite.svg"
@@ -651,7 +655,7 @@
                         <span>Featured</span>
                     </div>
                     <h1 class="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl"><a href="/assets/cases/BAS.pdf">Aviation Case Study: British Antarctic Survey</a></h1>
-                    <p class="pt-2 text-sm font-medium">by <a href="#_" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">June 3rd, 2025</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+                    <p class="pt-2 text-sm font-medium">by <a href="/pages/team" class="mr-1 underline">Brooke Linden</a> · <span class="mx-1">June 3rd, 2025</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
                 </div>
             </div>
         </div>
@@ -666,7 +670,7 @@
                 </div>
                 <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="#_">Airways: New Zealand</a></h2>
                 <p class="text-sm text-gray-500">A deep dive into the safety culture at New Zealand's national air traffic control provider encourages lasting change</p>
-                <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Michelle Morrissey</a> · <span class="mx-1">November 3rd, 2023</span> · <span class="mx-1 text-gray-600">8 min. read</span></p>
+                <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Michelle Morrissey</a> · <span class="mx-1">November 3rd, 2023</span> · <span class="mx-1 text-gray-600">8 min. read</span></p>
             </div>
 
             <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
@@ -678,7 +682,7 @@
                 </div>
                 <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Citation Jet Pilots</h2>
                 <p class="text-sm text-gray-500">Development of a novel training program for Citation Jet owner-operators increases safety during approach and landing</p>
-                <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Leonard McMillian</a> · <span class="mx-1">April 10, 2024</span> · <span class="mx-1 text-gray-600">6 min. read</span></p>
+                <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Leonard McMillian</a> · <span class="mx-1">April 10, 2024</span> · <span class="mx-1 text-gray-600">6 min. read</span></p>
             </div>
 
             <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
@@ -690,7 +694,7 @@
                 </div>
                 <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Virgin Australia</h2>
                 <p class="text-sm text-gray-500">Aligning policies and pilot mental models by understanding decision-making in the moment</p>
-                <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">Martin Smith</a> · <span class="mx-1">April 6, 2021</span> · <span class="mx-1 text-gray-600">10 min. read</span></p>
+                <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">Martin Smith</a> · <span class="mx-1">April 6, 2021</span> · <span class="mx-1 text-gray-600">10 min. read</span></p>
             </div>
 
         </div>

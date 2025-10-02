@@ -155,7 +155,7 @@ function hfun_member(args)
 
     html *= """
           </ul>
-          <a href="/pages/team/" class="inline-block px-6 py-3 rounded-lg bg-[#00638a] text-white font-medium shadow hover:bg-[#00638a] transition">
+          <a href="/pages/team/" class="blue-btn inline-block px-6 py-3 rounded-lg bg-[#00638a] text-white font-medium shadow hover:bg-[#00638a] transition">
             ← Back to Team
           </a>
         </div>
