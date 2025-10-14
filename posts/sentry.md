@@ -10,7 +10,7 @@
 
 Presage is happy to open-source Sentry.jl, a small package designed to make interfacing with [sentry](https://sentry.io/welcome/) easier when building web applications with [julia](https://julialang.org/). Sentry.jl builds on the work done by [SentryIntegration.jl](https://github.com/synchronoustechnologies/SentryIntegration.jl), with updates to the code to allow installation in modern versions of julia without dependencies on unregistered packages. 
 
-Sentry.jl is a set of utilities for for capturing data about an exceptional state in an application. Given this data, it then builds and sends a JSON payload to the Sentry server.
+Sentry.jl is a set of utilities for capturing data about an exceptional state in an application. Given this data, it then builds and sends a JSON payload to the Sentry server.
 
 To use Sentry.jl, you will need an account on sentry.io. Once you have a DSN assigned to your project, you can initialize the package using the `Sentry.init()` function. 
 
