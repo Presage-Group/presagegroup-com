@@ -81,7 +81,7 @@ function featured_post(title, link, date, short_text="test", author="Presage Gro
     end
 
     html = """
-    <div class="flex flex-col items-center sm:px-5 md:flex-row">
+    <div class="flex flex-row items-center sm:px-5 md:flex-row">
         <div class="w-full md:w-1/2">
             <a href="/$link/" class="block">
                 <img class="object-cover w-full h-full rounded-lg max-h-64 sm:max-h-96" src="$img_src">
@@ -96,11 +96,11 @@ function featured_post(title, link, date, short_text="test", author="Presage Gro
 
                 <p class="text-sm text-gray-500">$short_text</p>
 
-                <div class="flex flex-col w-full md:flex-row">
+                <div class="flex flex-row w-full">
                   $tag_html
                 </div>
 
-                <p class="pt-2 text-sm font-medium">by <a href="/pages/team" class="mr-1 underline">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600">$length_html</span></p>
+                <p class="pt-2 text-sm font-medium">by <a href="/pages/team" class="mr-1 underline dark:!text-white">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600 dark:text-white">$length_html</span></p>
             </div>
         </div>
     </div>
@@ -129,16 +129,16 @@ function grid_post(title, link, date, short_text="test", author="Presage Group";
     end
 
     html = """
-    <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+    <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4 dark:border dark:border-gray-700 dark:rounded-lg">
         <a href="/$link/" class="block">
             <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="$img_src">
         </a>
-        <div class="flex flex-col w-full md:flex-row">
+        <div class="flex flex-row w-full">
           $tag_html
         </div>
         <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/$link/">$title</a></h2>
         <p class="text-sm text-gray-500">$short_text</p>
-        <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600">$length_html</span></p>
+        <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline dark:!text-white">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600 dark:!text-white"">$length_html</span></p>
     </div>
     """
     return html
