@@ -94,7 +94,7 @@ body {
     /* Adjust text sizes and margins */
     h1,
     h2,
-    h3,
+    /* h3, */
     h4,
     h5,
     h6 {
@@ -351,7 +351,7 @@ h5 a:visited {
 
 .franklin-content p {
     margin: 1rem auto 1.25rem auto;
-    padding: 0;
+    padding: 0px 8px 0px 8px;
     line-height: 1.6;
     max-width: 70ch;
     text-align: justify;
@@ -421,7 +421,7 @@ td {
 } */
 
 .franklin-content h2 {
-    margin: 1.5em auto 1em auto;
+    /* margin: 1.5em auto 1em auto; */
     padding-bottom: 0.5em;
     margin-top: 1.5em;
     margin-bottom: 1em;

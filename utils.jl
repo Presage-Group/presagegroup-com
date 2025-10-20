@@ -63,7 +63,7 @@ end
 
             <!-- Text column -->
             <div class="flex flex-col justify-center p-6 flex-1 dark:bg-[#1f2937]">
-              <h3 class="text-lg font-bold text-gray-900 leading-tight">
+              <h3 class="text-base sm:text-lg font-bold text-gray-900 leading-tight">
                 $(e.title)
               </h3>
               <p class="mt-2 text-sm text-gray-500">
