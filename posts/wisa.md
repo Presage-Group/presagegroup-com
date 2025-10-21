@@ -16,4 +16,4 @@ The purpose of this study is to extend preliminary, exploratory work we conducte
 
 In our current study, we explored the barriers to personal achievement for stakeholders working in the area of sustainability in aeronautics, including motivation and perceived meaning in work, institutional and/or corporate supports, and mental health and emotional wellbeing. Our goal was for the improved understanding of these barriers to determine how best to protect the emotional and cognitive well-being of individuals charged with creating a sustainable aeronautics industry.
 
-The results of this study are being prepared as an academic publication, but are currently available as an unpublished pre-print at the following link: [URL]
+The results of this study are being prepared as an academic publication, but are currently available as an unpublished pre-print at the following link: [OSF](https://osf.io/preprints/socarxiv/ys32x_v1)
