@@ -59,7 +59,7 @@
     >
         <div class="flex space-x-4 w-16">
             <img src="/assets/PresageLogo.webp" width="30px" class="w-1/2" />
-            <img src="/assets/burger-menu.svg" width="30px" class="w-1/2" />
+            <img src="/assets/burger-menu.svg" width="30px" class="w-1/2 dark:invert dark:brightness-0" />
         </div>
     </button>
 
@@ -73,7 +73,7 @@
         x-cloak
     >
         <div
-            class="p-1 mt-1 text-sm bg-white border rounded-md shadow-md border-neutral-200/70 text-neutral-700"
+            class="p-1 mt-1 text-sm bg-white border rounded-md shadow-md border-neutral-200/70 text-neutral-700 dark:text-[#FAF9F6]"
         >
             <a
                 href="/"
@@ -528,7 +528,7 @@
                     <a
                         href="/pages/story/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                     >
                         <span class="block mb-1 font-medium">Our Story</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -538,7 +538,7 @@
                     <a
                         href="/pages/how/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                     >
                         <span class="block mb-1 font-medium">How it Works</span>
                         <span class="block font-light leading-5 opacity-50"
@@ -548,7 +548,7 @@
                     <a
                         href="/pages/team"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                     >
                         <span class="block mb-1 font-medium"
                             >Meet the Team</span
@@ -560,7 +560,7 @@
                     <a
                         href="/blog/"
                         @click="navigationMenuClose()"
-                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                        class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                     >
                         <span class="block mb-1 font-medium">Blog & News Releases</span>
                         <span class="block leading-5 opacity-50"
@@ -590,7 +590,7 @@
                 <a
                     href="/pages/industries/airlines/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                 >
                     <span class="block mb-1 font-medium">Airlines and Aerospace</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -600,7 +600,7 @@
                 <a
                     href="/pages/industries/airtraffic/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                 >
                     <span class="block mb-1 font-medium">Air Traffic Control</span>
                     <span class="block font-light leading-5 opacity-50"
@@ -610,7 +610,7 @@
                 <a
                     href="/pages/industries/utilities/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                 >
                     <span class="block mb-1 font-medium"
                         >Utilities</span
@@ -622,7 +622,7 @@
                 <a
                     href="/pages/industries/health/"
                     @click="navigationMenuClose()"
-                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300"
+                    class="block px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
                 >
                     <span class="block mb-1 font-medium">Health and Wellbeing</span>
                     <span class="block leading-5 opacity-50"
@@ -664,7 +664,7 @@ Sentry.set_tag(<span class="hljs-string">&quot;release&quot;</span>, string(<spa
 Sentry.set_tag(<span class="hljs-string">&quot;environment&quot;</span>, get(<span class="hljs-literal">ENV</span>, <span class="hljs-string">&quot;RUN_ENV&quot;</span>, <span class="hljs-string">&quot;unset&quot;</span>))</code></pre>
 <p>Presage uses a julia-based server to quickly and efficiently process questionnaire results and provide near-realtime feedback to our clients about their employees. Sentry.jl is an important part of monitoring the health of this server and will continue to be developed into a full-featured SDK. You can contribute to or just keep up with our progress on github at the <a href="https://github.com/Presage-Group/Sentry.jl">Sentry.jl repository</a>. </p>
 <div class="page-foot">
-    Last modified: October 15, 2025
+    Last modified: October 21, 2025
 </div>
 </div>
 </div> <!-- end of class container -->

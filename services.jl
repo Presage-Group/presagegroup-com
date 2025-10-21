@@ -3,27 +3,26 @@
 function hfun_hero(params)
     hero_img, hero_title, hero_subtitle = params
     return """
-    <section class="px-2 pb-8 bg-white md:px-0">
-        <div class="relative text-center">
-            <img
-                class="rounded-md sm:rounded-xl object-cover max-h-96 w-full"
-                src="$hero_img"
-            />
-            <div class="absolute inset-0 bg-black/40 rounded-md sm:rounded-xl"></div>
-            <div class="container w-full absolute top-0 left-10 mt-10 border-l-4 border-white pl-4">
-                <h1
-                    class="text-4xl font-extrabold tracking-tight text-left text-white sm:text-5xl md:text-6xl my-0"
-                >
-                    <span class="block">$hero_title</span>
-                </h1>
-                <h2
-                    class="text-white text-left text-base sm:text-2xl md:text-3xl mt-4 leading-snug break-words"
-                >
-                    $hero_subtitle
-                </h2>
-            </div>
-        </div>
-    </section>
+<section class="px-2 pb-8 bg-white md:px-0">
+  <div class="relative text-center mx-2"> <!-- constrain width -->
+    <img
+      class="rounded-md sm:rounded-xl object-cover max-h-96 w-full"
+      src="$hero_img"
+    />
+    <div class="absolute inset-0 bg-black/40 rounded-md sm:rounded-xl"></div>
+    <div class="absolute top-0 left-0 w-full px-4 sm:px-8 md:px-12 mt-10"> <!-- use padding, not fixed left -->
+      <div class="border-l-4 border-white pl-4 text-left">
+        <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl my-0">
+          <span class="block">$hero_title</span>
+        </h1>
+        <h2 class="text-white text-base sm:text-2xl md:text-3xl mt-4 leading-snug break-words">
+          $hero_subtitle
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
     """
 end
 
@@ -59,29 +58,29 @@ end
 # Our Work section
 function hfun_work(work_text, experts_html="")
     return """
-    <div class="grid grid-cols-1 md:grid-cols-10 gap-4 px-4 md:px-0">
-        <div class="md:col-span-6">
+    <div class="grid grid-cols-1 xl:grid-cols-10 gap-8 px-4 xl:px-0">
+        <div class="xl:col-span-6">
             <div class="max-w-[85ch] mx-auto">
-                <h2 
-                    class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-left">
+                <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-left">
                     Our Work
                 </h2>
-                <p 
-                    class="text-xl text-gray-500 text-left">
+                <p class="text-xl text-gray-500 text-left px-2">
                     $work_text
                 </p>
-            </div>          
+            </div>
         </div>
 
-        <div class="md:col-span-4">
-            <h2 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8 ml-8">
+        <div class="xl:col-span-4 px-2">
+            <div class="max-w-[85ch] mx-auto">
+                <h2 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8">
                 Our Industry Experts
-            </h2>
-            $experts_html
-            <div class="text-center">
-                <a href="/pages/team/" class="blue-btn mx-auto inline-block px-6 py-3 mt-4 mb-3 text-lg text-white bg-[#00416b] rounded-full hover:bg-[#00638a]" data-primary="#00416b" data-rounded="rounded-full">
-                    Learn More About Our Team
-                </a>
+                </h2>
+                $experts_html
+                <div class="text-center">
+                    <a href="/pages/team/" class="blue-btn mx-auto inline-block px-6 py-3 mt-4 mb-3 text-lg text-white bg-[#00416b] rounded-full hover:bg-[#00638a]" data-primary="#00416b" data-rounded="rounded-full">
+                        Learn More About Our Team
+                    </a>
+                </div>
             </div>
         </div>
     </div>
