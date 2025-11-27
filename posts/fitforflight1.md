@@ -5,7 +5,7 @@ tags = ["projects", "fitforflight"]
 title = "Addressing the Mental Health Crisis in Aviation: Developing Fit for Flight"
 short_text = "Presage Group Inc. embarks on the development of Fit for Flight, an application focused on mental health and wellbeing in aviation."
 rss_pubdate = Date(2025, 11, 18)
-img = "/"
+img = "/assets/F4F Blog Post Image.webp"
 +++
 
 \blogheader{}
