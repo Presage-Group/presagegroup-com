@@ -10,102 +10,58 @@
         referrerpolicy="no-referrer"
     />
 
-   <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-(--breakpoint-xl) text-center lg:py-16 lg:px-6">
-        <div class="mx-auto mb-5 max-w-(--breakpoint-sm) lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">LEADERSHIP TEAM</h2>
-        </div> 
-        <div class="grid gap-4 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {{
-                small_card
-                "Dr. Martin Smith"
-                "/assets/martin.webp"
-                "Co-founder / CEO"
-                "/pages/members/marty"
-                "linkedin" "https://www.linkedin.com/in/jmartinsmith/"
-            }}
+    <section class="bg-white dark:bg-gray-900">
+        <div
+            class="py-8 px-4 mx-auto max-w-(--breakpoint-xl) text-center lg:py-16 lg:px-6"
+        >
+            <div class="mx-auto mb-5 max-w-(--breakpoint-sm) lg:mb-16">
+                <h2
+                    class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+                >
+                    LEADERSHIP TEAM
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                {{ small_card "Dr. Martin Smith" "/assets/martin.webp"
+                "Co-founder / CEO" "/pages/members/marty" "linkedin"
+                "https://www.linkedin.com/in/jmartinsmith/" }} {{ small_card
+                "Leonard McMillian" "/assets/Len-Headshot.webp" "COO"
+                "/pages/members/len" "email"
+                "mailto:lmcmillian@presagegroup.com" }} {{ small_card "Capt.
+                Piyush Gandhi" "/assets/Piyush.webp" "VP Operations and Business
+                Development" "/pages/members/piyush" "linkedin"
+                "https://www.linkedin.com/in/piyush-gandhi-118b982/" }}
+            </div>
+            <hr class="my-16 border-gray-400 dark:border-gray-700" />
+            <div class="mx-auto mb-5 mt-24 max-w-(--breakpoint-sm) lg:mb-16">
+                <h2
+                    class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+                >
+                    SUBJECT MATTER EXPERTS
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                {{ small_card "Capt. Bill Curtis" "/assets/will.webp" "Head,
+                Aviation" "/pages/members/bill" "linkedin"
+                "https://www.linkedin.com/in/bill-curtis-70628a35/" }} {{
+                small_card "Michelle Morrissey"
+                "/assets/Michelle-Morrissey-Headshot.webp" "SME"
+                "/pages/members/morrissey" "email"
+                "mailto:mmorrissey@presagegroup.com" }} {{ small_card "Capt.
+                Mark Stow" "/assets/M.Stow-headshot.webp" "SME"
+                "/pages/members/mark" "linkedin"
+                "https://www.linkedin.com/in/mark-stow-5524b968/" }} {{
+                small_card "Capt. Jacques Mignault" "/assets/jacques.webp" "SME"
+                "/pages/members/jacques" "linkedin"
+                "https://www.linkedin.com/in/jacques-mignault-30341035/" }} {{
+                small_card "Capt. Christof Kemény"
+                "/assets/ChristofKemeny-HeadShot.jpg" "SME"
+                "/pages/members/christof" "email"
+                "mailto:ckemeny@presagegroup.com" }} {{ small_card "Kathleen
+                Fox" "/assets/kathyfox.webp" "SME" "/pages/members/kathy"
+                "email" "mailto:kfox@presagegroup.com" }}
 
-            {{
-                small_card
-                "Leonard McMillian"
-                "/assets/Len-Headshot.webp"
-                "COO"
-                "/pages/members/len"
-                "email" "mailto:lmcmillian@presagegroup.com"
-            }}
-
-            {{
-                small_card
-                "Capt. Piyush Gandhi"
-                "/assets/Piyush.webp"
-                "VP Operations and Business Development"
-                "/pages/members/piyush"
-                "linkedin" "https://www.linkedin.com/in/piyush-gandhi-118b982/"
-            }}
-
-            {{
-                small_card
-                "Capt. Bill Curtis"
-                "/assets/will.webp"
-                "Head, Aviation"
-                "/pages/members/bill"
-                "linkedin" "https://www.linkedin.com/in/bill-curtis-70628a35/"
-            }}
-
-        </div> 
-        <hr class="my-16 border-gray-400 dark:border-gray-700">
-        <div class="mx-auto mb-5 mt-24 max-w-(--breakpoint-sm) lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">SUBJECT MATTER EXPERTS</h2>
-        </div> 
-        <div class="grid gap-4 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            
-            {{
-                small_card
-                "Michelle Morrissey"
-                "/assets/Michelle-Morrissey-Headshot.webp"
-                "SME"
-                "/pages/members/morrissey"
-                "email" "mailto:mmorrissey@presagegroup.com"
-            }}
-
-
-            {{
-                small_card
-                "Capt. Mark Stow"
-                "/assets/M.Stow-headshot.webp"
-                "SME"
-                "/pages/members/mark"
-                "linkedin" "https://www.linkedin.com/in/mark-stow-5524b968/"
-            }}
-
-            {{
-                small_card
-                "Capt. Jacques Mignault"
-                "/assets/jacques.webp"
-                "SME"
-                "/pages/members/jacques"
-                "linkedin" "https://www.linkedin.com/in/jacques-mignault-30341035/"
-            }}
-
-              {{
-                small_card
-                "Capt. Christof Kemény"
-                "/assets/Christof Kemeny - Head Shot -1.jpg"
-                "SME"
-                "/pages/members/christof"
-                "email" "mailto:ckemeny@presagegroup.com"
-            }}
-
-            {{
-                small_card
-                "Kathleen Fox"
-                "/assets/kathyfox.webp"
-                "SME"
-                "/pages/members/kathy"
-                "email" "mailto:kfox@presagegroup.com"
-            }}
-
-            <!-- {{
+                <!-- {{
                 small_card
                 "Michel Charette"
                 "/assets/IMAGE.webp"
@@ -114,7 +70,7 @@
                 "email" "mailto:mcharette@presagegroup.com"
             }} -->
 
-            <!-- {{
+                <!-- {{
                 small_card
                 "Daniel Marchesseault"
                 "/assets/IMAGE.webp"
@@ -123,45 +79,17 @@
                 "email" "mailto:dmarchesseault@presagegroup.com"
             }} -->
 
-            {{
-                small_card
-                "Craig Drew"
-                "/assets/Craig-Drew.webp"
-                "SME"
-                "/pages/members/craig"
-                "email" "mailto:cdrew@presagegroup.com"
-            }}
+                {{ small_card "Craig Drew" "/assets/Craig-Drew.webp" "SME"
+                "/pages/members/craig" "email" "mailto:cdrew@presagegroup.com"
+                }} {{ small_card "Dr. Richard Karl" "/assets/Dick-Karl-3.webp"
+                "SME" "/pages/members/richard" "email"
+                "mailto:dkarl@presagegroup.com" }} {{ small_card "David Barnes"
+                "/assets/david.webp" "SME" "/pages/members/david" "email"
+                "mailto:dbarnes@presagegroup.com" }} {{ small_card "Brian Nero"
+                "/assets/Brian-Nero.webp" "SME" "/pages/members/brian" "email"
+                "mailto:bnero@presagegroup.com" }}
 
-            {{
-                small_card
-                "Dr. Richard Karl"
-                "/assets/Dick-Karl-3.webp"
-                "SME"
-                "/pages/members/richard"
-                "email" "mailto:dkarl@presagegroup.com"
-            }}
-
-            {{
-                small_card
-                "David Barnes"
-                "/assets/david.webp"
-                "SME"
-                "/pages/members/david"
-                "email" "mailto:dbarnes@presagegroup.com"
-            }}
-
-            {{
-                small_card
-                "Brian Nero"
-                "/assets/Brian-Nero.webp"
-                "SME"
-                "/pages/members/brian"
-                "email" "mailto:bnero@presagegroup.com"
-            }}
-
-          
-
-            <!-- {{
+                <!-- {{
                 small_card
                 "Christof Kemeny"
                 "/assets/IMAGE.webp"
@@ -187,59 +115,38 @@
                 "/pages/members/david"
                 "email" "mailto:djamieson@presagegroup.com"
             }} -->
+            </div>
+            <hr class="my-16 border-gray-400 dark:border-gray-700" />
+            <div class="mx-auto mb-5 mt-24 max-w-(--breakpoint-sm) lg:mb-16">
+                <h2
+                    class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+                >
+                    ANALYTICS AND RESEARCH
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                {{ small_card "Dr. Randall Boyes"
+                "/assets/randy-headshot-1.webp" "Director, Analytics"
+                "/pages/members/randy" "linkedin"
+                "https://www.linkedin.com/in/rboyes/" "google_scholar"
+                "https://scholar.google.ca/citations?user=T7SV6T0AAAAJ&hl=en"
+                "github" "https://github.com/rdboyes" }} {{ small_card "Dr.
+                Brooke Linden" "/assets/brooke-headshot.webp" "Director,
+                Research" "/pages/members/brooke" "linkedin"
+                "https://www.linkedin.com/in/bjdelcorde/" "google_scholar"
+                "https://scholar.google.ca/citations?user=KCkz6iQAAAAJ&hl=en" }}
+                {{ small_card "Dr. Umair Durrani" "/assets/umair-headshot.webp"
+                "Data Scientist" "/pages/members/umair" "linkedin"
+                "https://www.linkedin.com/in/durraniu/" "google_scholar"
+                "https://scholar.google.ca/citations?hl=en&user=jS1b6osAAAAJ"
+                "github" "https://github.com/durraniu" }} {{ small_card "Amy
+                Ecclestone" "/assets/Amy.webp" "Data Analyst"
+                "/pages/members/amy" "linkedin"
+                "https://www.linkedin.com/in/amy-ecclestone-92a376220/"
+                "google_scholar"
+                "https://scholar.google.ca/citations?hl=en&user=z9Lj5_UAAAAJ" }}
 
-        </div>  
-        <hr class="my-16 border-gray-400 dark:border-gray-700">
-        <div class="mx-auto mb-5 mt-24 max-w-(--breakpoint-sm) lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">ANALYTICS AND RESEARCH</h2>
-        </div> 
-        <div class="grid gap-4 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            
-            {{
-                small_card
-                "Dr. Randall Boyes"
-                "/assets/randy-headshot-1.webp"
-                "Director, Analytics"        
-                "/pages/members/randy"     
-                "linkedin" "https://www.linkedin.com/in/rboyes/"   
-                "google scholar" "https://scholar.google.ca/citations?user=T7SV6T0AAAAJ&hl=en"
-                "github" "https://github.com/rdboyes"
-                
-            }}
-
-            {{
-                small_card
-                "Dr. Brooke Linden"
-                "/assets/brooke-headshot.webp"
-                "Director, Research"
-                "/pages/members/brooke"
-                "linkedin" "https://www.linkedin.com/in/bjdelcorde/"
-                "google scholar" "https://scholar.google.ca/citations?user=KCkz6iQAAAAJ&hl=en"
-            }}
-
-            {{
-                small_card
-                "Dr. Umair Durrani"
-                "/assets/umair-headshot.webp"
-                "Data Scientist"
-                "/pages/members/umair"
-                "linkedin" "https://www.linkedin.com/in/durraniu/"
-                "google scholar" "https://scholar.google.ca/citations?hl=en&user=jS1b6osAAAAJ"
-                "github" "https://github.com/durraniu"
-            }}
-
-            {{
-                small_card
-                "Amy Ecclestone"
-                "/assets/Amy.webp"
-                "Data Analyst"
-                "/pages/members/amy"
-                "linkedin" "https://www.linkedin.com/in/amy-ecclestone-92a376220/"
-                "google scholar" "https://scholar.google.ca/citations?hl=en&user=z9Lj5_UAAAAJ"
-            }}
-
-
-            <!-- {{
+                <!-- {{
                 small_card
                 "Kary Lucas"
                 "/assets/kary.jpeg"
@@ -248,19 +155,11 @@
                 "email" "mailto:klucas@presagegroup.com"
             }} -->
 
-            {{
-                small_card
-                "Megan Smith"
-                "/assets/megan_smith.webp"
-                "Data Analyst"
-                "/pages/members/megan"
-                "linkedin" "https://www.linkedin.com/in/megan-smith-climate/"
-            }}
-
-        </div>  
-
-
-    </div>
+                {{ small_card "Megan Smith" "/assets/megan_smith.webp" "Data
+                Analyst" "/pages/members/megan" "linkedin"
+                "https://www.linkedin.com/in/megan-smith-climate/" }}
+            </div>
+        </div>
     </section>
     {{ insert foot.html}}
 </html>
