@@ -1,11 +1,11 @@
 +++
-title = "Utilities"
+title = "Utilities and Transportation"
 layout = "base_service"
 +++
 
 {{service 
 "/assets/images/utilities_page.webp"
-"Utilities" 
+"Utilities and Transportation" 
 "Leaders in human decision-making, safety culture, <br> and leadership development"
 
 "Keeping systems moving and communities connected depends on more than just infrastructure - it depends on people. 
@@ -21,7 +21,7 @@ Whether it’s a control room operator managing grid fluctuations, a transportat
 
 "Michelle Morrissey|SME, Utilities|/assets/Michelle-Morrissey-Headshot.webp|Former VP Health Safety Environment;Former VP Construction Services"
 "Leonard McMillian|SME, Utilities|/assets/Len-Headshot.webp|Chief Operating Officer;"
-"Umair Durrani, PhD|Data Scientist|/assets/umair-headshot.webp|Former Postdoctoral Researcher in <br> Civil Engineering;"
+"Umair Durrani, PhD|SME, Transportation|/assets/umair-headshot.webp|Former Postdoctoral Researcher in <br> Civil Engineering;"
 
 "--areas--"
 "Decision Making|How are your people making decisions under pressure?"
