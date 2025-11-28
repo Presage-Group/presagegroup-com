@@ -41,7 +41,7 @@
     html *= featured_post(fp.title, fp.link, fp.date, fp.short_text, fp.author; tags=fp.tags, img = fp.img)
 
     html *= """\n
-      <div class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
+      <div class="grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16 items-stretch">
     """
 
     for ele in eles[2:min(length(posts), n)]
@@ -128,21 +128,40 @@ function grid_post(title, link, date, short_text="test", author="Presage Group";
         img_src = img
     end
 
-    html = """
-    <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4 dark:border dark:border-gray-700 dark:rounded-lg">
-        <a href="/$link/" class="block">
-            <img class="object-contain w-full aspect-video mb-2 overflow-hidden rounded-lg shadow-sm" src="$img_src">
+    return """
+    <div class="col-span-12 sm:col-span-6 xl:col-span-4 min-h-[24rem] h-full flex flex-col min-h-0 rounded-lg shadow-sm dark:border dark:border-gray-700 dark:rounded-lg">
+
+        <a href="/$link/" class="block w-full h-48 overflow-hidden bg-gray-100 flex items-center justify-center rounded-t-lg">
+            <img class="w-full h-full object-contain object-center" src="$img_src">
         </a>
-        <div class="flex flex-row w-full">
-          $tag_html
+
+        <div class="flex flex-col w-full p-2 flex-1 min-h-0">
+
+            <div class="flex flex-row w-full mt-2">
+                $tag_html
+            </div>
+
+            <h2 class="text-lg font-bold sm:text-xl md:text-2xl mt-1">
+                <a href="/$link/">$title</a>
+            </h2>
+
+            <p class="text-sm text-gray-500 mb-2">
+                $short_text
+            </p>
+
+            <div class="flex-grow"></div>
+
+            <p class="text-xs font-medium text-gray-600 dark:!text-white mt-auto">
+                <a href="/pages/team" class="mr-1 underline dark:!text-white">$author</a> ·
+                <span class="mx-1">$date</span> ·
+                <span class="mx-1 dark:!text-white">$length_html</span>
+            </p>
+
         </div>
-        <h2 class="text-lg font-bold sm:text-xl md:text-2xl"><a href="/$link/">$title</a></h2>
-        <p class="text-sm text-gray-500">$short_text</p>
-        <p class="pt-2 text-xs font-medium"><a href="/pages/team" class="mr-1 underline dark:!text-white">$author</a> · <span class="mx-1">$date</span> · <span class="mx-1 text-gray-600 dark:!text-white"">$length_html</span></p>
     </div>
     """
-    return html
 end
+
 
 function format_tag(tag_name)
     html = """\n
@@ -192,5 +211,3 @@ function lx_blogheader(com, _)
 
         """
 end
-
-
