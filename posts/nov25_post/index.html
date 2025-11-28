@@ -637,27 +637,26 @@
 
 </header>
 <div class="franklin-content">
-<section class="bg-white dark:bg-gray-900 py-12">
-  <div class="max-w-4xl mx-auto px-6 lg:px-8">
-    <div class="flex flex-col items-center text-center">
-      <img class="w-48 h-48 rounded-full object-cover mb-6 shadow-lg" src="/assets/kathyfox.webp" alt="Kathleen Fox">
-      <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-2">Kathleen Fox</h1>
-      <h2 class="text-lg font-medium text-gray-500 dark:text-gray-400 mb-6">SME</h2>
-      <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-8">Kathy Fox is a highly respected leader in Canadian aviation, with over 50 years of experience spanning air traffic control, commercial flying, and aviation safety. She held senior roles at NAV CANADA, including Vice President of Operations, before serving as Chair of the Transportation Safety Board of Canada from 2014 to 2024. A licensed airline transport pilot with over 5,200 flight hours, Kathy also holds advanced academic credentials in science, business, and human factors. Her contributions have earned her numerous accolades, including induction into Canada’s Aviation Hall of Fame and the International Women in Aviation Pioneer Hall of Fame.</p>
-      <ul class="flex justify-center space-x-6 mb-8">
-<a href="mailto:kfox@presagegroup.com" class="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto fill-current" viewBox="0 0 1920 1920">
-    <path d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z" fill-rule="evenodd"/>
-</svg>
+<div class="flex flex-col items-center text-center sm:px-5 gap-y-4">
+    <img
+        class="h-48 w-96 object-contain rounded-md mt-6"
+        src="/assets/brand.png"
+        alt="Blog header image"
+    >
+    <p class="text-3xl font-semibold max-w-2xl">
+        Consistent Branding of reports and applications with LLMs
+    </p>
+</div>
 
-</a>
-      </ul>
-      <a href="/pages/team/" class="blue-btn inline-block px-6 py-3 rounded-lg bg-[#00638a] text-white font-medium shadow hover:bg-[#00638a] transition">
-        ← Back to Team
-      </a>
-    </div>
-  </div>
-</section>
+<p>The analytics team at Presage uses tools such as <a href="https://quarto.org/">Quarto</a> and <a href="https://shiny.posit.co/">Shiny</a> for developing reports, dashboards, and applications. These outputs require significant customization based on the company branding guidelines. The <a href="https://posit-dev.github.io/brand-yml/">brand.yml</a> project by Posit makes the branding process easier by requiring a single <code>_brand.yml</code> file that is placed in your project folder. This file should contain information from the branding guidelines, including fonts, colours, and logos. The accompanying <code>brand.yml</code> R and Python packages also bundle functions for theming visualizations and tables for a consistent look of reports and applications, making the branding process significantly faster. </p>
+<p>For further increase in productivity, we can leverage three features of Large Language Model &#40;LLM&#41; APIs for generating <code>_brand.yml</code> files and colour palettes in our projects. These features are &#40;1&#41; Tool calling, &#40;2&#41; Retrieval-Augmented Generation &#40;RAG&#41;, and &#40;3&#41; Structured output.</p>
+<p>The following functions are bundled in the R package <a href="https://github.com/durraniu/brandthis"><code>brandthis</code></a>: </p>
+<table><tr><th align="right">Function</th><th align="right">Description</th><th align="right">LLM Feature&#40;s&#41;</th></tr><tr><td align="right"><code>create_brand</code></td><td align="right">Creates <code>_brand.yml</code></td><td align="right">Image-to-colour extraction, contrast checking</td></tr><tr><td align="right"><code>suggest_color_scales</code></td><td align="right">Suggests suitable color palettes</td><td align="right">RAG</td></tr><tr><td align="right"><code>create_color_palette</code></td><td align="right">Creates color palettes</td><td align="right">Structured output</td></tr></table>
+<p>Check out this presentation about <code>brandthis</code> below or view full screen <a href="https://dru.quarto.pub/brandthis/#/title-slide">here</a>.</p>
+
+
+<iframe width="800" height="400" style="display:block; margin:0 auto;" marginheight="10" marginwidth="10" src="https://dru.quarto.pub/brandthis/#/title-slide"></iframe>
+
 
 <div class="page-foot">
     Last modified: November 28, 2025
