@@ -8,7 +8,7 @@
 
 \blogheader{}
 
-Presage Group was pleased to join the University of Waterloo Aviation Society (UWAS) for the Northern Lights Aero Foundation presentation featuring First Officer Heather H. of Porter Airlines and our VP of Operations, Piyush Gandhi.
+Presage Group was pleased to join the University of Waterloo Aviation Society (UWAS) for the Northern Lights Aero Foundation presentation featuring First Officer Heather H. of Porter Airlines and our VP of Operations and Business Development, Piyush Gandhi.
 
 They shared practical guidance on building a meaningful aviation career while highlighting the importance of preparation, resilience, and initiative. The discussion also emphasized ongoing efforts to advance diversity, equity, and inclusion across the sector and how this work strengthens the industry.
 
