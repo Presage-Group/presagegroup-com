@@ -3,6 +3,8 @@
 @def date = "2025-12-18"
 @def tags = ["analytics", "blog"]
 @def short_text = "Understanding Safety Through Mixed Methods"
+@def img = "/assets/images/mixed_methods.svg"
+
 @def rss_pubdate = Date(2025, 12, 18)
 
 \blogheader{}
