@@ -19,7 +19,7 @@ function lx_baz(com, _)
     return uppercase(brace_content)
 end
 
-@delay function hfun_homepage_posts()
+function hfun_homepage_posts()
     list = readdir("posts")
     filter!(f -> endswith(f, ".md") && f != "index.md", list)
     posts = []
