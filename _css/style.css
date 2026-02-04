@@ -427,6 +427,15 @@ td {
     margin-bottom: 1em;
 }
 
+
+.franklin-content h4 {
+    margin: 1rem auto 1.25rem auto;
+    padding: 0px 8px 0px 8px;
+    line-height: 1.6;
+    max-width: 58.5ch;
+    text-align: left;
+}
+
 .franklin-content a {
     color: #00415b;
     text-decoration: none;
