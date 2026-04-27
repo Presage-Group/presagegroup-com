@@ -3,7 +3,7 @@ title = "Airlines"
 layout = "base_service"
 +++
 
-{{service 
+{{industry 
 "/assets/images/airlines_page.webp"
 "Airlines and Aerospace" 
 "Leaders in pilot decision-making, organizational <br> culture, and flight path management"

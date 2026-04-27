@@ -3,7 +3,7 @@ title = "Utilities and Transportation"
 layout = "base_service"
 +++
 
-{{service 
+{{industry 
 "/assets/images/utilities_page.webp"
 "Utilities and Transportation" 
 "Leaders in human decision-making, safety culture, <br> and leadership development"

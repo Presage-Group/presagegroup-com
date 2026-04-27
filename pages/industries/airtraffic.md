@@ -3,7 +3,7 @@ title = "Air Traffic Control"
 layout = "base_service"
 +++
 
-{{service 
+{{industry 
 "/assets/images/atc_page.webp"
 "Air Traffic Control" 
 "Leaders in ATC decision-making and <br> organizational safety culture"
