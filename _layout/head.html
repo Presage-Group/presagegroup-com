@@ -25,6 +25,10 @@
             Alpine.store("contactModal", { open: false });
         });
     </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
+    </script>
 </head>
 <header class="sticky top-0 left-0 w-full z-50">
     {{ insert slidenav.html }} {{ insert nav.html }}

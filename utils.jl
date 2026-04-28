@@ -1,5 +1,6 @@
 include("blog.jl")
 include("industries.jl")
+include("services.jl")
 include("team.jl")
 
 function hfun_bar(vname)

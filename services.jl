@@ -56,87 +56,60 @@ end
 
 
 # Our Work section
-function hfun_work(work_text, experts_html="")
+function hfun_work(heading, youtube_url, html_content="")
     return """
-    <div class="grid grid-cols-1 xl:grid-cols-10 gap-8 px-4 xl:px-0">
-        <div class="xl:col-span-6">
-            <div class="max-w-[85ch] mx-auto">
-                <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-left">
-                    Our Work
-                </h2>
-                <p class="text-xl text-gray-500 text-left px-2">
-                    $work_text
-                </p>
-            </div>
+    <div class="container max-w-6xl mx-auto px-8 xl:px-5">
+        <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
+            $heading
+        </h2>
+        <div class="relative w-full rounded-xl overflow-hidden" style="padding-bottom: 56.25%;">
+            <iframe
+                class="absolute top-0 left-0 w-full h-full"
+                src="$youtube_url"
+                title="YouTube video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
-
-        <div class="xl:col-span-4 px-2">
-            <div class="max-w-[85ch] mx-auto">
-                <h2 class="text-3xl font-bold tracking-tight text-left text-gray-500 dark:text-gray-200 py-8">
-                Our Industry Experts
-                </h2>
-                $experts_html
-                <div class="text-center">
-                    <a href="/pages/team/" class="blue-btn mx-auto inline-block px-6 py-3 mt-4 mb-3 text-lg text-white bg-[#00416b] rounded-full hover:bg-[#00638a]" data-primary="#00416b" data-rounded="rounded-full">
-                        Learn More About Our Team
-                    </a>
-                </div>
-            </div>
+        <div class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-2 gap-12">
+            $html_content
         </div>
     </div>
     """
 end
-
 
 
 # One area of expertise card
-function hfun_area(title::String, desc::String)
-    svg = """
-    <svg xmlns="http://www.w3.org/2000/svg"
-         width="24" height="24" viewBox="0 0 24 24"
-         stroke-width="2" stroke="currentColor" fill="none"
-         stroke-linecap="round" stroke-linejoin="round">
-        <path fill="none" stroke="none" d="M0 0h24v24H0z" />
-        <path d="M4 20V16L14.5 5.5A1.5 1.5 0 0 1 18.5 9.5L8 20H4M13.5 6.5L17.5 10.5" />
-    </svg>
-    """
+function hfun_area(title::String, desc::String, icon_name::String="circle")
     return """
-    <div
-        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl"
-        data-rounded="rounded-xl"
-        data-rounded-max="rounded-full"
-    >
-        <div class="p-3 text-white bg-blue-500 rounded-full"
-             data-primary="blue-500"
-             data-rounded="rounded-full">
-            $svg
+    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl">
+        <div class="p-3 text-white bg-blue-500 rounded-full">
+            <i data-lucide="$icon_name"></i>
         </div>
-        <h4 class="text-xl font-medium text-gray-700 text-center">
-            $title
-        </h4>
-        <p class="text-base text-center text-gray-500">
-            $desc
-        </p>
+        <h4 class="text-xl font-medium text-gray-700 text-center">$title</h4>
+        <p class="text-base text-center text-gray-500">$desc</p>
     </div>
     """
 end
 
-# Function for processing the input string for areas of expertise
+
 function hfun_area_from_string(s::String)
     parts = split(s, "|")
     title = String(parts[1])
     desc  = length(parts) > 1 ? String(parts[2]) : ""
-    return hfun_area(title, desc)
+    svg   = length(parts) > 2 ? String(parts[3]) : ""
+    return hfun_area(title, desc, svg)
 end
 
 # All areas
-function hfun_areas(area_params::Vector{String})
+function hfun_areas(area_params::Vector{String}, title::String)
     cards = join([hfun_area_from_string(s) for s in area_params], "\n")
     return """
-    <section class="pt-32 bg-white">
+    <section class="pt-12 bg-white">
         <div class="container max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
-                Our Areas of Expertise
+                $title
             </h2>
             <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
                 $cards
@@ -226,63 +199,6 @@ function hfun_project_from_string(s::String)
 end
 
 
-function hfun_marquee()
-    return raw"""
-<div
-    x-data
-    x-init="
-            $nextTick(() => {
-                const content = $refs.content;
-                const item = $refs.item;
-                const clone = item.cloneNode(true);
-                content.appendChild(clone);
-            });
-    "
-    class="relative w-full bg-gray-900 container-block mt-10"
->
-    <div
-        class="relative w-full py-3 mx-auto overflow-hidden text-lg italic tracking-wide text-white uppercase bg-gray-900 max-w-7xl sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl"
-    >
-        <div
-            class="absolute left-0 z-20 w-40 h-full bg-linear-to-r from-gray-900 to-transparent"
-        ></div>
-        <div
-            class="absolute right-0 z-20 w-40 h-full bg-linear-to-l from-gray-900 to-transparent"
-        ></div>
-        <div x-ref="content" class="flex animate-marquee">
-            <div
-                x-ref="item"
-                class="flex items-center justify-around shrink-0 w-full py-2 space-x-2 text-white"
-            >
-                <img src="/assets/Delta_logo.svg" width="100" />
-                <img src="/assets/luft.svg" width="100" />
-                <img src="/assets/airways.webp" width="100" />
-                <img src="/assets/air-canada.svg" width="100" />
-                <img src="/assets/FlightSafety-Logo-Color.svg" width="100" />
-                <img src="/assets/Virgin_Australia_Logo_2022.svg" width="100" />
-                <img src="/assets/Porter_Airlines_Logo.svg" width="100" />
-                <img
-                    src="/assets/bas-logo-inverse-transparent.svg"
-                    width="200"
-                />
-            </div>
-        </div>
-    </div>
-</div>
-<style>
-    @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-    }
-    .animate-marquee {
-        animation: marquee 20s linear infinite;
-    }
-</style>
-"""
-end
-
-
-
 function hfun_call_to_action(img::String="/assets/images/citation.webp")
     return """
     <section class="px-2 py-25 bg-white md:px-0">
@@ -352,40 +268,28 @@ end
 Service page skeleton.
 """
 function hfun_service(params)
-    hero_html = hfun_hero(params[1:3])
-    work_html = ""
-    areas_html = ""
-    projects_html = ""
-    marquee_html = hfun_marquee()
-
-    # last param = image for call_to_action
-    img = last(params)
+    hero_html           = hfun_hero(params[1:3])
+    areas_html          = ""
+    projects_html       = ""
+    img                 = last(params)
     call_to_action_html = hfun_call_to_action(img)
 
-    if "--areas--" in params || "--projects--" in params
-        idx_area = findfirst(==("--areas--"), params)
-        idx_proj = findfirst(==("--projects--"), params)
+    heading      = params[4]
+    youtube_url  = params[5]
+    html_content = params[6]
+    work_html    = hfun_work(heading, youtube_url, html_content)
 
-        cutoff = minimum(filter(!isnothing, [idx_area, idx_proj]))
-        if cutoff > 5
-            experts_html = hfun_experts(params[5:cutoff-1])
-            work_html = hfun_work(params[4], experts_html)
-        else
-            work_html = hfun_work(params[4])
-        end
+    idx_area = findfirst(==("--areas--"), params)
+    idx_proj = findfirst(==("--projects--"), params)
 
-        if idx_area !== nothing
-            stop = (idx_proj === nothing ? length(params) : idx_proj - 1)
-            areas_html = hfun_areas(params[idx_area+1:stop])
-        end
-
-        if idx_proj !== nothing
-            projects_html = hfun_projects(params[idx_proj+1:end-1])  # all project strings
-        end
-    else
-        experts_html = length(params) > 4 ? hfun_experts(params[5:end-1]) : ""
-        work_html = hfun_work(params[4], experts_html)
+    if idx_area !== nothing
+        stop       = idx_proj === nothing ? length(params) - 1 : idx_proj - 1
+        areas_html = hfun_areas(params[idx_area+1:stop], "Features and Outcomes")
     end
 
-    return hero_html * work_html * areas_html * projects_html * marquee_html * call_to_action_html
+    if idx_proj !== nothing
+        projects_html = hfun_projects(params[idx_proj+1:end-1])
+    end
+
+    return hero_html * work_html * areas_html * projects_html * call_to_action_html
 end
