@@ -74,7 +74,10 @@ function hfun_work_service(heading, youtube_url, html_content="")
         <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
             $heading
         </h2>
-        <div class="relative w-full rounded-xl overflow-hidden" style="padding-bottom: 56.25%;">
+        <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed my-8 columns-1 sm:columns-2 gap-12">
+            $html_content
+        </div>
+        <div class="relative w-full rounded-xl overflow-hidden" style="padding-top: 56.25%;">
             <iframe
                 class="absolute top-0 left-0 w-full h-full"
                 src="$youtube_url"
@@ -83,9 +86,6 @@ function hfun_work_service(heading, youtube_url, html_content="")
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
-        </div>
-        <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-1 sm:columns-2 gap-12">
-            $html_content
         </div>
     </div>
     """

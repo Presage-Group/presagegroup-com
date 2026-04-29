@@ -23,5 +23,5 @@ layout = "base_service"
 "Impact of Mitigations|Allows organizations to continuously take the pulse of their pilot cohort's mental health and well-being and assess the impact of mitigations.|activity"
 
 "--projects--"
-"/assets/images/dashboard.jpg"
+"/assets/images/f4f2.png"
 }}
