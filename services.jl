@@ -1,6 +1,6 @@
 # Services
 # hero section
-function hfun_hero(params)
+function hfun_hero_service(params)
     hero_img, hero_title, hero_subtitle = params
     return """
 <section class="px-2 pb-8 bg-white md:px-0">
@@ -27,7 +27,7 @@ function hfun_hero(params)
 end
 
 # Single expert
-function hfun_expert(name, role, former_positions::Vector{String}, img_path)
+function hfun_expert_service(name, role, former_positions::Vector{String}, img_path)
     former_html = join(["<div class=\"text-gray-500 dark:text-gray-300 text-lg ml-2.5\">$pos</div>" for pos in former_positions], "\n")
     return """
     <div class="flex items-center space-x-4">
@@ -42,21 +42,33 @@ function hfun_expert(name, role, former_positions::Vector{String}, img_path)
 end
 
 # All experts
-function hfun_experts(expert_params::Vector{String})
-    return join([hfun_expert_from_string(e) for e in expert_params], "\n")
+function hfun_experts_service(expert_params::Vector{String})
+    return join([hfun_expert_from_string_service(e) for e in expert_params], "\n")
 end
 
-function hfun_expert_from_string(s::String)
+function hfun_expert_from_string_service(s::String)
     parts = split(s, "|")
     name, role, img = String.(parts[1:3])   # force to plain Strings
     former = length(parts) > 3 ? String.(split(parts[4], ";")) : String[]
-    return hfun_expert(name, role, former, img)
+    return hfun_expert_service(name, role, former, img)
 end
 
 
 
 # Our Work section
-function hfun_work(heading, youtube_url, html_content="")
+function hfun_work_service(heading, youtube_url, html_content="")
+    if youtube_url == ""
+        return """
+        <div class="container max-w-6xl mx-auto px-8 xl:px-5">
+            <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
+                $heading
+            </h2>
+            <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-1 sm:columns-2 gap-12">
+                $html_content
+            </div>
+        </div>
+        """
+    end
     return """
     <div class="container max-w-6xl mx-auto px-8 xl:px-5">
         <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
@@ -72,7 +84,7 @@ function hfun_work(heading, youtube_url, html_content="")
                 allowfullscreen>
             </iframe>
         </div>
-        <div class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-2 gap-12">
+        <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-1 sm:columns-2 gap-12">
             $html_content
         </div>
     </div>
@@ -81,7 +93,7 @@ end
 
 
 # One area of expertise card
-function hfun_area(title::String, desc::String, icon_name::String="circle")
+function hfun_area_service(title::String, desc::String, icon_name::String="circle")
     return """
     <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl">
         <div class="p-3 text-white bg-blue-500 rounded-full">
@@ -94,17 +106,17 @@ function hfun_area(title::String, desc::String, icon_name::String="circle")
 end
 
 
-function hfun_area_from_string(s::String)
+function hfun_area_from_string_service(s::String)
     parts = split(s, "|")
     title = String(parts[1])
     desc  = length(parts) > 1 ? String(parts[2]) : ""
     svg   = length(parts) > 2 ? String(parts[3]) : ""
-    return hfun_area(title, desc, svg)
+    return hfun_area_service(title, desc, svg)
 end
 
 # All areas
-function hfun_areas(area_params::Vector{String}, title::String)
-    cards = join([hfun_area_from_string(s) for s in area_params], "\n")
+function hfun_areas_service(area_params::Vector{String}, title::String)
+    cards = join([hfun_area_from_string_service(s) for s in area_params], "\n")
     return """
     <section class="pt-12 bg-white">
         <div class="container max-w-6xl mx-auto">
@@ -122,7 +134,7 @@ end
 
 
 # Single project card.
-function hfun_project(title, description, tag, author, date, minutes, link, img, tag_color="bg-gray-500")
+function hfun_project_service(title, description, tag, author, date, minutes, link, img, tag_color="bg-gray-500")
     return """
     <div class="w-full sm:w-1/2 xl:w-1/3">
         <a href="$link" target="_blank" class="block">
@@ -157,7 +169,7 @@ end
 
 
 # Multiple projects
-function hfun_projects(project_params::Vector{String})
+function hfun_projects_service(project_params::Vector{String})
     # drop the CTA image if it’s the last entry
     clean_params = filter(p -> endswith(p, ".jpg") == false &&
                            endswith(p, ".jpeg") == false &&
@@ -168,7 +180,7 @@ function hfun_projects(project_params::Vector{String})
         return ""  # no projects → return nothing
     end
 
-    projects_html = join([hfun_project_from_string(p) for p in clean_params], "\n")
+    projects_html = join([hfun_project_from_string_service(p) for p in clean_params], "\n")
     return """
     <section class="pt-32 bg-white">
         <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
@@ -185,7 +197,7 @@ end
 
 
 # Function for processing the input string for projects
-function hfun_project_from_string(s::String)
+function hfun_project_from_string_service(s::String)
     parts = split(s, "|")
     # ensure there are at least 8 parts (9th optional tag_color)
     if length(parts) < 8
@@ -195,11 +207,11 @@ function hfun_project_from_string(s::String)
     parts_s = String.(parts)
     title, description, tag, author, date, minutes, link, img = parts_s[1:8]
     tag_color = length(parts_s) > 8 ? parts_s[9] : "bg-gray-500"
-    return hfun_project(title, description, tag, author, date, minutes, link, img, tag_color)
+    return hfun_project_service(title, description, tag, author, date, minutes, link, img, tag_color)
 end
 
 
-function hfun_call_to_action(img::String="/assets/images/citation.webp")
+function hfun_call_to_action_service(img::String="/assets/images/citation.webp")
     return """
     <section class="px-2 py-25 bg-white md:px-0">
         <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
@@ -268,27 +280,33 @@ end
 Service page skeleton.
 """
 function hfun_service(params)
-    hero_html           = hfun_hero(params[1:3])
+    hero_html           = hfun_hero_service(params[1:3])
     areas_html          = ""
     projects_html       = ""
     img                 = last(params)
-    call_to_action_html = hfun_call_to_action(img)
+    call_to_action_html = hfun_call_to_action_service(img)
 
     heading      = params[4]
     youtube_url  = params[5]
     html_content = params[6]
-    work_html    = hfun_work(heading, youtube_url, html_content)
+    work_html    = hfun_work_service(heading, youtube_url, html_content)
 
     idx_area = findfirst(==("--areas--"), params)
     idx_proj = findfirst(==("--projects--"), params)
 
     if idx_area !== nothing
         stop       = idx_proj === nothing ? length(params) - 1 : idx_proj - 1
-        areas_html = hfun_areas(params[idx_area+1:stop], "Features and Outcomes")
+        # println(length(params[idx_area+1:stop]))
+        if length(params[idx_area+1:stop]) > 6
+            grid_heading = "Scientific Studies"
+        else 
+            grid_heading = "Features and Outcomes"
+        end
+        areas_html = hfun_areas_service(params[idx_area+1:stop], grid_heading)
     end
 
     if idx_proj !== nothing
-        projects_html = hfun_projects(params[idx_proj+1:end-1])
+        projects_html = hfun_projects_service(params[idx_proj+1:end-1])
     end
 
     return hero_html * work_html * areas_html * projects_html * call_to_action_html

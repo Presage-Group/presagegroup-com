@@ -825,3 +825,5 @@ p {
     width: 24px;
     height: 24px;
 }
+
+.content-cols > *:first-child { margin-top: 0; }
