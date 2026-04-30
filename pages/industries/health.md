@@ -3,7 +3,7 @@ title = "Health and Wellbeing"
 layout = "base_service"
 +++
 
-{{service 
+{{industry 
 "/assets/images/health_page.webp"
 "Health and Wellbeing" 
 "Emerging leaders in organizational culture <br> related to mental health and wellbeing"
