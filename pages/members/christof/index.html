@@ -45,6 +45,10 @@
             Alpine.store("contactModal", { open: false });
         });
     </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
+    </script>
 </head>
 <header class="sticky top-0 left-0 w-full z-50">
     <div
@@ -222,6 +226,28 @@
             <button
                 :class="{ 'bg-[#00638a]' : navigationMenu=='learn-more', 'hover:bg-[#00638a]' : navigationMenu!='learn-more' }"
                 @mouseover="navigationMenuOpen=true; navigationMenuReposition($el); navigationMenu='learn-more'"
+                @mouseleave="navigationMenuLeave()"
+                class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl font-medium text-gray-700 rounded-md hover:text-neutral-100 text-neutral-100 hover:bg-[#00638a] focus:outline-none disabled:opacity-50 disabled:pointer-events-none bg-[#00416b] group w-max"
+            >
+                <span>INDUSTRIES</span>
+                <svg
+                    :class="{ '-rotate-180' : navigationMenuOpen==true && navigationMenu == 'learn-more' }"
+                    class="relative top-px ml-1 h-3 w-3 ease-out duration-300"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <button
+                :class="{ 'bg-[#00638a]' : navigationMenu=='services', 'hover:bg-[#00638a]' : navigationMenu!='services' }"
+                @mouseover="navigationMenuOpen=true; navigationMenuReposition($el); navigationMenu='services'"
                 @mouseleave="navigationMenuLeave()"
                 class="inline-flex items-center justify-center h-10 px-4 py-2 text-xl font-medium text-gray-700 rounded-md hover:text-neutral-100 text-neutral-100 hover:bg-[#00638a] focus:outline-none disabled:opacity-50 disabled:pointer-events-none bg-[#00416b] group w-max"
             >
@@ -671,6 +697,73 @@
                 </a>
             </div>
         </div>
+        <div
+            x-show="navigationMenu == 'services'"
+            class="flex items-stretch justify-center w-full max-w-2xl p-6 gap-x-3"
+        >
+            <div
+                class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
+            >
+                <img
+                    src="/assets/Presage_Logo_TXTwhite.svg"
+                    style="width: 300px; height: 300px"
+                />
+                <div class="relative px-7 text-white">
+                    <span class="block text-sm opacity-60"
+                        >Studies and Software Solutions</span
+                    >
+                </div>
+            </div>
+            <div class="w-80">
+                <a
+                    href="/pages/services/scientific-studies/"
+                    @click="navigationMenuClose()"
+                    class="flex items-center group px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
+                >
+                    <div class="flex-1">
+                        <span class="block mb-1 font-medium">Scientific Studies</span>
+                        <span class="block mr-5 font-light leading-5 opacity-50"
+                            >Go-around Decision Making (GADM), culture, evaluations, analysis, and assessments</span
+                        >
+                    </div>
+                    <svg class="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12h18M15 6l6 6-6 6"/>
+                    </svg>
+                </a>
+                <a
+                    href="/pages/services/fit-for-flight/"
+                    @click="navigationMenuClose()"
+                    class="flex items-center group px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
+                >
+                    <div class="flex-1">
+                        <span class="block mb-1 font-medium">Fit for Flight</span>
+                        <span class="block mr-5 font-light leading-5 opacity-50"
+                            >Pilot mental health and well-being tool</span
+                        >
+                    </div>
+                    <svg class="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12h18M15 6l6 6-6 6"/>
+                    </svg>
+                </a>
+                <a
+                    href="/pages/services/pti/"
+                    @click="navigationMenuClose()"
+                    class="flex items-center group px-3.5 py-3 text-sm rounded hover:bg-neutral-300 dark:hover:bg-[#00416B]"
+                >
+                    <div class="flex-1">
+                        <span class="block mb-1 font-medium"
+                            >Presage Training Insights</span
+                        >
+                        <span class="block mr-5 leading-5 opacity-50"
+                            >Pilot training enhancement tool</span
+                        >
+                    </div>
+                    <svg class="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12h18M15 6l6 6-6 6"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 </nav>
 <div class="hidden lg:relative lg:flex h-1 mt-0 my-1 -mx-1 bg-[#00415b]"></div>
@@ -702,7 +795,7 @@ Captain Kemény regularly collaborates with international airlines and organizat
 </section>
 
 <div class="page-foot">
-    Last modified: April 17, 2026
+    Last modified: April 30, 2026
 </div>
 </div>
 </div> <!-- end of class container -->
