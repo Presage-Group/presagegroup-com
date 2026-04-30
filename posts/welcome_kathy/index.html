@@ -62,7 +62,7 @@
         class="block lg:hidden h-16 px-4 py-2 text-sm font-medium transition-colors bg-white rounded-md hover:bg-neutral-100 active:bg-white focus:bg-white disabled:opacity-50 disabled:pointer-events-none"
     >
         <div class="flex space-x-4 w-16">
-            <img src="/assets/PresageLogo.webp" width="30px" class="w-1/2" />
+            <img src="/assets/PGI_logo3.png" width="30px" class="w-1/2" />
             <img src="/assets/burger-menu.svg" width="30px" class="w-1/2 dark:invert dark:brightness-0" />
         </div>
     </button>
@@ -145,6 +145,28 @@
                 <span>Health and Wellbeing</span>
             </a>
             <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
+            <a
+                href="/pages/services/scientific-studies/"
+                @click="menuBarOpen=false"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
+            >
+                <span>Scientific Studies</span>
+            </a>
+            <a
+                href="/pages/services/fit-for-flight"
+                @click="menuBarOpen=false"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
+            >
+                <span>Fit for Flight</span>
+            </a>
+            <a
+                href="/pages/services/pti/"
+                @click="menuBarOpen=false"
+                class="relative flex justify-between w-full cursor-default select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none data-disabled:opacity-50 data-disabled:pointer-events-none"
+            >
+                <span>Presage Training Insights</span>
+            </a>
+            <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
             <!-- opens a modal with a contact form. -->
             <button
                 @click="Alpine.store('contactModal').open = true"
@@ -187,7 +209,7 @@
     >
         <a href="/" class="flex items-center font-extrabold text-white md:py-0 w-48">
             <img
-                src="/assets/Presage_Logo_noTXT.svg"
+                src="/assets/PGI_logo2_grey.png"
                 height="120"
                 width="120"
             />
@@ -540,8 +562,8 @@
                     class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
                 >
                     <img
-                        src="/assets/Presage_Logo_TXTwhite.svg"
-                        style="width: 300px; height: 300px"
+                        src="/assets/PGI_logo2_grey.png"
+                        style="width: 300px;"
                     />
                     <div class="relative px-7 text-white">
                         <span class="block text-sm opacity-60"
@@ -623,8 +645,8 @@
                 class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
             >
                 <img
-                    src="/assets/Presage_Logo_TXTwhite.svg"
-                    style="width: 300px; height: 300px"
+                    src="/assets/PGI_logo2_grey.png"
+                    style="width: 300px;"
                 />
                 <div class="relative px-7 text-white">
                     <span class="block text-sm opacity-60"
@@ -705,8 +727,8 @@
                 class="shrink-0 w-48 rounded pt-28 pb-7 bg-linear-to-br from-neutral-800 to-[#00415b]"
             >
                 <img
-                    src="/assets/Presage_Logo_TXTwhite.svg"
-                    style="width: 300px; height: 300px"
+                    src="/assets/PGI_logo2_grey.png"
+                    style="width: 300px;"
                 />
                 <div class="relative px-7 text-white">
                     <span class="block text-sm opacity-60"

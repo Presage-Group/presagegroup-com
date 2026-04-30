@@ -75,7 +75,7 @@ function featured_post(title, link, date, short_text="test", author="Presage Gro
     end
 
     if isnothing(img)
-        img_src = "/assets/Presage_Logo_noTXT.svg"
+        img_src = "/assets/PGI_logo2_grey.png"
     else
         img_src = img
     end
@@ -123,7 +123,7 @@ function grid_post(title, link, date, short_text="test", author="Presage Group";
     end
 
     if isnothing(img)
-        img_src = "/assets/Presage_Logo_noTXT.svg"
+        img_src = "/assets/PGI_logo2_grey.png"
     else
         img_src = img
     end
