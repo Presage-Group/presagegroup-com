@@ -29,7 +29,7 @@ function hfun_homepage_posts()
         fi = "posts/" * splitext(post)[1]
         title = pagevar(fi, :title)
         datestr = pagevar(fi, :date)
-        img = pagevar(fi, :img; default="/assets/Presage_Logo_noTXT.svg")
+        img = pagevar(fi, :img; default="/assets/PGI_logo2_grey.png")
         if !isnothing(datestr)
             date = Date(datestr, df)
             push!(posts, (
