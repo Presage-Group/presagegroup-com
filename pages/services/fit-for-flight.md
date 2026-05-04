@@ -10,9 +10,17 @@ layout = "base_service"
 
 "What is Fit for Flight?"
 "https://www.youtube.com/embed/va7Zyyu_8wQ?si=qhXh9QMgQ-0hyY9G"
-"<p>Studies completed by government, civil, and military organizations over the past several years have reported <strong>increasing rates of mental illness among pilot populations</strong>, along with poor assessment protocols, barriers to help-seeking, stigma, and an overall lack of upstream, whole-person approaches to supporting pilot mental health and overall well-being. These findings have been supported by numerous anecdotal accounts from pilots throughout the aviation sector.</p> 
-<p>In response to this growing concern, Presage has developed <strong>a next generation mental health assessment tool</strong> to address both pilot and organizational concerns, risks, and gaps in the well-being safety net. <strong>Fit for Flight</strong>  differentiates itself from other mental health and well-being apps by being the only assessment tool that measures the relationship between mental health risks and the degradation in decision-making and situational awareness.</p> 
-<p>Fit for Flight is a custom-built tool, <strong>co-created directly with client organizations</strong> to support the identification and continuous monitoring of aggregate personnel mental health risks. This empowers leadership to deploy proactive and tailored interventions and mitigations, while demonstrating accountability for the risks presented to them. Individuals benefit from rapid feedback on their own well-being, highlighted comparative assessment scores, improved mental health literacy, and support for early intervention if required.</p>"
+"<p>Fit For Flight is a next generation digital mental health assessment tool, designed to support the mental health and wellbeing of pilots and other professionals in the aviation sector.</p>"
+
+"--bullets--"
+"Measures <strong>over 15 aspects of mental health and well-being</strong>, taking a whole-person approach - from stressors, to substance use, to resilience, and perceived stigma."
+"Connects the dots between <strong>mental health-related risk and degradation in decision-making</strong> and situational awareness on the job."
+"<strong>Proactively aims to keep people healthy</strong> before mental health is compromised, providing continuous, rapid feedback to both organizations and individuals."
+"In addition to assessment, <strong>delivers mental health education and support</strong> for early intervention where required."
+"<strong>Customized for every client</strong> - co-created directly with organizations to tailor the tool to best suit your needs"
+
+"--quote--"
+"Fit for Flight is the only customizable, digital mental health tool that works upstream to intervene early and mitigate both mental health degradation and safety risk by leveraging scientific research and decades of experience in pilot decision-making and situational awareness."
 
 "--areas--"
 "Rapid Assessment|Confidential, rapid assessment of the entire mental health ecosystem, including common mental illnesses, resilience, coping ability, perceived stigma, and aviation-specific stressors.|circle-check"
@@ -23,5 +31,7 @@ layout = "base_service"
 "Impact of Mitigations|Allows organizations to continuously take the pulse of their pilot cohort's mental health and well-being and assess the impact of mitigations.|activity"
 
 "--projects--"
+"Performance Readiness and Safety Promotion|Supporting Pilot's Mental Health & Well-being|FitforFlight|Brooke Linden|2026|8 min. read|/assets/cases/F4F.pdf|/assets/images/f4f3.jpg|bg-lime-500"
+"Addressing the Mental Health Crisis in Aviation|Developing Fit for Flight|FitforFlight|Brooke Linden|2026|5 min. read|/posts/fitforflight1/|/assets/images/f4f4.jpg|bg-lime-500"
 "/assets/images/f4f2.png"
 }}
