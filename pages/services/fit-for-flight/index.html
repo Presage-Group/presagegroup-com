@@ -205,7 +205,7 @@
     class="hidden lg:relative lg:flex z-10 items-center w-full h-24 bg-gray-100 dark:bg-gray-800"
 >
     <div
-        class="relative flex flex-wrap items-start w-full mx-auto font-medium md:items-center justify-between md:h-24"
+        class="relative flex flex-wrap items-start w-full mb-4 mx-auto font-medium md:items-center justify-between md:h-24"
     >
         <a href="/" class="flex items-center font-extrabold text-white md:py-0 w-48">
             <img
@@ -215,7 +215,7 @@
             />
         </a>
         <div
-            class="relative z-50 flex-col items-center justify-center w-1/2 h-auto px-2 py-2 text-center text-gray-400 rounded-md md:w-auto md:h-10 md:flex-row md:items-center"
+            class="relative z-50 flex-col items-center justify-center w-1/2 h-auto px-2 text-center text-gray-400 rounded-md md:w-auto md:h-10 md:flex-row md:items-center"
         >
             <a
                 href="/"
@@ -816,10 +816,8 @@
     <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
         What is Fit for Flight?
     </h2>
-    <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed my-8 columns-1 sm:columns-2 gap-12">
-        <p>Studies completed by government, civil, and military organizations over the past several years have reported <strong>increasing rates of mental illness among pilot populations</strong>, along with poor assessment protocols, barriers to help-seeking, stigma, and an overall lack of upstream, whole-person approaches to supporting pilot mental health and overall well-being. These findings have been supported by numerous anecdotal accounts from pilots throughout the aviation sector.</p> 
-<p>In response to this growing concern, Presage has developed <strong>a next generation mental health assessment tool</strong> to address both pilot and organizational concerns, risks, and gaps in the well-being safety net. <strong>Fit for Flight</strong>  differentiates itself from other mental health and well-being apps by being the only assessment tool that measures the relationship between mental health risks and the degradation in decision-making and situational awareness.</p> 
-<p>Fit for Flight is a custom-built tool, <strong>co-created directly with client organizations</strong> to support the identification and continuous monitoring of aggregate personnel mental health risks. This empowers leadership to deploy proactive and tailored interventions and mitigations, while demonstrating accountability for the risks presented to them. Individuals benefit from rapid feedback on their own well-being, highlighted comparative assessment scores, improved mental health literacy, and support for early intervention if required.</p>
+    <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed my-8 columns-1 gap-12">
+        <p>Fit For Flight is a next generation digital mental health assessment tool, designed to support the mental health and wellbeing of pilots and other professionals in the aviation sector.</p>
     </div>
     <div class="relative w-full rounded-xl overflow-hidden" style="padding-top: 56.25%;">
         <iframe
@@ -832,6 +830,68 @@
         </iframe>
     </div>
 </div>
+<section class="bg-white pt-12 pb-4">
+    <div class="container max-w-4xl mx-auto px-8">
+        <ul class="space-y-4" id="bullet-list">
+            <li class="bullet-reveal flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 text-gray-700 dark:text-gray-200 text-lg">
+    <span class="mt-3 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
+    <span>Measures <strong>over 15 aspects of mental health and well-being</strong>, taking a whole-person approach - from stressors, to substance use, to resilience, and perceived stigma.</span>
+</li>
+
+<li class="bullet-reveal flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 text-gray-700 dark:text-gray-200 text-lg">
+    <span class="mt-3 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
+    <span>Connects the dots between <strong>mental health-related risk and degradation in decision-making</strong> and situational awareness on the job.</span>
+</li>
+
+<li class="bullet-reveal flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 text-gray-700 dark:text-gray-200 text-lg">
+    <span class="mt-3 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
+    <span><strong>Proactively aims to keep people healthy</strong> before mental health is compromised, providing continuous, rapid feedback to both organizations and individuals.</span>
+</li>
+
+<li class="bullet-reveal flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 text-gray-700 dark:text-gray-200 text-lg">
+    <span class="mt-3 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
+    <span>In addition to assessment, <strong>delivers mental health education and support</strong> for early intervention where required.</span>
+</li>
+
+<li class="bullet-reveal flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 text-gray-700 dark:text-gray-200 text-lg">
+    <span class="mt-3 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
+    <span><strong>Customized for every client</strong> - co-created directly with organizations to tailor the tool to best suit your needs</span>
+</li>
+
+        </ul>
+    </div>
+</section>
+<style>
+    .bullet-reveal.visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+</style>
+<script>
+    (function () {
+        const items = document.querySelectorAll('.bullet-reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // stagger each bullet by its index
+                    const idx = Array.from(items).indexOf(entry.target);
+                    setTimeout(() => entry.target.classList.add('visible'), idx * 150);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        items.forEach(el => observer.observe(el));
+    })();
+</script>
+<section class="bg-white py-10">
+    <div class="container max-w-4xl mx-auto px-8">
+        <blockquote class="border-l-8 border-[#00416b] pl-6 py-2">
+            <p class="text-2xl sm:text-3xl font-extrabold text-[#00416b] dark:text-gray-100 leading-snug">
+                &ldquo;Fit for Flight is the only customizable, digital mental health tool that works upstream to intervene early and mitigate both mental health degradation and safety risk by leveraging scientific research and decades of experience in pilot decision-making and situational awareness.&rdquo;
+            </p>
+        </blockquote>
+    </div>
+</section>
 <section class="pt-12 bg-white">
     <div class="container max-w-6xl mx-auto">
         <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
@@ -887,6 +947,70 @@
 </div>
 
         </div>
+    </div>
+</section>
+<section class="pt-32 bg-white">
+    <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
+        Learn More
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-8 pb-10 sm:px-5 m-10">
+        <div class="w-full sm:w-1/2 xl:w-1/3">
+    <a href="/assets/cases/F4F.pdf" target="_blank" class="block">
+        <img
+            class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 max-w-6xl"
+            src="/assets/images/f4f3.jpg"
+            alt="Performance Readiness and Safety Promotion"
+        />
+    </a>
+
+    <div class="bg-lime-500 px-3 py-1.5 mb-3 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
+        <span>FitforFlight</span>
+    </div>
+
+    <h2 class="text-lg text-black dark:text-white font-bold sm:text-xl md:text-2xl">
+        <a href="/assets/cases/F4F.pdf" target="_blank">Performance Readiness and Safety Promotion</a>
+    </h2>
+
+    <p class="text-sm text-gray-500">
+        Supporting Pilot's Mental Health & Well-being
+    </p>
+
+    <p class="pt-2 text-xs font-medium">
+        <span class="mr-1 underline">Brooke Linden</span> ·
+        <span class="mx-1">2026</span> ·
+        <span class="mx-1 text-gray-600">8 min. read</span>
+    </p>
+</div>
+
+<div class="w-full sm:w-1/2 xl:w-1/3">
+    <a href="/posts/fitforflight1/" target="_blank" class="block">
+        <img
+            class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 max-w-6xl"
+            src="/assets/images/f4f4.jpg"
+            alt="Addressing the Mental Health Crisis in Aviation"
+        />
+    </a>
+
+    <div class="bg-lime-500 px-3 py-1.5 mb-3 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
+        <span>FitforFlight</span>
+    </div>
+
+    <h2 class="text-lg text-black dark:text-white font-bold sm:text-xl md:text-2xl">
+        <a href="/posts/fitforflight1/" target="_blank">Addressing the Mental Health Crisis in Aviation</a>
+    </h2>
+
+    <p class="text-sm text-gray-500">
+        Developing Fit for Flight
+    </p>
+
+    <p class="pt-2 text-xs font-medium">
+        <span class="mr-1 underline">Brooke Linden</span> ·
+        <span class="mx-1">2026</span> ·
+        <span class="mx-1 text-gray-600">5 min. read</span>
+    </p>
+</div>
+
     </div>
 </section>
 <section class="px-2 py-25 bg-white md:px-0">
@@ -949,7 +1073,7 @@
 </section>
 
 <div class="page-foot">
-    Last modified: April 30, 2026
+    Last modified: May 04, 2026
 </div>
 </div>
 </div> <!-- end of class container -->
