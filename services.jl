@@ -63,7 +63,7 @@ function hfun_work_service(heading, youtube_url, html_content="")
             <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
                 $heading
             </h2>
-            <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-1 sm:columns-2 gap-12">
+            <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-1 gap-12">
                 $html_content
             </div>
         </div>
@@ -74,7 +74,7 @@ function hfun_work_service(heading, youtube_url, html_content="")
         <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
             $heading
         </h2>
-        <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed my-8 columns-1 sm:columns-2 gap-12">
+        <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed my-8 columns-1 gap-12">
             $html_content
         </div>
         <div class="relative w-full rounded-xl overflow-hidden" style="padding-top: 56.25%;">
@@ -92,7 +92,66 @@ function hfun_work_service(heading, youtube_url, html_content="")
 end
 
 
-# One area of expertise card
+# Animated bullet points, revealed one by one on scroll
+function hfun_bullets_service(bullets::Vector{String})
+    items = join([
+        """
+        <li class="bullet-reveal flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 text-gray-700 dark:text-gray-200 text-lg">
+            <span class="mt-1 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
+            <span>$b</span>
+        </li>
+        """ for b in bullets
+    ], "\n")
+
+    return """
+    <section class="bg-white pt-12 pb-4">
+        <div class="container max-w-4xl mx-auto px-8">
+            <ul class="space-y-4" id="bullet-list">
+                $items
+            </ul>
+        </div>
+    </section>
+    <style>
+        .bullet-reveal.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+    <script>
+        (function () {
+            const items = document.querySelectorAll('.bullet-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // stagger each bullet by its index
+                        const idx = Array.from(items).indexOf(entry.target);
+                        setTimeout(() => entry.target.classList.add('visible'), idx * 150);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            items.forEach(el => observer.observe(el));
+        })();
+    </script>
+    """
+end
+
+# Big bold block quote
+function hfun_quote_service(text::String)
+    return """
+    <section class="bg-white py-10">
+        <div class="container max-w-4xl mx-auto px-8">
+            <blockquote class="border-l-8 border-[#00416b] pl-6 py-2">
+                <p class="text-2xl sm:text-3xl font-extrabold text-[#00416b] dark:text-gray-100 leading-snug">
+                    &ldquo;$text&rdquo;
+                </p>
+            </blockquote>
+        </div>
+    </section>
+    """
+end
+
+# 
 function hfun_area_service(title::String, desc::String, icon_name::String="circle")
     return """
     <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-blue-300 sm:rounded-xl">
@@ -184,7 +243,7 @@ function hfun_projects_service(project_params::Vector{String})
     return """
     <section class="pt-32 bg-white">
         <h2 class="text-4xl font-bold tracking-tight text-center dark:text-gray-200">
-            Presage Case Studies and Client Testimonials
+            Learn More
         </h2>
 
         <div class="flex flex-wrap justify-center gap-8 pb-10 sm:px-5 m-10">
@@ -281,8 +340,6 @@ Service page skeleton.
 """
 function hfun_service(params)
     hero_html           = hfun_hero_service(params[1:3])
-    areas_html          = ""
-    projects_html       = ""
     img                 = last(params)
     call_to_action_html = hfun_call_to_action_service(img)
 
@@ -291,23 +348,39 @@ function hfun_service(params)
     html_content = params[6]
     work_html    = hfun_work_service(heading, youtube_url, html_content)
 
-    idx_area = findfirst(==("--areas--"), params)
-    idx_proj = findfirst(==("--projects--"), params)
+    # locate all section delimiters
+    idx_bullets  = findfirst(==("--bullets--"),  params)
+    idx_quote    = findfirst(==("--quote--"),     params)
+    idx_area     = findfirst(==("--areas--"),     params)
+    idx_proj     = findfirst(==("--projects--"),  params)
 
-    if idx_area !== nothing
-        stop       = idx_proj === nothing ? length(params) - 1 : idx_proj - 1
-        # println(length(params[idx_area+1:stop]))
-        if length(params[idx_area+1:stop]) > 6
-            grid_heading = "Scientific Studies"
-        else 
-            grid_heading = "Features and Outcomes"
-        end
-        areas_html = hfun_areas_service(params[idx_area+1:stop], grid_heading)
+    # ── bullets ──────────────────────────────────────────────────────────────
+    bullets_html = ""
+    if idx_bullets !== nothing
+        stop_bullets = something(idx_quote, idx_area, idx_proj, length(params)) - 1
+        bullets_html = hfun_bullets_service(params[idx_bullets+1:stop_bullets])
     end
 
+    # ── block quote ──────────────────────────────────────────────────────────
+    quote_html = ""
+    if idx_quote !== nothing
+        stop_quote = something(idx_area, idx_proj, length(params)) - 1
+        quote_html = hfun_quote_service(join(params[idx_quote+1:stop_quote], " "))
+    end
+
+    # ── areas ────────────────────────────────────────────────────────────────
+    areas_html = ""
+    if idx_area !== nothing
+        stop_area  = idx_proj === nothing ? length(params) - 1 : idx_proj - 1
+        grid_heading = length(params[idx_area+1:stop_area]) > 6 ? "Scientific Studies" : "Features and Outcomes"
+        areas_html = hfun_areas_service(params[idx_area+1:stop_area], grid_heading)
+    end
+
+    # ── projects ─────────────────────────────────────────────────────────────
+    projects_html = ""
     if idx_proj !== nothing
         projects_html = hfun_projects_service(params[idx_proj+1:end-1])
     end
 
-    return hero_html * work_html * areas_html * projects_html * call_to_action_html
+    return hero_html * work_html * bullets_html * quote_html * areas_html * projects_html * call_to_action_html
 end
