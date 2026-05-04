@@ -97,7 +97,7 @@ function hfun_bullets_service(bullets::Vector{String})
     items = join([
         """
         <li class="bullet-reveal flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 text-gray-700 dark:text-gray-200 text-lg">
-            <span class="mt-1 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
+            <span class="mt-3 shrink-0 w-3 h-3 rounded-full bg-[#00416b]"></span>
             <span>$b</span>
         </li>
         """ for b in bullets
