@@ -4,7 +4,7 @@ layout = "base_service"
 +++
 
 {{service 
-"/assets/images/f4f.webp"
+"/assets/images/f4f3.jpg"
 "Fit for Flight" 
 "Pilot Mental Health and Well-being Tool"
 
