@@ -31,7 +31,7 @@ layout = "base_service"
 "Impact of Mitigations|Allows organizations to continuously take the pulse of their pilot cohort's mental health and well-being and assess the impact of mitigations.|activity"
 
 "--projects--"
-"Performance Readiness and Safety Promotion|Supporting Pilot's Mental Health & Well-being|FitforFlight|Brooke Linden|2026|8 min. read|/assets/cases/F4F.pdf|/assets/images/f4f3.jpg|bg-lime-500"
+"Performance Readiness and Safety Promotion|Supporting Pilot's Mental Health & Well-being|FitforFlight|Brooke Linden|2026|8 min. read|/assets/cases/F4F2.pdf|/assets/images/f4f3.jpg|bg-lime-500"
 "Addressing the Mental Health Crisis in Aviation|Developing Fit for Flight|FitforFlight|Brooke Linden|2026|5 min. read|/posts/fitforflight1/|/assets/images/f4f4.jpg|bg-lime-500"
 "/assets/images/f4f2.png"
 }}
