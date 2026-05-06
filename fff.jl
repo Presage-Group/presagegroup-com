@@ -65,7 +65,7 @@ function hfun_work_fff(heading, youtube_url)
         """
     end
     return """
-    <div class="container max-w-6xl mx-auto px-8 xl:px-5">
+    <div class="container max-w-4xl mx-auto px-8 xl:px-5">
         <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
             $heading
         </h2>
@@ -87,8 +87,10 @@ end
 function hfun_content_fff(html_content)
     return isempty(html_content) ? "" : """
     <div class="container max-w-6xl mx-auto px-8 xl:px-5">
-        <div class="content-cols text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8 columns-1 gap-12">
-            $html_content
+        <div class="flex justify-center">
+            <div class="max-w-3xl w-full text-gray-600 dark:text-gray-300 text-lg leading-relaxed mt-8">
+                $html_content
+            </div>
         </div>
     </div>
     """
@@ -108,7 +110,7 @@ function hfun_bullets_fff(bullets::Vector{String})
 
     return """
     <section class="bg-white pt-12 pb-4">
-        <div class="container max-w-4xl mx-auto px-8">
+        <div class="container max-w-3xl mx-auto px-8">
             <ul class="space-y-4" id="bullet-list">
                 $items
             </ul>

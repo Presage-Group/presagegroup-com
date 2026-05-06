@@ -11,9 +11,9 @@ layout = "base_service"
 "Fit For Flight Walkthrough"
 "https://www.youtube.com/embed/va7Zyyu_8wQ?si=qhXh9QMgQ-0hyY9G"
 "<br>
-<h4>
+<h2>
     Fit For Flight is a next generation digital mental health assessment tool, designed to support the mental health and wellbeing of pilots and other professionals in the aviation sector.
-</h4>"
+</h2>"
 
 "--bullets--"
 "Measures <strong>over 15 aspects of mental health and well-being</strong>, taking a whole-person approach - from stressors, to substance use, to resilience, and perceived stigma."
