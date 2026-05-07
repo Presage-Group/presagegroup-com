@@ -3,14 +3,17 @@ title = "Fit for Flight"
 layout = "base_service"
 +++
 
-{{service 
+{{fff 
 "/assets/images/f4f3.jpg"
 "Fit for Flight" 
 "Pilot Mental Health and Well-being Tool"
 
-"What is Fit for Flight?"
+"Fit For Flight Walkthrough"
 "https://www.youtube.com/embed/va7Zyyu_8wQ?si=qhXh9QMgQ-0hyY9G"
-"<p>Fit For Flight is a next generation digital mental health assessment tool, designed to support the mental health and wellbeing of pilots and other professionals in the aviation sector.</p>"
+"<br>
+<h2>
+    Fit For Flight is a next generation digital mental health assessment tool, designed to support the mental health and wellbeing of pilots and other professionals in the aviation sector.
+</h2>"
 
 "--bullets--"
 "Measures <strong>over 15 aspects of mental health and well-being</strong>, taking a whole-person approach - from stressors, to substance use, to resilience, and perceived stigma."
