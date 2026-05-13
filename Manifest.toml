@@ -111,9 +111,9 @@ version = "1.11.0"
 
 [[deps.JLLWrappers]]
 deps = ["Artifacts", "Preferences"]
-git-tree-sha1 = "0533e564aae234aff59ab625543145446d8b6ec2"
+git-tree-sha1 = "7204148362dafe5fe6a273f855b8ccbe4df8173e"
 uuid = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210"
-version = "1.7.1"
+version = "1.8.0"
 
 [[deps.JSON]]
 deps = ["Dates", "Logging", "Parsers", "PrecompileTools", "StructUtils", "UUIDs", "Unicode"]
@@ -290,9 +290,9 @@ version = "1.11.0"
 
 [[deps.Revise]]
 deps = ["CodeTracking", "FileWatching", "InteractiveUtils", "JuliaInterpreter", "LibGit2", "LoweredCodeUtils", "OrderedCollections", "Preferences", "REPL", "UUIDs"]
-git-tree-sha1 = "5f4f629c085b87e71125eec6773f5f872c74a47a"
+git-tree-sha1 = "d9383b639663d8220ac9c523927e38bc21cad16a"
 uuid = "295af30f-e4ad-537b-8983-00126c2a3abe"
-version = "3.14.2"
+version = "3.14.3"
 
     [deps.Revise.extensions]
     DistributedExt = "Distributed"
