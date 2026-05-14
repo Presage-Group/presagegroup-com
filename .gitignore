@@ -5,3 +5,4 @@ package-lock.json
 .vscode
 Manifest.toml
 .Rproj.user
+.positai
