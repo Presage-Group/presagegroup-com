@@ -674,9 +674,6 @@
   .w-full {
     width: 100%;
   }
-  .w-lg {
-    width: var(--container-lg);
-  }
   .w-max {
     width: max-content;
   }
