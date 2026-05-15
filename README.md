@@ -22,6 +22,6 @@ To make a change to the website:
 5. Push your branch to github (button in the top bar of github desktop). This should be done at minimum once per day so your work is backed up.
 6. Repeat steps 3-5 until you are happy with your changes
 7. Make a pull request from your branch to main. This can be done on the github website under "Pull Requests". Click the green button and ask for a review from someone else in analytics just to make sure nothing has broken.
-8. They merge the changes to main and they will be live in a couple minutes
+8. They merge the changes to main and they will be live in a couple minutes.
 9. Once a pull request has been safely merged and closed, delete your created branch. 
 
