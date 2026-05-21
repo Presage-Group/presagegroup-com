@@ -795,29 +795,17 @@
 <div class="flex flex-col items-center text-center sm:px-5 gap-y-4">
     <img
         class="h-48 w-96 object-contain rounded-md mt-6"
-        src="/assets/Julia_Programming_Language_Logo.svg"
+        src="/assets/FTSC-logo.jpg"
         alt="Blog header image"
     >
     <p class="text-3xl font-semibold max-w-2xl">
-        Announcing Sentry.jl: A minimal SDK for Sentry in julia
+        Presage Attends the Textron Aviation 2026 Safety Standdown
     </p>
 </div>
 
-<p>Presage is happy to open-source Sentry.jl, a small package designed to make interfacing with <a href="https://sentry.io/welcome/">sentry</a> easier when building web applications with <a href="https://julialang.org/">julia</a>. Sentry.jl builds on the work done by <a href="https://github.com/synchronoustechnologies/SentryIntegration.jl">SentryIntegration.jl</a>, with updates to the code to allow installation in modern versions of julia without dependencies on unregistered packages. </p>
-<p>Sentry.jl is a set of utilities for capturing data about an exceptional state in an application. Given this data, it then builds and sends a JSON payload to the Sentry server.</p>
-<p>To use Sentry.jl, you will need an account on sentry.io. Once you have a DSN assigned to your project, you can initialize the package using the <code>Sentry.init&#40;&#41;</code> function. </p>
-<pre><code class="julia hljs">Sentry.init(<span class="hljs-string">&quot;https://0000000000.ingest.sentry.io/0000000&quot;</span>)</code></pre>
-<p>The core functionality is in the <code>capture_exception</code> and <code>capture_message</code> functions, which are intended to be used at a high level in your application. When these functions are called after Sentry.jl is initialized, they will capture, package, and send the error object to Sentry. As a basic example: </p>
-<pre><code class="julia hljs"><span class="hljs-keyword">try</span>
-    core_loop()
-<span class="hljs-keyword">catch</span> exc
-    capture_exception(exc)
-<span class="hljs-keyword">end</span></code></pre>
-<p>Tags can be set to make classification and sorting of errors easier: </p>
-<pre><code class="julia hljs">Sentry.set_tag(<span class="hljs-string">&quot;customer&quot;</span>, customer)
-Sentry.set_tag(<span class="hljs-string">&quot;release&quot;</span>, string(<span class="hljs-literal">VERSION</span>))
-Sentry.set_tag(<span class="hljs-string">&quot;environment&quot;</span>, get(<span class="hljs-literal">ENV</span>, <span class="hljs-string">&quot;RUN_ENV&quot;</span>, <span class="hljs-string">&quot;unset&quot;</span>))</code></pre>
-<p>Presage uses a julia-based server to quickly and efficiently process questionnaire results and provide near-realtime feedback to our clients about their employees. Sentry.jl is an important part of monitoring the health of this server and will continue to be developed into a full-featured SDK. You can contribute to or just keep up with our progress on github at the <a href="https://github.com/Presage-Group/Sentry.jl">Sentry.jl repository</a>. </p>
+<p>At the Flight Test Safety Workshop in Dallas on May 6th, Presage CEO Dr. Martin Smith was pleased to take part in the event and present insights on human factors in the flight test environment. His talk focused on the “perfect storm” that forms when brain function, personal biases, and personality traits intersect with safety and risk management and how these invisible threats can shape decisions long before any mechanical or human error issues appear.</p>
+<p>Flight test programs work as shared ecosystems. When one part of that system hesitates, misses a cue, or doesn’t speak up, the whole operation feels it. One idea that stood out in his talk was the gut signal: the subtle, preverbal sense that something is off. In high stakes environments, this “felt sense” is often the very first hint that a threat is emerging. It’s quick, instinctive, and rooted in pattern recognition long before conscious reasoning occurs.</p>
+<p>Dr. Smith’s message underscored that paying attention to these human signals is part of flight test safety. When teams acknowledge them, check in with each other, and make sure they share the same mental model, risks surface earlier, and risk mitigation decisions improve.</p>
 <div class="page-foot">
     Last modified: May 21, 2026
 </div>
@@ -880,10 +868,6 @@ Sentry.set_tag(<span class="hljs-string">&quot;environment&quot;</span>, get(<sp
 
 <!-- CONTENT ENDS HERE -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-
-  <script src="/libs/highlight/highlight.min.js"></script>
-<script>hljs.highlightAll();hljs.configure({tabReplace: '    '});</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
