@@ -27,6 +27,7 @@ function hfun_homepage_posts()
     posts = []
     df = DateFormat("yyyy-mm-dd")
     for (k, post) in enumerate(list)
+        @info "Rendering $post"
         fi = "posts/" * splitext(post)[1]
         title = pagevar(fi, :title)
         datestr = pagevar(fi, :date)
