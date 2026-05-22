@@ -1,10 +1,12 @@
-@def author = "Brooke Linden" 
-@def date = "2026-03-24" 
-@def tags = ["presage"]
-@def title = "Why do we do what we do at Presage?"
-@def short_text = "Learn more about why we do what we do at Presage Group Inc." 
-@def rss_pubdate = Date(2026, 3, 24) 
-@def img = "/assets/how-pic3.jpg"
++++
+author = "Brooke Linden"
+date = "2026-03-24"
+tags = ["presage"]
+title = "Why do we do what we do at Presage?"
+short_text = "Learn more about why we do what we do at Presage Group Inc."
+rss_pubdate = Date(2026, 3, 24)
+img = "/assets/how-pic3.jpg"
++++
 
 \blogheader{}
 

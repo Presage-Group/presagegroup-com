@@ -1,10 +1,12 @@
-@def title = "lineaR: R interface to linear.app"
-@def author = "Umair Durrani"
-@def date = "2025-08-21"
-@def tags = ["analytics", "linear"]
-@def short_text = "Read data from and write data to linear.app using the GraphQL API in R."
-@def img = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/330px-R_logo.svg.png"
-@def rss_pubdate = Date(2025, 08, 21)
++++
+title = "lineaR: R interface to linear.app"
+author = "Umair Durrani"
+date = "2025-08-21"
+tags = ["analytics", "linear"]
+short_text = "Read data from and write data to linear.app using the GraphQL API in R."
+img = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/330px-R_logo.svg.png"
+rss_pubdate = Date(2025, 08, 21)
++++
 
 \blogheader{}
 

@@ -1,11 +1,12 @@
-@def title = "Presage Group featured in AIR International"
-@def author = "Piyush Gandhi"
-@def date = "2022-08-18"
-@def tags = ["projects", "GADME"]
-@def short_text = "AIR International's August 2022 edition discusses the Go-Around Decision-Making & Execution (GADM&E) study for the Gulfstream G500, G600, & G650"
-@def img = "/assets/images/pexels-saturnus99-19766183.webp"
-
-@def rss_pubdate = Date(2022, 08, 18)
++++
+title = "Presage Group featured in AIR International"
+author = "Piyush Gandhi"
+date = "2022-08-18"
+tags = ["projects", "GADME"]
+short_text = "AIR International's August 2022 edition discusses the Go-Around Decision-Making & Execution (GADM&E) study for the Gulfstream G500, G600, & G650"
+img = "/assets/images/pexels-saturnus99-19766183.webp"
+rss_pubdate = Date(2022, 08, 18)
++++
 
 \blogheader{}
 

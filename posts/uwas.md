@@ -1,10 +1,12 @@
-@def author = "Piyush Ghandi"
-@def date = "2025-12-03"
-@def tags = ["news", "UWAS"]
-@def title = "Presage Group Joins UWaterloo Aviation Society for Industry Presentation"
-@def short_text = "A discussion on career growth, preparedness, and advancing inclusion in aviation"
-@def rss_pubdate = Date(2025, 12, 03)
-@def img = "/assets/piyush_uwas.webp"
++++
+author = "Piyush Ghandi"
+date = "2025-12-03"
+tags = ["news", "UWAS"]
+title = "Presage Group Joins UWaterloo Aviation Society for Industry Presentation"
+short_text = "A discussion on career growth, preparedness, and advancing inclusion in aviation"
+rss_pubdate = Date(2025, 12, 03)
+img = "/assets/piyush_uwas.webp"
++++
 
 \blogheader{}
 

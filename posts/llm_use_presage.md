@@ -1,10 +1,12 @@
-@def author = "Randy Boyes"
-@def date = "2026-01-26"
-@def tags = ["analytics", "AI"]
-@def title = "AI use at Presage"
-@def short_text = "How do we use AI at Presage?"
-@def rss_pubdate = Date(2026, 01, 26)
-@def img = "/assets/team.webp"
++++
+author = "Randy Boyes"
+date = "2026-01-26"
+tags = ["analytics", "AI"]
+title = "AI use at Presage"
+short_text = "How do we use AI at Presage?"
+rss_pubdate = Date(2026, 01, 26)
+img = "/assets/team.webp"
++++
 
 \blogheader{}
 

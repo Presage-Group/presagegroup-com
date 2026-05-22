@@ -1,10 +1,12 @@
-@def title = "Kathy Fox named to be a Member of the Order of Canada"
-@def author = "Piyush Gandhi"
-@def date = "2026-01-05"
-@def tags = ["team", "announcement"]
-@def short_text = "Congratulations Kathy!"
-@def img = "/assets/kathyfox.webp"
-@def rss_pubdate = Date(2025, 01, 05)
++++
+title = "Kathy Fox named to be a Member of the Order of Canada"
+author = "Piyush Gandhi"
+date = "2026-01-05"
+tags = ["team", "announcement"]
+short_text = "Congratulations Kathy!"
+img = "/assets/kathyfox.webp"
+rss_pubdate = Date(2025, 01, 05)
++++
 
 \blogheader{}
 

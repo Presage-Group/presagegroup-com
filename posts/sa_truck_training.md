@@ -1,10 +1,12 @@
-@def author = "Umair Durrani"
-@def date = "2026-02-27"
-@def tags = ["analytics", "situational awareness"]
-@def title = "Situational Awareness as a framework for commercial driving safety"
-@def short_text = "Scaling personalized coaching and feedback in driver training."
-@def rss_pubdate = Date(2026, 02, 27)
-@def img = "/assets/app.png"
++++
+author = "Umair Durrani"
+date = "2026-02-27"
+tags = ["analytics", "situational awareness"]
+title = "Situational Awareness as a framework for commercial driving safety"
+short_text = "Scaling personalized coaching and feedback in driver training."
+rss_pubdate = Date(2026, 02, 27)
+img = "/assets/app.png"
++++
 
 \blogheader{}
 

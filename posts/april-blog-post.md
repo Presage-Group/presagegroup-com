@@ -1,10 +1,12 @@
-@def title = "Runway Incursions Are Rising in Canada: Why Human Factors Are More Important Than Ever" 
-@def author = "Amy Ecclestone" 
-@def date = "2026-04-17" 
-@def tags = ["analytics", "blog"] 
-@def short_text = "Runway Incursions Are Rising in Canada: Why Human Factors Are More Important Than Ever"
-@def img = "/assets/april-blog-figure.svg"
-@def rss_pubdate = Date(2026, 04, 17)
++++
+title = "Runway Incursions Are Rising in Canada: Why Human Factors Are More Important Than Ever"
+author = "Amy Ecclestone"
+date = "2026-04-17"
+tags = ["analytics", "blog"]
+short_text = "Runway Incursions Are Rising in Canada: Why Human Factors Are More Important Than Ever"
+img = "/assets/april-blog-figure.svg"
+rss_pubdate = Date(2026, 04, 17)
++++
 
 \blogheader{}
 

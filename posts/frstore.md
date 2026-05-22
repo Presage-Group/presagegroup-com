@@ -1,11 +1,12 @@
-@def title = "frstore: R interface to Google Firestore Database"
-@def author = "Umair Durrani"
-@def date = "2025-08-21"
-@def tags = ["analytics", "google"]
-@def short_text = "Easy API access to Firestore in R"
-@def img = "/assets/images/frstore.webp"
-
-@def rss_pubdate = Date(2025, 08, 21)
++++
+title = "frstore: R interface to Google Firestore Database"
+author = "Umair Durrani"
+date = "2025-08-21"
+tags = ["analytics", "google"]
+short_text = "Easy API access to Firestore in R"
+img = "/assets/images/frstore.webp"
+rss_pubdate = Date(2025, 08, 21)
++++
 
 \blogheader{}
 

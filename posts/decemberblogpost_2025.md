@@ -1,11 +1,12 @@
-@def title = "Understanding Safety Through Mixed Methods"
-@def author = "Amy Ecclestone"
-@def date = "2025-12-18"
-@def tags = ["analytics", "blog"]
-@def short_text = "Understanding Safety Through Mixed Methods"
-@def img = "/assets/images/mixed_methods.svg"
-
-@def rss_pubdate = Date(2025, 12, 18)
++++
+title = "Understanding Safety Through Mixed Methods"
+author = "Amy Ecclestone"
+date = "2025-12-18"
+tags = ["analytics", "blog"]
+short_text = "Understanding Safety Through Mixed Methods"
+img = "/assets/images/mixed_methods.svg"
+rss_pubdate = Date(2025, 12, 18)
++++
 
 \blogheader{}
 

@@ -1,10 +1,12 @@
-@def author = "Randy Boyes"
-@def date = "2025-10-14"
-@def tags = ["news", "analytics", "julia"]
-@def title = "Announcing Sentry.jl: A minimal SDK for Sentry in julia"
-@def short_text = "Sentry.jl is a in-development julia package for error monitoring using sentry.io"
-@def rss_pubdate = Date(2025, 10, 14)
-@def img = "/assets/Julia_Programming_Language_Logo.svg"
++++
+author = "Randy Boyes"
+date = "2025-10-14"
+tags = ["news", "analytics", "julia"]
+title = "Announcing Sentry.jl: A minimal SDK for Sentry in julia"
+short_text = "Sentry.jl is a in-development julia package for error monitoring using sentry.io"
+rss_pubdate = Date(2025, 10, 14)
+img = "/assets/Julia_Programming_Language_Logo.svg"
++++
 
 \blogheader{}
 
