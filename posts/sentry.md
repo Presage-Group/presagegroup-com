@@ -4,7 +4,6 @@ date = "2025-10-14"
 tags = ["news", "analytics", "julia"]
 title = "Announcing Sentry.jl: A minimal SDK for Sentry in julia"
 short_text = "Sentry.jl is a in-development julia package for error monitoring using sentry.io"
-rss_pubdate = Date(2025, 10, 14)
 img = "/assets/Julia_Programming_Language_Logo.svg"
 +++
 
@@ -38,4 +37,4 @@ Sentry.set_tag("release", string(VERSION))
 Sentry.set_tag("environment", get(ENV, "RUN_ENV", "unset"))
 ```
 
-Presage uses a julia-based server to quickly and efficiently process questionnaire results and provide near-realtime feedback to our clients about their employees. Sentry.jl is an important part of monitoring the health of this server and will continue to be developed into a full-featured SDK. You can contribute to or just keep up with our progress on github at the [Sentry.jl repository](https://github.com/Presage-Group/Sentry.jl). 
+Presage uses a julia-based server to quickly and efficiently process questionnaire results and provide near-realtime feedback to our clients about their employees. Sentry.jl is an important part of monitoring the health of this server and will continue to be developed into a full-featured SDK. You can contribute to or just keep up with our progress on github at the [Sentry.jl repository](https://github.com/Presage-Group/Sentry.jl).

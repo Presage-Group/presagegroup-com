@@ -4,7 +4,6 @@ date = "2024-01-01"
 tags = ["news", "gadme"]
 title = "Navigating the Skies with Confidence: CJP’s Commitment to Safety"
 short_text = "Presage Group's work with the Citation Jet Pilots Owner's Association (CJP) was featured in an article in Twin & Turbine."
-rss_pubdate = Date(2024, 01, 01)
 img = "/assets/TTlogo.webp"
 +++
 

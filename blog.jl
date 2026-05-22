@@ -1,4 +1,4 @@
-@delay function hfun_recent_posts(m::Vector{String})
+function hfun_recent_posts(m::Vector{String})
     @assert length(m) == 1 "only one argument allowed for recent posts (the number of recent posts to pull)"
     n = parse(Int64, m[1])
     list = readdir("posts")
@@ -57,7 +57,7 @@
     return html
 end
 
-@delay function hfun_all_posts()
+function hfun_all_posts()
     return hfun_recent_posts(["-1"])
 end
 

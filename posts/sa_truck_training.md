@@ -4,7 +4,6 @@ date = "2026-02-27"
 tags = ["analytics", "situational awareness"]
 title = "Situational Awareness as a framework for commercial driving safety"
 short_text = "Scaling personalized coaching and feedback in driver training."
-rss_pubdate = Date(2026, 02, 27)
 img = "/assets/app.png"
 +++
 
@@ -44,4 +43,4 @@ Interested in working with us to improve your fleet safety? Click 'Work with us'
 
 [3]	MNP, “Commercial Trucking Insurance and Education,” Insurance Bureau of Canada, Apr. 2024.   
 
-[4]	M. C. Camden, J. S. Hickman, and R. J. Hanowski, “Reversing Poor Safety Records: Identifying Best Practices to Improve Fleet Safety,” Safety, vol. 8, no. 1, p. 2, Dec. 2021, doi: 10.3390/safety8010002.  
+[4]	M. C. Camden, J. S. Hickman, and R. J. Hanowski, “Reversing Poor Safety Records: Identifying Best Practices to Improve Fleet Safety,” Safety, vol. 8, no. 1, p. 2, Dec. 2021, doi: 10.3390/safety8010002.

@@ -4,7 +4,6 @@ date = "2026-01-26"
 tags = ["news", "gadme"]
 title = "It's Contagious"
 short_text = "Presage Group's work with the Citation Jet Pilots Owner's Association (CJP) was featured in an article in Twin & Turbine."
-rss_pubdate = Date(2026, 01, 26)
 img = "/assets/TTlogo.webp"
 +++
 

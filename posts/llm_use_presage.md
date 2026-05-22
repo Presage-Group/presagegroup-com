@@ -4,7 +4,6 @@ date = "2026-01-26"
 tags = ["analytics", "AI"]
 title = "AI use at Presage"
 short_text = "How do we use AI at Presage?"
-rss_pubdate = Date(2026, 01, 26)
 img = "/assets/team.webp"
 +++
 
@@ -34,4 +33,4 @@ Presage relies on local models for transcription of audio and video files.
 
 #### Research
 
-We may use LLMs to assist us in finding research papers, but will never base conclusions or recommendations on the summaries provided by an LLM. We will always read the primary source material directly. 
+We may use LLMs to assist us in finding research papers, but will never base conclusions or recommendations on the summaries provided by an LLM. We will always read the primary source material directly.

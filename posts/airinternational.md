@@ -5,7 +5,6 @@ date = "2022-08-18"
 tags = ["projects", "GADME"]
 short_text = "AIR International's August 2022 edition discusses the Go-Around Decision-Making & Execution (GADM&E) study for the Gulfstream G500, G600, & G650"
 img = "/assets/images/pexels-saturnus99-19766183.webp"
-rss_pubdate = Date(2022, 08, 18)
 +++
 
 \blogheader{}

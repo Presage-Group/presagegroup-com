@@ -4,7 +4,6 @@ date = "2025-08-24"
 tags = ["projects", "gadme"]
 title = "Presage completes project with British Antarctic Survey"
 short_text = "Presage Group Inc. was subcontracted to apply a Multiple Flight Operations Scientific Study to assist in the safe entry into service (EIS) of the Dash-8-314 aircraft into BAS’ unique operating environment in Rothera, Antarctica."
-rss_pubdate = Date(2025, 08, 24)
 img = "/assets/images/antarctica.webp"
 +++
 

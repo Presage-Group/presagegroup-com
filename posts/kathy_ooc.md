@@ -5,7 +5,6 @@ date = "2026-01-05"
 tags = ["team", "announcement"]
 short_text = "Congratulations Kathy!"
 img = "/assets/kathyfox.webp"
-rss_pubdate = Date(2025, 01, 05)
 +++
 
 \blogheader{}

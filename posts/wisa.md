@@ -5,7 +5,6 @@ date = "2025-08-22"
 tags = ["analytics", "wisa"]
 short_text = "Aerospace Sustainability and its Intersection with Mental Health and Wellbeing"
 img = "/assets/images/wisa_logo.webp"
-rss_pubdate = Date(2025, 08, 22)
 +++
 
 \blogheader{}

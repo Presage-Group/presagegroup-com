@@ -5,7 +5,6 @@ date = "2025-12-18"
 tags = ["analytics", "blog"]
 short_text = "Understanding Safety Through Mixed Methods"
 img = "/assets/images/mixed_methods.svg"
-rss_pubdate = Date(2025, 12, 18)
 +++
 
 \blogheader{}

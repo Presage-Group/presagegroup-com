@@ -5,7 +5,6 @@ date = "2026-04-17"
 tags = ["analytics", "blog"]
 short_text = "Runway Incursions Are Rising in Canada: Why Human Factors Are More Important Than Ever"
 img = "/assets/april-blog-figure.svg"
-rss_pubdate = Date(2026, 04, 17)
 +++
 
 \blogheader{}
@@ -22,4 +21,3 @@ This is where The Presage Group’s approach becomes critical. Rather than treat
 By examining psychosocial and organizational drivers, including cognitive load, fatigue, communication dynamics, and situational awareness, this approach shifts safety management from reactive to more proactive. It complements existing technical and procedural safeguards by addressing the human performance factors that ultimately determines how systems are used in practice.  
 
 In high-risk domains like aviation, safety requires a detailed understanding of behaviour in context. If runway incursions continue to rise, meaningful progress will depend on integrating behavioural insight into how risk is identified, managed, and mitigated across the system.
-

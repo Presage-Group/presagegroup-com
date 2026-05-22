@@ -5,7 +5,6 @@ tags = ["news"]
 date = "2026-05-19"
 short_text = "Presage Attends the Textron Aviation 2026 Safety Standdown"
 img = "/assets/FTSC-logo.jpg"
-rss_pubdate = Date(2026, 05, 19)
 +++
 
 \blogheader{}

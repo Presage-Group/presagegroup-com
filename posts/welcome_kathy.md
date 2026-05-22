@@ -5,7 +5,6 @@ date = "2025-08-22"
 tags = ["team", "announcement"]
 short_text = "Welcoming Kathy Fox to Team"
 img = "/assets/kathyfox.webp"
-rss_pubdate = Date(2025, 08, 22)
 +++
 
 \blogheader{}
