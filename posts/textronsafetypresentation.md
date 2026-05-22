@@ -1,7 +1,7 @@
-@def title = "Presage Attends the Textron Aviation 2026 Safety Standdown"
+@def title = "Presage Presents at the Textron Aviation 2026 Safety Standdown"
 @def author = "Amy Ecclestone, Dr. Martin Smith"
 @def date = "2026-05-21"
-@def short_text = "Presage Attends the Textron Aviation 2026 Safety Standdown"
+@def short_text = "Presage Presents at the Textron Aviation 2026 Safety Standdown"
 @def img = "/assets/FTSC-logo.jpg"
 @def rss_pubdate = Date(2026, 05, 21)
 
