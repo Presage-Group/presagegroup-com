@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "Bash(python -c \"data=open\\('config.md','rb'\\).read\\(\\); print\\('CRLF' if b'\\\\r\\\\n' in data else 'LF only'\\)\")",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

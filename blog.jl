@@ -194,7 +194,7 @@ const tag_color_lookup = Dict{Int64,String}(
 
 
 
-function lx_blogheader(com, _)
+function lx_blogheader()::String
     return """
         ~~~
         <div class="flex flex-col items-center text-center sm:px-5 gap-y-4">

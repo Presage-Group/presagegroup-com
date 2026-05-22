@@ -18,7 +18,7 @@ ignore = ["node_modules/"]
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 generate_rss = true
 website_title = "Presage Group, Inc."
-website_descr = "Test deployment of new site"
+website_descr = "Scientific consulting and software development firm"
 website_url   = "https://peppy-tulumba-8f6533.netlify.app/"
 +++
 
