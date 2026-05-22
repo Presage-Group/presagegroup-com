@@ -1,3 +1,8 @@
+# FranklinParser.split_args wraps quoted template args with literal " characters,
+# e.g. "foo" in the template becomes the string "\"foo\"" (3+len chars).
+# Unquoted tokens are left as-is. Strip those surrounding quotes before use.
+sq(s::String) = (length(s) >= 2 && s[1] == '"' && s[end] == '"') ? s[2:end-1] : s
+
 include("blog.jl")
 include("industries.jl")
 include("services.jl")

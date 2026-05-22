@@ -6,18 +6,19 @@ function hfun_recent_posts(m::Vector{String})
     posts = []
     df = DateFormat("yyyy-mm-dd")
     for (k, post) in enumerate(list)
-        fi = "posts/" * splitext(post)[1]
-        title = pagevar(fi, :title)
-        datestr = pagevar(fi, :date)
-        tags = pagevar(fi, :tags; default=[""])
-        author = pagevar(fi, :author)
-        short_text = pagevar(fi, :short_text)
-        img = pagevar(fi, :img; default=nothing)
+        fi = joinpath("posts", post)   # OS path separator to match children_contexts keys
+        fi_url = "posts/" * post       # forward slash for HTML hrefs
+        title = getvarfrom(:title, fi)
+        datestr = getvarfrom(:date, fi)
+        tags = getvarfrom(:tags, fi; default=[""])
+        author = getvarfrom(:author, fi)
+        short_text = getvarfrom(:short_text, fi)
+        img = getvarfrom(:img, fi; default=nothing)
         if !isnothing(datestr)
             date = Date(datestr, df)
             push!(posts, (
                 title=title,
-                link=fi,
+                link=fi_url,
                 date=date,
                 tags=tags,
                 author=author,
@@ -194,7 +195,7 @@ const tag_color_lookup = Dict{Int64,String}(
 
 
 
-function lx_blogheader()::String
+function lx_blogheader(a::Vector{String})::String
     return """
         ~~~
         <div class="flex flex-col items-center text-center sm:px-5 gap-y-4">

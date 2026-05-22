@@ -339,6 +339,7 @@ end
 Service page skeleton.
 """
 function hfun_service(params)
+    params = sq.(params)
     hero_html           = hfun_hero_service(params[1:3])
     img                 = last(params)
     call_to_action_html = hfun_call_to_action_service(img)

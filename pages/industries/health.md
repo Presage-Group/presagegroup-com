@@ -18,7 +18,7 @@ As we extend our work into healthcare and related domains, our approach remains 
 
 "Martin Smith, PhD|Co-founder / CEO|/assets/martin.webp|Former Pilot and Flight Dispatcher;"
 "Brooke Linden, PhD|Director, Research|/assets/brooke-headshot.webp|Research Scientist, Health Services and <br> Policy Research Institute;"
-"Richard Karl, PhD|SME, Medicine & Surgery|/assets/Dick-Karl-3.webp|Chairman Emeritus of the Surgery Department <br> at the University of South Florida <br> Morsani College of Medicine;"
+"Richard Karl, MD|SME, Medicine & Surgery|/assets/Dick-Karl-3.webp|Chairman Emeritus of the Surgery Department <br> at the University of South Florida <br> Morsani College of Medicine;"
 "Randy Boyes, PhD|Director, Analytics|/assets/randy-headshot-1.webp|Former Epidemiologist;"
 
 "--areas--"

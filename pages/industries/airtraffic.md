@@ -28,7 +28,7 @@ Whether we’re conducting culture diagnostics, evaluating real-time decision pr
 "Safety Culture|Organizational safety culture, policies and procedures."
 "Air Traffic Controller Well Being|Safeguarding and supporting controllers' mental health and wellbeing."
 
---projects--
+"--projects--"
 "Airways New Zealand|A review of safety culture|Scientific Aviation|Brooke Linden|2023|8 min. read|/assets/cases/Airways.pdf|/assets/images/DVOR with aircraft 2.webp|bg-orange-500"
 "/assets/images/tower.webp"
 }}

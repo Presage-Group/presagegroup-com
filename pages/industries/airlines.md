@@ -53,7 +53,7 @@ mental health in the industry, is well underway."
 "Safety Culture|Organizational safety culture, flight deck person, policies and procedures."
 "Pilot Wellbeing|Safeguarding and supporting pilots’ mental health and wellbeing."
 
---projects--
+"--projects--"
 "British Antarctic Survey|A review of takeoff and landing procedures prior to the introduction of a new aircraft type|Scientific Aviation|Brooke Linden|June 3rd, 2025|8 min. read|/assets/cases/BAS.pdf|/assets/images/antarctica.webp|bg-orange-500"
 "Virgin Australia|Aligning policies and pilot mental models by understanding decision-making in the moment|Commercial Aviation|Brooke Linden|April 6, 2021|10 min. read|/assets/cases/virgin.pdf|/assets/images/virgin.webp|bg-red-500"
 "/assets/citation.webp"

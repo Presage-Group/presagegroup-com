@@ -347,6 +347,7 @@ Section order:
   hero → quote → work (heading + video) → content → bullets → areas → projects → CTA
 """
 function hfun_fff(params)
+    params = sq.(params)
     hero_html           = hfun_hero_fff(params[1:3])
     img                 = last(params)
     call_to_action_html = hfun_call_to_action_fff(img)
