@@ -9,6 +9,4 @@ img = "/assets/FlightSafety-Logo-blue.svg"
 
 \blogheader{}
 
-Presage Group announced at the Business Aviation Safety Summit (BASS) that we will be partnering with FlightSafety International on a new study to investigate the root causes of runway excursions for Gulfstream operators. The study will use Presage's proprietary psychological methodology.
-
-[Read the full article in AIN here!](https://www.ainonline.com/aviation-news/business-aviation/2022-05-11/flightsafety-presage-team-gulfstream-go-around-study)
+Presage Group announced at the Business Aviation Safety Summit (BASS) that we will be partnering with FlightSafety International on a new study to investigate the root causes of runway excursions for Gulfstream operators. The study will use Presage's proprietary psychological methodology. [Read the full article in AIN here!](https://www.ainonline.com/aviation-news/business-aviation/2022-05-11/flightsafety-presage-team-gulfstream-go-around-study)
