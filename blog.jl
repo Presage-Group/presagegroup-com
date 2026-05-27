@@ -7,7 +7,7 @@ function hfun_recent_posts(m::Vector{String})
     df = DateFormat("yyyy-mm-dd")
     for (k, post) in enumerate(list)
         fi = joinpath("posts", post)   # OS path separator to match children_contexts keys
-        fi_url = "posts/" * post       # forward slash for HTML hrefs
+        fi_url = "posts/" * split(post, ".")[1]       # forward slash for HTML hrefs
         title = getvarfrom(:title, fi)
         datestr = getvarfrom(:date, fi)
         tags = getvarfrom(:tags, fi; default=[""])
@@ -39,7 +39,7 @@ function hfun_recent_posts(m::Vector{String})
     eles = sort(posts, by=x -> x.date, rev=true)
     fp = eles[1]
 
-    html *= featured_post(fp.title, fp.link, fp.date, fp.short_text, fp.author; tags=fp.tags, img = fp.img)
+    html *= featured_post(fp.title, fp.link, fp.date, fp.short_text, fp.author; tags=fp.tags, img=fp.img)
 
     html *= """\n
       <div class="grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16 items-stretch">

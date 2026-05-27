@@ -1,5 +1,5 @@
 +++
-title = "Presage Attends the Textron Aviation 2026 Safety Standdown"
+title = "Presage Presents at the Textron Aviation 2026 Safety Standdown"
 author = "Amy Ecclestone, Dr. Martin Smith"
 tags = ["news"]
 date = "2026-05-19"

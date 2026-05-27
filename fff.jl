@@ -55,7 +55,7 @@ end
 
 # Our Work section — heading + video only (html_content rendered separately)
 function hfun_work_fff(heading, youtube_url)
-    if youtube_url == ""
+    if youtube_url in ("", "none")
         return """
         <div class="container max-w-6xl mx-auto px-8 xl:px-5">
             <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">

@@ -35,15 +35,16 @@ function hfun_homepage_posts()
     df = DateFormat("yyyy-mm-dd")
     for (k, post) in enumerate(list)
         @info "Rendering $post"
-        fi = "posts/" * splitext(post)[1]
-        title = pagevar(fi, :title)
-        datestr = pagevar(fi, :date)
-        img = pagevar(fi, :img; default="/assets/PGI_logo2_grey.png")
+        fi = joinpath("posts", post)
+        fi_url = "posts/" * split(post, ".")[1]
+        title = getvarfrom(:title, fi)
+        datestr = getvarfrom(:date, fi)
+        img = getvarfrom(:img, fi; default="/assets/PGI_logo2_grey.png")
         if !isnothing(datestr)
             date = Date(datestr, df)
             push!(posts, (
                 title=title,
-                link=fi,
+                link=fi_url,
                 date=date,
                 img=img
             ))

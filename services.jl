@@ -57,7 +57,7 @@ end
 
 # Our Work section
 function hfun_work_service(heading, youtube_url, html_content="")
-    if youtube_url == ""
+    if youtube_url in ("", "none")
         return """
         <div class="container max-w-6xl mx-auto px-8 xl:px-5">
             <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
