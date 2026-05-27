@@ -197,7 +197,6 @@ const tag_color_lookup = Dict{Int64,String}(
 
 function lx_blogheader(a::Vector{String})::String
     return """
-        ~~~
         <div class="flex flex-col items-center text-center sm:px-5 gap-y-4">
             <img
                 class="h-48 w-96 object-contain rounded-md mt-6"
@@ -208,7 +207,6 @@ function lx_blogheader(a::Vector{String})::String
                 $(locvar("title"))
             </p>
         </div>
-        ~~~
 
         """
 end
