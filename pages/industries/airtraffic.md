@@ -1,8 +1,3 @@
-+++
-title = "Air Traffic Control"
-layout = "base_service"
-+++
-
 {{industry 
 "/assets/images/atc_page.webp"
 "Air Traffic Control" 

@@ -1,8 +1,3 @@
-+++
-title = "Fit for Flight"
-layout = "base_service"
-+++
-
 {{fff 
 "/assets/images/f4f3.jpg"
 "Fit for Flight" 

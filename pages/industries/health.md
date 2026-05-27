@@ -1,8 +1,3 @@
-+++
-title = "Health and Wellbeing"
-layout = "base_service"
-+++
-
 {{industry 
 "/assets/images/health_page.webp"
 "Health and Wellbeing" 

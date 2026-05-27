@@ -1,8 +1,3 @@
-+++
-title = "Utilities and Transportation"
-layout = "base_service"
-+++
-
 {{industry 
 "/assets/images/utilities_page.webp"
 "Utilities and Transportation" 

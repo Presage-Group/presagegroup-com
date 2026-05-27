@@ -1,8 +1,3 @@
-+++
-title = "Scientific Studies"
-layout = "base_service"
-+++
-
 {{service 
 "/assets/images/sstudies.webp"
 "Scientific Studies" 

@@ -1,8 +1,3 @@
-+++
-title = "Airlines"
-layout = "base_service"
-+++
-
 {{industry 
 "/assets/images/airlines_page.webp"
 "Airlines and Aerospace" 
