@@ -10,18 +10,17 @@ To build the site for the first time on your computer:
 4. Navigate to the repository directory in a terminal
 5. Start julia and activate this environment with `] activate .`, where `]` is the command to enter the julia REPL Package mode. The prompt should say "presagegroup-com" if this worked correctly. 
 6. Instantiate this environment with `instantiate` while still in package mode.
-7. At the normal julia prompt (use backspace to exit package mode, your prompt should now say "julia>"), type `using Franklin` to load `Franklin.jl`.
-8. `serve()` will start a local server at http://localhost:8000 and open a preview of the site in your browser
+7. At the normal julia prompt (use backspace to exit package mode, your prompt should now say "julia>"), type `using Xranklin, Revise` to load `Xranklin.jl`. 
+8. `serve(clear = true)` will start a local server at http://localhost:8000 and open a preview of the site in your browser. The site will update live when you make changes.
 
 To make a change to the website: 
 
 1. Fetch the current state of the repo from github. In github desktop, this is done by clicking the "Fetch origin" button at the top. 
 2. Make a local branch with a name that describes your intended change ("september-blog-post", "new-fitforflight-page", "fix-darkmode", etc.). In github desktop, click on the down arrow beside "Current branch" and type your name into the box, then click the "New branch" button.
 3. Make changes locally and commit them. Commits can either be based on completing pieces of the work (e.g. "first paragraph added") or just over time (e.g. "end of day may 12"). Aim to not make too many changes between commits.
-4. Build the site locally to preview your change. See instructions above (you can start from step 4). 
+4. Build the site locally to preview your change. See instructions above (you can start from step 4). Make changes if required and the changes should update the preview.
 5. Push your branch to github (button in the top bar of github desktop). This should be done at minimum once per day so your work is backed up.
 6. Repeat steps 3-5 until you are happy with your changes
 7. Make a pull request from your branch to main. This can be done on the github website under "Pull Requests". Click the green button and ask for a review from someone else in analytics just to make sure nothing has broken.
 8. They merge the changes to main and they will be live in a couple minutes.
-9. Once a pull request has been safely merged and closed, delete your created branch. 
-
+9. Once a pull request has been safely merged and closed, delete your created branch.

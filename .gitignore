@@ -6,3 +6,4 @@ package-lock.json
 Manifest.toml
 .Rproj.user
 .positai
+__cache/

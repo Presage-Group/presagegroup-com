@@ -1,10 +1,11 @@
-@def author = "Randy Boyes"
-@def date = "2026-01-26"
-@def tags = ["analytics", "AI"]
-@def title = "AI use at Presage"
-@def short_text = "How do we use AI at Presage?"
-@def rss_pubdate = Date(2026, 01, 26)
-@def img = "/assets/team.webp"
++++
+author = "Randy Boyes"
+date = "2026-01-26"
+tags = ["analytics", "AI"]
+title = "AI use at Presage"
+short_text = "How do we use AI at Presage?"
+img = "/assets/team.webp"
++++
 
 \blogheader{}
 
@@ -32,4 +33,4 @@ Presage relies on local models for transcription of audio and video files.
 
 #### Research
 
-We may use LLMs to assist us in finding research papers, but will never base conclusions or recommendations on the summaries provided by an LLM. We will always read the primary source material directly. 
+We may use LLMs to assist us in finding research papers, but will never base conclusions or recommendations on the summaries provided by an LLM. We will always read the primary source material directly.

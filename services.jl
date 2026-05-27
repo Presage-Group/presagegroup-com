@@ -57,7 +57,7 @@ end
 
 # Our Work section
 function hfun_work_service(heading, youtube_url, html_content="")
-    if youtube_url == ""
+    if youtube_url in ("", "none")
         return """
         <div class="container max-w-6xl mx-auto px-8 xl:px-5">
             <h2 class="text-4xl font-bold tracking-tight dark:text-gray-200 py-8 text-center">
@@ -339,6 +339,7 @@ end
 Service page skeleton.
 """
 function hfun_service(params)
+    params = sq.(params)
     hero_html           = hfun_hero_service(params[1:3])
     img                 = last(params)
     call_to_action_html = hfun_call_to_action_service(img)

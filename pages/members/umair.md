@@ -1,8 +1,3 @@
-+++
-title = "Umair Durrani"
-layout = "member"
-+++
-
 {{ member
 "Dr. Umair Durrani"
 "/assets/umair-headshot.webp"

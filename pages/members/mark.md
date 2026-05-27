@@ -1,8 +1,3 @@
-+++
-title = "Mark Stow"
-layout = "member"
-+++
-
 {{ member
 "Capt. Mark Stow"
 "/assets/M.Stow-headshot.webp"

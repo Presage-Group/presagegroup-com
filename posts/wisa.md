@@ -1,10 +1,11 @@
-@def title = "Presage Awarded WISA Grant to Conduct Research"
-@def author = "Brooke Linden"
-@def date = "2025-08-22"
-@def tags = ["analytics", "wisa"]
-@def short_text = "Aerospace Sustainability and its Intersection with Mental Health and Wellbeing"
-@def img = "/assets/images/wisa_logo.webp"
-@def rss_pubdate = Date(2025, 08, 22)
++++
+title = "Presage Awarded WISA Grant to Conduct Research"
+author = "Brooke Linden"
+date = "2025-08-22"
+tags = ["analytics", "wisa"]
+short_text = "Aerospace Sustainability and its Intersection with Mental Health and Wellbeing"
+img = "/assets/images/wisa_logo.webp"
++++
 
 \blogheader{}
 

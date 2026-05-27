@@ -1,8 +1,3 @@
-+++
-title = "Randall Boyes"
-layout = "member"
-+++
-
 {{ member
 "Dr. Randall Boyes"
 "/assets/randy-headshot-1.webp"

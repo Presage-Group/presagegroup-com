@@ -1,8 +1,3 @@
-+++
-title = "Michelle Morrissey"
-layout = "member"
-+++
-
 {{ member
 "Michelle Morrissey"
 "/assets/Michelle-Morrissey-Headshot.webp"

@@ -1,8 +1,3 @@
-+++
-title = "PTI"
-layout = "base_service"
-+++
-
 {{service 
 "/assets/images/pti.webp"
 "Presage Training Insights" 

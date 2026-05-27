@@ -1,0 +1,4 @@
+# Force LF line endings for all text files.
+# FranklinParser tokenizes +++ TOML blocks by matching "+++\n" (not "\r\n"),
+# so CRLF line endings break front matter parsing on Windows.
+* text=auto eol=lf

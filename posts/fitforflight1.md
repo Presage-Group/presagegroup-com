@@ -4,7 +4,6 @@ date = "2025-11-18"
 tags = ["projects", "fitforflight"]
 title = "Addressing the Mental Health Crisis in Aviation: Developing Fit for Flight"
 short_text = "Presage Group Inc. embarks on the development of Fit for Flight, an application focused on mental health and wellbeing in aviation."
-rss_pubdate = Date(2025, 11, 18)
 img = "/assets/F4F Blog Post Image.webp"
 +++
 
@@ -20,4 +19,4 @@ The development of Fit for Flight builds upon years of Presage’s applied resea
 
 Our goal is to pave the way for airlines to normalize discussions around mental health in the aviation context, provide pilots and other employees in the sector with tools to track and manage their own wellbeing, and provide organizations with the data and tools they need to make informed, evidence-based decisions to best support their workforce for years to come. 
 
-Further updates on the development and deployment of Fit for Flight will be shared through Presage’s website and partner channels as the project progresses. 
+Further updates on the development and deployment of Fit for Flight will be shared through Presage’s website and partner channels as the project progresses.

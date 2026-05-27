@@ -1,8 +1,3 @@
-+++
-title = "Amy Ecclestone"
-layout = "member"
-+++
-
 {{ member
 "Amy Ecclestone"
 "/assets/Amy.webp"

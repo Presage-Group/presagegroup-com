@@ -1,10 +1,11 @@
-@def title = "Presage Group partners with Citation Jet Pilots"
-@def author = "Piyush Gandhi"
-@def date = "2021-05-18"
-@def tags = ["projects", "gadme"]
-@def short_text = "We are pleased to announce that Citation Jet Pilots Owner Pilot Association (CJP) has signed a SaaS agreement with Presage Group Inc. to partner in a scientific study"
-@def img = "/assets/citation.webp"
-@def rss_pubdate = Date(2021, 05, 18)
++++
+title = "Presage Group partners with Citation Jet Pilots"
+author = "Piyush Gandhi"
+date = "2021-05-18"
+tags = ["projects", "gadme"]
+short_text = "We are pleased to announce that Citation Jet Pilots Owner Pilot Association (CJP) has signed a SaaS agreement with Presage Group Inc. to partner in a scientific study"
+img = "/assets/citation.webp"
++++
 
 \blogheader{}
 

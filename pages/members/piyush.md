@@ -1,8 +1,3 @@
-+++
-title = "Piyush Gandhi"
-layout = "member"
-+++
-
 {{ member
 "Capt. Piyush Gandhi, MBA"
 "/assets/Piyush.webp"

@@ -1,10 +1,11 @@
-@def author = "Umair Durrani"
-@def date = "2025-11-28"
-@def tags = ["analytics", "AI"]
-@def title = "Consistent Branding of reports and applications with LLMs"
-@def short_text = "The `brandthis` package, developed by a Presage Data Scientist, makes consistent branding easy."
-@def rss_pubdate = Date(2025, 11, 28)
-@def img = "/assets/brand.png"
++++
+author = "Umair Durrani"
+date = "2025-11-28"
+tags = ["analytics", "AI"]
+title = "Consistent Branding of reports and applications with LLMs"
+short_text = "The `brandthis` package, developed by a Presage Data Scientist, makes consistent branding easy."
+img = "/assets/brand.png"
++++
 
 \blogheader{}
 

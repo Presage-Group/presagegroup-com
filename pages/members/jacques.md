@@ -1,8 +1,3 @@
-+++
-title = "Jacques Mignault"
-layout = "member"
-+++
-
 {{ member
 "Capt. Jacques Mignault"
 "/assets/jacques.webp"

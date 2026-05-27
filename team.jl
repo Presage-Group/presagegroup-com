@@ -1,4 +1,5 @@
 function hfun_small_card(args)
+    args = sq.(args)
     name = args[1]
     photo = args[2]
     title = args[3]
@@ -74,6 +75,7 @@ const icons = Dict{String,String}(
 
 
 function hfun_member(args)
+    args = sq.(args)
     name = args[1]
     photo = args[2]
     title = args[3]
