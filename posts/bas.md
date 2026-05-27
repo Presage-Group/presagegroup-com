@@ -22,6 +22,4 @@ Following extensive data collection, working groups were conducted with members 
 
 The SOPs have been readily adopted by the pilots and
 have proven to be robust and effective. In particular, pilots have 'bought into' the concepts in a way that
-they previously didn't.
-
-[View the detailed case study writeup here!](/assets/cases/BAS.pdf)
+they previously didn't. [View the detailed case study writeup here!](/assets/cases/BAS.pdf)

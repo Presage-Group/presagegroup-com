@@ -32,38 +32,57 @@ that organizations and their people can **realize their potential** and
 
 **HOW DO WE DO IT?**
 
-**1. We Build Trust through Dialogue**
+**We Build Trust through Dialogue**
 
-- • Create opportunities for meaningful open interaction
-- • Actively listen to the experience of all members of the organization
-- • Manage our own biases and help clients manage their biases
-- • Be trustworthy and nurture trust in others\
-- • Identify a common language and translate the message
-- • We are honest even when it’s hard
-- • Take the time and provide the support required for positive organic and lasting change
+• Create opportunities for meaningful open interaction
 
-**2. We Develop Solutions Collaboratively**
+• Actively listen to the experience of all members of the organization
 
-- • Utilize a holistic approach that considers organizations as ecosystems
-- • Adapt our methodology to be reflective of the needs of our clients
-- • Co-create an understanding of what success looks like
-- • Build on client strengths and expertise to reach a positive outcome together
-- • Be flexible and willing to iterate on solutions
+• Manage our own biases and help clients manage their biases
 
-**3. We Use Science and Subject Matter Expertise to Create
+• Be trustworthy and nurture trust in others
+
+• Identify a common language and translate the message
+
+• We are honest even when it’s hard
+
+• Take the time and provide the support required for positive organic and lasting change
+
+**We Develop Solutions Collaboratively**
+
+• Utilize a holistic approach that considers organizations as ecosystems
+
+• Adapt our methodology to be reflective of the needs of our clients
+
+• Co-create an understanding of what success looks like
+
+• Build on client strengths and expertise to reach a positive outcome together
+
+• Be flexible and willing to iterate on solutions
+
+**We Use Science and Subject Matter Expertise to Create
 Understanding**
 
-- • Ask the right questions
-- • Draw on current methods from diverse scientific disciplines, relevant expertise, and our IP to build a complete understanding of organizations, individuals, and the challenges they are facing.
-- • Test assumptions, challenge biases, identify drivers, and evaluate proposed interventions using rigorous scientific methods that are most appropriate for the task.
-- • Seek out new knowledge and new techniques to ensure that we are always using the best tools available for the job.
-- • Communicate findings in a way that makes sense to our intended audiences Shape a new collaborative idea of success; use the right tools to move towards it
+• Ask the right questions
 
-**4. We Nurture "Care-ism"**
+• Draw on current methods from diverse scientific disciplines, relevant expertise, and our IP to build a complete understanding of organizations, individuals, and the challenges they are facing.
 
-- • Acknowledge that we are in “the people business”
-- • Recognize that we are all human beings with needs, wants, imperfections, and biases
-- • Show humility – we are open, curious, and willing to learn with and from our clients
-- • Ask the good questions and the difficult questions – listen to the responses
-- • We promote self-awareness, which encourages other-awareness
-- • We demonstrate and promote the premise that when people are cared for they are more careful
+• Test assumptions, challenge biases, identify drivers, and evaluate proposed interventions using rigorous scientific methods that are most appropriate for the task.
+
+• Seek out new knowledge and new techniques to ensure that we are always using the best tools available for the job.
+
+• Communicate findings in a way that makes sense to our intended audiences Shape a new collaborative idea of success; use the right tools to move towards it
+
+**We Nurture "Care-ism"**
+
+• Acknowledge that we are in “the people business”
+
+• Recognize that we are all human beings with needs, wants, imperfections, and biases
+
+• Show humility – we are open, curious, and willing to learn with and from our clients
+
+• Ask the good questions and the difficult questions – listen to the responses
+
+• We promote self-awareness, which encourages other-awareness
+
+• We demonstrate and promote the premise that when people are cared for they are more careful

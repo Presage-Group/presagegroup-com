@@ -9,7 +9,4 @@ img = "/assets/TTlogo.webp"
 
 \blogheader{}
 
-Presage Group Inc.'s partnership with the Citation Jet Pilots association (CJP) and their Safe-To-Land program was highlighted in the latest edition of Twin & Turbine magazine.
-
-
-[Read the full article in Twin & Turbine here!](https://www.twinandturbine.com/its-contagious/)
+Presage Group Inc.'s partnership with the Citation Jet Pilots association (CJP) and their Safe-To-Land program was highlighted in the latest edition of Twin & Turbine magazine. [Read the full article in Twin & Turbine here!](https://www.twinandturbine.com/its-contagious/)

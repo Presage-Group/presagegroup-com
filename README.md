@@ -11,7 +11,7 @@ To build the site for the first time on your computer:
 5. Start julia and activate this environment with `] activate .`, where `]` is the command to enter the julia REPL Package mode. The prompt should say "presagegroup-com" if this worked correctly. 
 6. Instantiate this environment with `instantiate` while still in package mode.
 7. At the normal julia prompt (use backspace to exit package mode, your prompt should now say "julia>"), type `using Xranklin, Revise` to load `Xranklin.jl`. 
-8. `serve()` will start a local server at http://localhost:8000 and open a preview of the site in your browser. The site will update live when you make changes.
+8. `serve(clear = true)` will start a local server at http://localhost:8000 and open a preview of the site in your browser. The site will update live when you make changes.
 
 To make a change to the website: 
 
