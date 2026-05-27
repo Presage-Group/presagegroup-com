@@ -1,8 +1,3 @@
-+++
-title = "Leonard McMillian"
-layout = "member"
-+++
-
 {{ member
 "Leonard McMillian"
 "/assets/Len-Headshot.webp"

@@ -1,8 +1,3 @@
-+++
-title = "Richard Karl"
-layout = "member"
-+++
-
 {{ member
 "Dr. Richard Karl"
 "/assets/Dick-Karl-3.webp"
