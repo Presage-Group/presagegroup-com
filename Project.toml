@@ -2,3 +2,6 @@
 NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 Xranklin = "558449b0-171e-4e1f-900f-d076a5ddf486"
+
+[sources]
+Xranklin = {url ="https://github.com/tlienart/Xranklin.jl", rev="main"}
