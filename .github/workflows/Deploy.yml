@@ -29,7 +29,7 @@ jobs:
       - name: Install Julia
         uses: julia-actions/setup-julia@v2
         with:
-          version: "1.11" # Franklin seems to have issues with 1.12
+          version: "1.12"
       # Build with updated Xranklin
       - run: julia -e '
           using Pkg; Pkg.add(url="https://github.com/tlienart/Xranklin.jl", rev="main");
