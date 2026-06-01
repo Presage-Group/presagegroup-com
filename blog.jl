@@ -1,4 +1,4 @@
-@delay function hfun_recent_posts(m::Vector{String})
+function hfun_recent_posts(m::Vector{String})
     @assert length(m) == 1 "only one argument allowed for recent posts (the number of recent posts to pull)"
     n = parse(Int64, m[1])
     list = readdir("posts")
@@ -6,18 +6,19 @@
     posts = []
     df = DateFormat("yyyy-mm-dd")
     for (k, post) in enumerate(list)
-        fi = "posts/" * splitext(post)[1]
-        title = pagevar(fi, :title)
-        datestr = pagevar(fi, :date)
-        tags = pagevar(fi, :tags; default=[""])
-        author = pagevar(fi, :author)
-        short_text = pagevar(fi, :short_text)
-        img = pagevar(fi, :img; default=nothing)
+        fi = joinpath("posts", post)   # OS path separator to match children_contexts keys
+        fi_url = "posts/" * split(post, ".")[1]       # forward slash for HTML hrefs
+        title = getvarfrom(:title, fi)
+        datestr = getvarfrom(:date, fi)
+        tags = getvarfrom(:tags, fi; default=[""])
+        author = getvarfrom(:author, fi)
+        short_text = getvarfrom(:short_text, fi)
+        img = getvarfrom(:img, fi; default=nothing)
         if !isnothing(datestr)
             date = Date(datestr, df)
             push!(posts, (
                 title=title,
-                link=fi,
+                link=fi_url,
                 date=date,
                 tags=tags,
                 author=author,
@@ -38,7 +39,7 @@
     eles = sort(posts, by=x -> x.date, rev=true)
     fp = eles[1]
 
-    html *= featured_post(fp.title, fp.link, fp.date, fp.short_text, fp.author; tags=fp.tags, img = fp.img)
+    html *= featured_post(fp.title, fp.link, fp.date, fp.short_text, fp.author; tags=fp.tags, img=fp.img)
 
     html *= """\n
       <div class="grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16 items-stretch">
@@ -57,7 +58,7 @@
     return html
 end
 
-@delay function hfun_all_posts()
+function hfun_all_posts()
     return hfun_recent_posts(["-1"])
 end
 
@@ -194,9 +195,8 @@ const tag_color_lookup = Dict{Int64,String}(
 
 
 
-function lx_blogheader(com, _)
+function lx_blogheader(a::Vector{String})::String
     return """
-        ~~~
         <div class="flex flex-col items-center text-center sm:px-5 gap-y-4">
             <img
                 class="h-48 w-96 object-contain rounded-md mt-6"
@@ -207,7 +207,6 @@ function lx_blogheader(com, _)
                 $(locvar("title"))
             </p>
         </div>
-        ~~~
 
         """
 end

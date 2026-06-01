@@ -4,20 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <title>Presage Group</title>
-    <!-- bootstrap@5.3.1 and bootstrap icon@1.10-->
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
+    
+
+
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/output.css">
-<!-- <link rel="stylesheet" href="/css/franklin.css"> -->
-<!-- <link rel="stylesheet" href="/css/logos.css"> -->
 
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"> -->
-<!-- fonts -->
-<!-- <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"> -->
+
+
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-<!-- favicon generated through https://realfavicongenerator.net/-->
+
+
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
@@ -39,7 +39,7 @@
         src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
         defer
     ></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    
     <script defer>
         document.addEventListener("alpine:init", () => {
             Alpine.store("contactModal", { open: false });
@@ -167,7 +167,7 @@
                 <span>Presage Training Insights</span>
             </a>
             <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
-            <!-- opens a modal with a contact form. -->
+            
             <button
                 @click="Alpine.store('contactModal').open = true"
                 class="relative flex justify-between w-full cursor-pointer select-none group items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none"
@@ -311,7 +311,7 @@
     class="fixed top-0 left-0 z-99 flex items-center justify-center w-screen h-screen"
     x-cloak
   >
-    <!-- Background overlay -->
+    
     <div
       @click="Alpine.store('contactModal').open = false"
       x-transition:enter="ease-out duration-300"
@@ -323,7 +323,7 @@
       class="absolute inset-0 w-full h-full bg-black bg-opacity-40"
     ></div>
 
-    <!-- Modal content -->
+    
     <div
       @click.away="Alpine.store('contactModal').open = false"
       x-transition:enter="ease-out duration-300"
@@ -359,7 +359,7 @@
         </button>
       </div>
 
-      <!-- Div that tells that form was submitted successfully -->
+      
       <div class="relative w-auto">
         <div x-show="Alpine.store('contactModal').formSuccess"
             class="mb-4 p-3 text-green-800 bg-green-100 rounded" x-cloak>
@@ -369,8 +369,8 @@
                 Close
             </button>
         </div>
-        <!-- Form fields -->
-        <!-- Wrap inputs in a <form> so browser validation runs -->
+        
+        
         <form id="contactForm">
           <div class="w-full max-w-xs mx-auto py-1">
             <input
@@ -420,8 +420,8 @@
             />
           </div>
 
-          <!-- Industry field -->
-          <!-- Replaced industry dropdown with <select> so that HTML5 validation works -->
+          
+          
           <div class="w-full max-w-xs mx-auto py-1">
             <label for="industry" class="sr-only">Industry</label>
             <select
@@ -439,7 +439,7 @@
             </select>
           </div>
 
-          <!-- message -->
+          
           <div class="w-full max-w-xs mx-auto py-1">
             <textarea
               x-data="{
@@ -791,8 +791,8 @@
 <div class="hidden lg:relative lg:flex h-1 mt-0 my-1 -mx-1 bg-[#00415b]"></div>
 
 </header>
-<div class="franklin-content">
-<section class="bg-white dark:bg-gray-900 py-12">
+<div class="franklin-content" >
+  <section class="bg-white dark:bg-gray-900 py-12">
   <div class="max-w-4xl mx-auto px-6 lg:px-8">
     <div class="flex flex-col items-center text-center">
       <img class="w-48 h-48 rounded-full object-cover mb-6 shadow-lg" src="/assets/randy-headshot-1.webp" alt="Dr. Randall Boyes">
@@ -824,11 +824,10 @@
   </div>
 </section>
 
-<div class="page-foot">
-    Last modified: May 22, 2026
+  
 </div>
-</div>
-</div> <!-- end of class container -->
+
+</div> 
 
 <footer class="container">
     <section class="bg-white">
@@ -878,13 +877,13 @@
 
             <p class="mt-8 text-base leading-6 text-center text-gray-400">
                 <a href="mailto:info@presagegroup.com">info@presagegroup.com</a> <br> <br>
-                &copy; 2025 Presage Group, Inc. All rights reserved.
+                &copy; 2026 Presage Group, Inc. All rights reserved.
             </p>
         </div>
     </section>
 </footer>
 
-<!-- CONTENT ENDS HERE -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 

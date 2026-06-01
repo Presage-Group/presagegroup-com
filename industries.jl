@@ -352,6 +352,7 @@ end
 Service page skeleton.
 """
 function hfun_industry(params)
+    params = sq.(params)
     hero_html = hfun_hero(params[1:3])
     work_html = ""
     areas_html = ""
